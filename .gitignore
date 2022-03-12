@@ -1,0 +1,7 @@
+site
+bin 
+include
+lib**
+pyvenv.cfg
+share
+etc
