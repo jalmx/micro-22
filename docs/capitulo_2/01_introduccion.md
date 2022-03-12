@@ -47,9 +47,9 @@ El modulo `Tk` incluye soporte para los siguientes módulos:
 Cuando desarrollamos una aplicación GUI se necesita una ventana principal, la cual va a contener todos los elementos ([widget](#widgets)) dentro de la misma; es decir, botones, etiquetas (Texto), cajas de texto, cajas para marcar (checkbox, radiobutton), frames (ventanas), etc.
 Inclusive la propia ventana (`Tk`) principal es un widget. Dentro de las ventanas se colocan los widgets
 
-
-
 ## Important Tk Concepts
+
+<!-- TODO: traducir o darle mi propia interpretación -->
 
 Even this simple program illustrates the following key Tk concepts:
 
@@ -57,8 +57,13 @@ Even this simple program illustrates the following key Tk concepts:
 
 A Tkinter user interface is made up of individual widgets. Each widget is represented as a Python object, instantiated from classes like ttk.Frame, ttk.Label, and ttk.Button.
 
+![Ejemplo de widgets](http://tkdocs.com/images/w_several_all.png)
+
 ## Widget hierarchy
 Widgets are arranged in a hierarchy. The label and button were contained within a frame, which in turn was contained within the root window. When creating each child widget, its parent widget is passed as the first argument to the widget constructor.
+
+
+![jerarquia de widgets](http://tkdocs.com/images/hierarchy.png)
 
 ## configuration options
 
@@ -68,15 +73,10 @@ Widgets have configuration options, which modify their appearance and behavior, 
 
 Widgets aren’t automatically added to the user interface when they are created. A geometry manager like grid controls where in the user interface they are placed.
 
+![geometria](http://tkdocs.com/images/calcgrid.png)
+
 ## event loop
+
 Tkinter reacts to user input, changes from your program, and even refreshes the display only when actively running an event loop. If your program isn’t running the event loop, your user interface won’t update.
 
-## Jerarquía de Widgets
-
-Widgets are all the things that you see onscreen. Our example had a button, an entry, a few labels, and a frame. Checkboxes, tree views, scrollbars, and text areas are examples of other widgets. Widgets are often referred to as "controls." You'll also sometimes see them referred to as "windows," particularly in Tk's documentation. This is a holdover from its X11 roots (under that terminology, both your toplevel application window and a button would be called windows).
-
-Here is an example showing some of Tk's widgets, which we'll cover individually shortly.
-
-![Ejemplo de widgets](http://tkdocs.com/images/w_several_all.png)
-
-![jerarquia de widgets](http://tkdocs.com/images/hierarchy.png)
+![event loop](http://tkdocs.com/images/eventloop.png)
