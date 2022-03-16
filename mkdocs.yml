@@ -1,1 +1,100 @@
-site_name: My Docs
+site_name: Python con GUI - Mecatrónica 85 
+site_description: "Documentación de Python con GUI (Tkinter) para Mecatrónica 85"
+site_author: Alejandro Leyva
+site_url: https://www.alejandro-leyva.com/micro_22
+edit_uri: ""
+
+theme:
+  name: material
+  locale: es
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      primary: deep orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      primary: deep orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  language: es
+
+
+markdown_extensions:
+  - tables
+  - meta
+  - attr_list
+  - md_in_html
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/footer.js
+  - javascripts/change_height_markmap.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/d3@6.7.0/dist/d3.min.js
+  - https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js
+  - https://unpkg.com/markmap-view@0.2.6/dist/index.min.js
+
+extra:
+  homepage: https://www.alejandro-leyva.com/algoritmos/
+  version: 1.0
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+    feedback:
+      title: Fue util esta información?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target=_blank>feedback form</a>.
+  
+  copyright: "Alejandro Leyva 2022 - 2022"
+
+  social:
+  
+    - icon: fontawesome/brands/github
+      link: https://github.com/jalmx
+    - icon: fontawesome/brands/dev
+      link: https://www.alejandro-leyva.com
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/mecatronica85/
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@xizuth
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:alejandro.leyva.us@gmail.com
+
+plugins:
+  - search:
+      lang: es
+      indexing: 'full'
+  - minify:
+      minify_html: true
+  - tags
+  - markmap

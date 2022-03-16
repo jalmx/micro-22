@@ -7,6 +7,9 @@ source ./bin/activate
 
 pip install mkdocs
 pip install mkdocs-material
+pip install mkdocs-plugin-tags
+pip install mkdocs-markmap
+pip install mkdocs-pdf-export-plugin
+pip install mkdocs-minify-plugin
+
 pip install notebook
-
-

@@ -5,3 +5,4 @@ lib**
 pyvenv.cfg
 share
 etc
+.directory
