@@ -60,7 +60,7 @@ print("Tu edad es: " + edad)
 
 ## Función `int()`
 
-En muchas ocasiones puedes tener un `número entero` almacenado en una variable pero no exactamnete es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `int` para poder realizar operaciones con él. Para esos casos contamos con la función `int()`
+En muchas ocasiones puedes tener un `número entero` almacenado en una variable pero no exactamente es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `int` para poder realizar operaciones con él. Para esos casos contamos con la función `int()`
 
 **Sintaxis:**
 
@@ -95,7 +95,7 @@ print(hexadecimal)
 
 ## Función `float()`
 
-En muchas ocasiones puedes tener un `número de punto flotante` almacenado en una variable pero no exactamnete es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `float` para poder realizar operaciones con él. Para esos casos contamos con la función `float()`
+En muchas ocasiones puedes tener un `número de punto flotante` almacenado en una variable pero no exactamente es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `float` para poder realizar operaciones con él. Para esos casos contamos con la función `float()`
 
 **Sintaxis:**
 
@@ -126,7 +126,7 @@ print(un_medio)
 
 ## Función `bool()`
 
-En muchas ocasiones puedes tener `una expresion booleana` almacenado en una variable pero no exactamnete es tipo `booleano`. Entonces, en ese caso necesitamos que sea de tipo `boolean` para poder realizar operaciones con él. Para esos casos contamos con la función `bool()`
+En muchas ocasiones puedes tener `una expresión booleana` almacenado en una variable pero no exactamnete es tipo `booleano`. Entonces, en ese caso necesitamos que sea de tipo `boolean` para poder realizar operaciones con él. Para esos casos contamos con la función `bool()`
 
 **Sintaxis:**
 
@@ -145,7 +145,7 @@ La función siempre regresa `True`, a menos que:
 - El objeto es `False`
 - El objeto es `0`
 - El objeto es `None`
-- Cadena vacia `""`
+- Cadena vacía `""`
 
 En todos estos casos, retorna `False`
 

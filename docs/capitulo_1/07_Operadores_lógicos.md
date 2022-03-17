@@ -12,7 +12,7 @@ Todo objeto con algun contenido será tomado como `True`, a menos que:
 - El objeto es `False`
 - El objeto es `0`
 - El objeto es `None`
-- El objeto es cadena vacia `""` o `''`
+- El objeto es cadena vacía `""` o `''`
 
 En todos estos casos, se toman como `False`.
 
@@ -38,7 +38,7 @@ Ejemplo|Analizando resultado |Resultado
 9 < 12 `and` 4 > 8 |True `and` False|False
 6 > 10 `and` 3 < 0 |False `and` False|False
 
-### 1.1 Ejemplo con operador lógico `and`
+### Ejemplo con operador lógico `and`
 
 
 ```python
@@ -98,7 +98,7 @@ Ejemplo|Analizando resultado |Resultado
 9 < 12 `or` 4 > 8 |True `or` False|True
 6 > 10 `or` 3 < 0 |False `or` False|False
 
-### 2.1 Ejemplo con operador lógico `or`
+### Ejemplo con operador lógico `or`
 
 
 ```python
@@ -183,6 +183,7 @@ else:
 
 
 ---
+
 Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
 
 [Mecatrónica 85](https://mecatronica85.com/)

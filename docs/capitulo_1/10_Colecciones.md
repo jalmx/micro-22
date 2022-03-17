@@ -1,6 +1,6 @@
 ![banner](../assets/banner.png)
 
-# 2.10 Colecciones
+# Colecciones
 
 Dentro de los lenguajes de programación hay tipos datos que son estructuras que pueden contener más de un dato, a comparación de los tipos de datos básicos, estas estructuras pueden contener muchos de esos datos básicos en su interior. Podrías decir que es una base de datos, pero esta solo existe mientras está la aplicación en ejecución, los datos son temporales. Las colecciones pueden contener cualquier tipo de dato, incluso mas colecciones.
 
@@ -11,17 +11,15 @@ En python son los siguientes:
 - `Diccionarios`
 - `Sets`
 
-*Nota: En este curso solo se cubriran las tuplas y las listas.*
+*Nota: En este curso solo se cubrirán las tuplas y las listas.*
 
-## 2.10.1 Tuplas
-
-
+## Tuplas
 
 Es una estructura de datos **inmutables**, una vez declarada no puede cambiar su contenido, ni agregar, ni eliminar, no modificar. 
 
-Cada posicion de los datos tiene un **indice** (index), el cual me ayuda a acceder a el. *La primera posicion siempre es 0*.
+Cada posición de los datos tiene un **indice** (index), el cual me ayuda a acceder a el. *La primera posición siempre es 0*.
 
-**La convencion de como declarar o nombrar a una lista o tupla es en plural**
+**La convención de como declarar o nombrar a una lista o tupla es en plural**
 
 Parámetros a destacar:
 
@@ -37,7 +35,7 @@ nombre_tupla = (dato1, dato2, ..., datoN)
 
 
 ```python
-# Declaracion de una tupla
+# Declaración de una tupla
 
 # Tiene 3 posiciones, comenzado en el 0. Largo de 3
 
@@ -80,13 +78,13 @@ while contador < len(calificaciones):
     contador += 1
 ```
 
-## 2.10.2 Listas
+## Listas
 
-Es una coleccion de elementos ordenados. En otro lenguajes es conocido como un `array`. A este tipo de coleccion es Mutable, es decir, se le pueden agregar, eliminar, quitar, elementos. Podemos hacer diversas operaciones con ellos.
+Es una colección de elementos ordenados. En otro lenguajes es conocido como un `array`. A este tipo de colección es Mutable, es decir, se le pueden agregar, eliminar, quitar, elementos. Podemos hacer diversas operaciones con ellos.
 
 Elementos que debemos tener en cuenta son:
 
-- `index`: El indice o posicion de cada elemento en la lista, recordar que todas comienzan en la posicion 0.
+- `index`: El indice o posición de cada elemento en la lista, recordar que todas comienzan en la posición 0.
 - `length`: La longitud o cantidad de elementos que contiene la lista
 
 **Sintaxis**
@@ -101,7 +99,7 @@ nombre_lista = [elemento1, elemento2, elemento3,.. , elementoN]
 - Puede contener la palabra **\*\*_list\*\*** o **\*\*_list\*\***
 
 
-### 2.10.2.1 Funciones de las listas
+### Funciones de las listas
 
 Las lista son un objeto, por lo tanto cuenta con diversos metodos los cuales nos ayudan a interactuar con ellos:
 
@@ -139,7 +137,7 @@ materias.extend(materias2)
 #imprimo la lista
 print(materias)
 
-#inserto una materia en la posicion 2
+#inserto una materia en la posición 2
 materias.insert(2,'Matematicas')
 
 #imprimo la lista
@@ -278,21 +276,21 @@ print("El valor minimo:", minimo)
 
 ## Eliminando elementos de la lista `del`
 
-Cuando queremos eliminar algun elemento de una coleccion se usa la palabra reservada `del` junto a la posicion del elemento a eliminar.
+Cuando queremos eliminar algún elemento de una colección se usa la palabra reservada `del` junto a la posición del elemento a eliminar.
 
 **Sintaxis**
 
--  `del coleccion[posicion|key]`
+-  `del colección[posicion|key]`
 
 
 ```python
-# Eliminar elementos de una coleccion
+# Eliminar elementos de una colección
 
 materias = ['analogica', 'digitales', 'mediciones' ]
 
 print(materias)
 
-del materias[1] # Elimino el elemento que esta en la posicion 1 de la coleccion
+del materias[1] # Elimino el elemento que esta en la posición 1 de la colección
 
 print(materias)
 
@@ -318,7 +316,7 @@ Los iteradores por default no te dicen cual es su largo, en muchas ocasiones nec
 
 **Sintaxis**
 
-- `len(iterator)`: Devuelve el numero de los elementos de una coleccion
+- `len(iterator)`: Devuelve el numero de los elementos de una colección
 
 
 ```python
@@ -408,9 +406,9 @@ print(f'Te cuento que tambien me gusta mucho {random.choice(hobbies)}')
     Te cuento que tambien me gusta mucho leer
 
 
-## 2.10.3 Diccionarios
+## Diccionarios
 
-Son un tipo de coleccion que su estructura es `Llave - Valor`. Para obtener el acceso al *valor* se hace a traves de la *llave*. La llave es unica y por lo tanto no se puede repetir.
+Son un tipo de colección que su estructura es `Llave - Valor`. Para obtener el acceso al *valor* se hace a traves de la *llave*. La llave es unica y por lo tanto no se puede repetir.
 
 **Sintaxis**
 
@@ -503,17 +501,30 @@ for values in calificaciones_neumatica.values():
 
 ## Función de ordenamiento (`sorted`)
 
-TODO
+Esta función ordena los elementos de una colección.
+
+```python
+
+collection = [4,2,9,12,8]
+
+ordenado = sorted(collection)
+
+print(ordenado)
+
+```
+
+    [2,4,89,12]
+
 
 https://developers.google.com/edu/python/sorting
 
 ## Función `tuple()`
 
-La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función tuple crea una instancia de una tupla vacía si no le pasamos ningún argumento. El argumento que puede recibir una colección.
 
 
 ```python
-mi_tupla = tuple() # crea una tupla vacia
+mi_tupla = tuple() # crea una tupla vacía
 
 calificaciones = [8,6,9,6,8]
 
@@ -531,7 +542,7 @@ print(tupla_calificaciones)
 
 ## Función `list()`
 
-La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función list crea una instancia de una lista vacía si no le pasamos ningún argumento. El argumento que puede recibir una colección.
 
 
 ```python
@@ -553,7 +564,7 @@ print(lista_calificaciones)
 
 ## Función `dict()`
 
-La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función dict crea una instancia de un diccionario vacío si no le pasamos ningún argumento. El argumento que puede recibir una colección.
 
 
 ```python
@@ -572,7 +583,7 @@ print(mi_diccionario)
 
 ## Función `enumerate()`
 
-A esta función se le pasa un iterable y me devuelve 2 valores, en la primera posicion me pasa el indice y en la segunda posicion me pasa el valor que tiene en ese momento el iterador.
+A esta función se le pasa un iterable y me devuelve 2 valores, en la primera posición me pasa el indice y en la segunda posición me pasa el valor que tiene en ese momento el iterador.
 
 
 **Sintaxis:**
@@ -598,14 +609,15 @@ for index, value in enumerate(pokemons):
     print(f'La posicion de {value} es {index}')
 ```
 
-    La posicion de pikachu es 0
-    La posicion de bolbasor es 1
-    La posicion de charizard es 2
+    La posición de pikachu es 0
+    La posición de bolbasor es 1
+    La posición de charizard es 2
     ===================================
-    La posicion de pikachu es 0
-    La posicion de bolbasor es 1
-    La posicion de charizard es 2
+    La posición de pikachu es 0
+    La posición de bolbasor es 1
+    La posición de charizard es 2
 
+---
 
 Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
 

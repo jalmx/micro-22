@@ -2,7 +2,7 @@
 
 #  Introducción a Python
 
-Python es un lenguaje de programación interpretado de proposito general, es dinamicamente tipado.
+Python es un lenguaje de programación interpretado de propósito general, es dinamicamente tipado.
 
 Estamos hablando de un lenguaje de programación dinamicamente tipado. Como tal si existen los tipos pero no se definen explicitamente y pueden ir cambiando en cualquier momento.
 
@@ -23,8 +23,7 @@ Elegimos la versión [Windows x86-64 executable installer](https://www.python.or
 
 ![type_installer](img/type_installer.png)
 
-Al ejecutar el instalador se debe activar la creación del PATH (variable de entorno), para que se agregue de forma automatica y se pueda ocupar en la lina de comando (CMD) de Windows.
-
+Al ejecutar el instalador se debe activar la creación del PATH (variable de entorno), para que se agregue de forma automática y se pueda ocupar en la linea de comando (CMD) de Windows.
 
 
 ## Tipos de lenguajes de programación

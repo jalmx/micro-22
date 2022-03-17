@@ -146,7 +146,7 @@ else:
     La suma es: 46
 
 
-## 5 Estructura `elif`
+## Estructura `elif`
 
 En ocasiones necesitamos verificar varias opciones y en alguna tiene que encajar o por ultimas terminar en una opción. Para esto tenemos que combinar muchos `if` con su `else`, para ello tenemos el siguiente operador, el cual nos ayuda a hacerlo de manera corta y fácil de leer. 
 Para esto siempre debemos realizar una comparación si entra en ese bloque o va al siguiente, y por ultimo si no coincide con alguna, termina en un bloque por *default*.
@@ -246,9 +246,11 @@ else:
 
 1. Hacer la calculadora de area y perímetro de un cuadrado, las opciones son calcular el area y el perímetro del del cuadrado, si da una opcion que no existe, indicar con un mensaje que la "opcion no existe".
 
-## 5.5.5 Short Hands 
+##  Short Hands 
 
-### 5.5.5.1 Short Hands If
+Esto significa que es una expresión corta, forma reducida o abreviada
+
+### Short Hands If
 
 Existe una versión corta cuando si la condición se cumple entra a hacer una cosa y termina.
 
@@ -267,7 +269,7 @@ if a > b: print("a es mas grande que b")
     a es mas grande que b
 
 
-## 5.5.6 Anidando `if`
+## Anidando `if`
 
 Podemos meter `if` dentro de otro `if`, no hay limites de anidamiento. Se pueden utilizar la cantidad de `if` que sean necesarios. Esta acción se llama `ifs anidados`
 
@@ -289,6 +291,7 @@ if x > 10:
 
 
 ---
+
 Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
 
 [Mecatrónica 85](https://mecatronica85.com/)

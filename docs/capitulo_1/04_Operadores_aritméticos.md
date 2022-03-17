@@ -58,7 +58,7 @@ El orden de precedencia de ejecución de los operadores aritméticos es:
 
 ## Ejemplos:
 
-Convertir la expresion algebraica a una espresion computable
+Convertir la expresión algebraica, a una expresión computable
 
 1. $\frac{2-3}{20}$
 2. $3 \times \frac{1}{2} + 8$
@@ -83,7 +83,7 @@ print("Resultado caso 5: " + str(caso_5) )
 
 ## Ejercicios
 
-Guardar en una variable el resultado de la operacion e imprimir por consola el resultado de las siguientes operaciones:
+Guardar en una variable el resultado de la operación e imprimir por consola el resultado de las siguientes operaciones:
 
 1. $\frac{5 + 8}{2}$
 2. $\frac{5 }{2} + 3$
@@ -95,9 +95,9 @@ Guardar en una variable el resultado de la operacion e imprimir por consola el r
 
 Vamos resolver unos problemas basicos
 
-1. Realizar una calculadora que sume 2 números, los valores estan en el programa
-2. Realizar una calculadora que haga la división de 2 números, los valores estan en el programa
-3. Realizar el cálculo de voltaje, los valores estan en el programa
+1. Realizar una calculadora que sume 2 números, los valores están en el programa
+2. Realizar una calculadora que haga la división de 2 números, los valores están en el programa
+3. Realizar el cálculo de voltaje, los valores están en el programa
 
 
 ```python

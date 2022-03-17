@@ -231,7 +231,7 @@ print(mensaje)
 
 ## Formateo de Strings - función `format()`
 
-Los `str` tienen una propiedad llamada `format()` con la cual podemos concatenar variables, se tienen en varias formas para realizar la concatenacion con este metodo. Retorna el `str` con el formato indicado. Las variables se colocaran automaticamente en la llaves.
+Los `str` tienen una propiedad llamada `format()` con la cual podemos concatenar variables, se tienen en varias formas para realizar la concatenacion con este método. Retorna el `str` con el formato indicado. Las variables se colocaran automaticamente en la llaves.
 
 **Sintaxis:**
 
@@ -426,7 +426,7 @@ print(f"El valor de pi es: {num:{1}.{3}}")
 
 
 ```python
-# Es similar a la función format(), con respecto a la sintaxis, no es necesario indicar la posicion de la variable
+# Es similar a la función format(), con respecto a la sintaxis, no es necesario indicar la posición de la variable
 # los decimales es el valor menos 1
 
 num = 3.14159

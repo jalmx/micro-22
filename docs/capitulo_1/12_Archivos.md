@@ -2,7 +2,7 @@
 
 # Archivos
 
-El manejo de archivos en Python es algo nativo, es decir, por default te da una utileria para comenzar a trabajar con ellos. Esto significa que podemos abrir y leer el contenido de un archivo plano de una manera muy sencilla y rapida.
+El manejo de archivos en Python es algo nativo, es decir, por default te da una utilería para comenzar a trabajar con ellos. Esto significa que podemos abrir y leer el contenido de un archivo plano de una manera muy sencilla y rápida.
 
 
 ## Función `open()`
@@ -40,14 +40,14 @@ Los archivos tiene diversos metodos para manipular su contenido
 - `readline()`: Lee una sola linea del archivo. Por default comienza en la primera.
 - `readlines()`: Crea una lista con el contenido de cada linea del archivo.
 - `write(data)`: Escribe lo que le pasamos como argumento.
-- `seek(position)`: Coloca el cursor en esa posicion dentro del archivo.
-- `close()`: Cierra el archivo. Esto siempre se debe hacer si se usa el metodo `open()` solo.
+- `seek(position)`: Coloca el cursor en esa posición dentro del archivo.
+- `close()`: Cierra el archivo. Esto siempre se debe hacer si se usa el método `open()` solo.
 
 *Nota: Contiene mas metodos, ir a la documentacion oficial de [IO](https://docs.python.org/3/library/io.html)*
 
 
 ```python
-# Creando un archivo vacio
+# Creando un archivo vacío
 
 mi_archivo = open('arhivo.txt','w') #aqui el archivo se crea y esta listo para escribir en él
 
@@ -76,6 +76,7 @@ Documentacion de [The with statement](https://docs.python.org/3/reference/compou
 
 
 ---
+
 Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
 
 [Mecatrónica 85](https://mecatronica85.com/)

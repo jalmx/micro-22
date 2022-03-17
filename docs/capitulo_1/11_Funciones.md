@@ -53,15 +53,15 @@ elevar_cuadrado()
 
 **Ejercicios:**
 
-1. Realizar una función que en su cuerpo realice la suma de dos números (estos estan dados por ustedes), e imprimir el resultado, es decir, cuando se invoque
+1. Realizar una función que en su cuerpo realice la suma de dos números (estos están dados por ustedes), e imprimir el resultado, es decir, cuando se invoque
 
-2. Realizar una función que en su cuerpo realice la impresion de 3 mensajes, los que ustedes quiereran, y al invocarla que salgan esos mensajes
+2. Realizar una función que en su cuerpo realice la impresión de 3 mensajes, los que ustedes quieran, y al invocarla que salgan esos mensajes
 
-## Funciones con parametros 
+## Funciones con parámetros 
 
-Las funciones en ocasiones necesitan parametros para funcionar y poder realizar la accion.
+Las funciones en ocasiones necesitan parámetros para funcionar y poder realizar la acción.
 
-Parametro = Argumento = variable
+`Parametro` = `Argumento` = `variable`
 
 **Como escribo una función y como la utilizo**
 
@@ -115,15 +115,15 @@ potencia(3,3)
 
 **Ejercicios:**
 
-1. Realizar una función que realice el calculo del area del circulo, la función recibe el radio. Ocupando las funciones de la libreria `math`.
+1. Realizar una función que realice el calculo del area del circulo, la función recibe el radio. Ocupando las funciones de la librería `math`.
 
 2. Realizar una función que reciba el nombre y la edad, y que imprima un mensaje con estos datos, ejemplo: "Hola 'alejandro'  que buena onda que tengas '20' anios"
 
 
 
-## Funciones con parametros por default u opcionales
+## Funciones con parámetros por default u opcionales
 
-Las funciones en ocasiones necesitan parametros para funcionar, pero no es necesario pasarle todos los parametros requeridos, dado que pueden ser opcionales y poder realizar la accion.
+Las funciones en ocasiones necesitan parámetros para funcionar, pero no es necesario pasarle todos los parámetros requeridos, dado que pueden ser opcionales y poder realizar la accion.
 
 Parametro = Argumento = variable
 
@@ -188,8 +188,8 @@ imprir_0_10(1)
 
 **Ejercicios:**
 
-1. Crear una función que reciba la edad, pero la edad es opcion, por default que tenga el valor de 15, y que mande a imprimir si es menor o mayor de edad, pero si es 15, que imprima tambien, la frase "Creo que no me pasaste la edad, tramposo!"
-2. Crear una función que calcule el area de cuadrados y rectangulos, la función recibe 2 parametros, la base y la altura, pero cuando es cuadrado solo recibe uno, por lo tanto, el segundo parametros es opcional, el segundo parametros por default es 0. 
+1. Crear una función que reciba la edad, pero la edad es opcion, por default que tenga el valor de 15, y que mande a imprimir si es menor o mayor de edad, pero si es 15, que imprima también, la frase "Creo que no me pasaste la edad, tramposo!"
+2. Crear una función que calcule el area de cuadrados y rectangulos, la función recibe 2 parámetros, la base y la altura, pero cuando es cuadrado solo recibe uno, por lo tanto, el segundo parámetros es opcional, el segundo parámetros por default es 0. 
 
 ## Retornado valores de una función
 
@@ -273,11 +273,11 @@ print(f'El perimetro es {operaciones_circulo(5,"perimetro")}')
     - i = corriente(10, 1000)
     - r = voltaje(10, 5)
 
-## Funciones con parametros nombrados
+## Funciones con parámetros nombrados
 
 Normalmente pasamos argumentos a las funciones con un orden orden establecido, y el orden que le coloco el programador, pero hay una forma de poder los argumentos en un orden cual sea, pero se debe especificar que argumento es.
 
-*Nota: Los parametros nombrados y tambien con valores por default van al final se colocan al final*
+*Nota: Los parámetros nombrados y también con valores por default van al final se colocan al final*
 
 Como escribo una función y como la utilizo.
 

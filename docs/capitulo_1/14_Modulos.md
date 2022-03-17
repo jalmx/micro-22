@@ -59,7 +59,7 @@ print(numero_en_rango)
 
 
 ```python
-# nos devulve un valor en el rango de 5 (min) al 15 (max)
+# nos devuelve un valor en el rango de 5 (min) al 15 (max)
 
 numero_rango_min_max = random.randint(3, 15) 
 
@@ -287,6 +287,7 @@ Para ver las funciones disponibles ir a la [Documentacion de python "Funciones"]
 
 
 ---
+
 Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
 
 [Mecatrónica 85](https://mecatronica85.com/)

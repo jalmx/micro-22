@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 
 root_window = Tk() #Creo la ventana principal
-root_window.title("Mi ventana") #Con este metodo coloco el titulo de la ventana
+root_window.title("Mi ventana") #Con este método coloco el titulo de la ventana
 root_window.config(bg="gray")
 
 frm = ttk.Frame(root_window, padding=10)

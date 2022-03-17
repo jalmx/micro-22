@@ -2,7 +2,7 @@
 
 # Estructura de repetición `while` 
 
-Dentro de la programación tenemos estructuras de control para repetir acciones. Hay varias estructuras que podemos utilizar, los ciclos son `while`,  `for`; este ultimo se verá en otro cápitulo.
+Dentro de la programación tenemos estructuras de control para repetir acciones. Hay varias estructuras que podemos utilizar, los ciclos son `while`,  `for`; este ultimo se verá en otro capítulo.
 
 ## Estructura `while`
 
@@ -227,9 +227,9 @@ print("Programa a finalizado")
 
 1. Imprimir la tabla del 8, del 1 al 10, con el siguiente formato "8 x 1 = 8"
 2. Realizar un programa que solicite 10 números e imprima si es par o impar y si es mayor a 10 que lo indique, de lo contrario solo dice "es impar"
-3. Realizar un programa solicite los 3 parciales de Matemáticas, e imprimir el promedio, pero si reprueba, ahora á que pedir el resultado de su extra, en caso que haya pasado el extra, le dara su calificacion final y le dirá "aprobado". En caso que no apruebe su extra, solo le dirá "estas en recursamiento"
+3. Realizar un programa solicite los 3 parciales de Matemáticas, e imprimir el promedio, pero si reprueba, ahora á que pedir el resultado de su extra, en caso que haya pasado el extra, le dará su calificacion final y le dirá "aprobado". En caso que no apruebe su extra, solo le dirá "estas en recursamiento"
 
-## 2 Continue y Break
+## Continue y Break
 
 Existen 2 palabras reservadas que nos ayudan a un control mas complejo dentro de los ciclos, que son `break` y `continue`.
 
@@ -262,7 +262,7 @@ while True: # ciclo infinito
 
 
 ```python
-# vamos a hacer que el ciclo ignore todo el codigo que tiene por debajo cuando encuentre la palabra continue
+# vamos a hacer que el ciclo ignore todo el código que tiene por debajo cuando encuentre la palabra continue
 
 contador = 0
 

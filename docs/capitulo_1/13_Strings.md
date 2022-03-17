@@ -26,7 +26,7 @@ print(minuscula)
 
 ## Convertir a Mayúsculas (upper)
 
-Una función que nos fascilita es convertir todo el string a mayúsculas. Ignora simbolos y números.
+Una función que nos facilita es convertir todo el string a mayúsculas. Ignora símbolos y números.
 
 - upper(): Converts a string into upper case
 
@@ -47,7 +47,7 @@ print(upper)
 
 ## Convertir a Mayúsculas (capitalize)
 
-Una función que nos fascilita es convertir solo la primer letra a mayúsculas, el resto a minúsculas. Esto es útil para cuando queremos que una oración inicie en mayusculas o palabra. Ignora simbolos y números.
+Una función que nos facilitá es convertir solo la primer letra a mayúsculas, el resto a minúsculas. Esto es útil para cuando queremos que una oración inicie en mayúsculas o palabra. Ignora símbolos y números.
 
 - capitalize(): Converts the first character to upper case
 
@@ -133,15 +133,8 @@ print(f'Son espacios: {" ".isspace()}')
 https://www.w3schools.com/python/python_ref_string.asp
 
 
-```python
-
-```
-
-
-
-
-
 ---
+
 Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
 
 [Mecatrónica 85](https://mecatronica85.com/)
