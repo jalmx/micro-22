@@ -1,60 +1,43 @@
 # Prácticas
 
-## 1. Control de salidas
-   
-### 1.1. Encender LED
+!!! example "Encender LEDs"
+    **Descripción:** Hacer parpadear los leds, encendidos deben estar 2 segundos, y apagados un segundo, esto debe repetirse 5 veces
+    **Material:** 
+    - 1 Led
+    - 1 R330 
+    **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
 
-Descripción| Materiales | Diagrama pictórico 
--|-|-
-1.1.1 Configuración de salidas desde archivo|1 Led<br>1 R220|![practica 1](imgs/1.1_pract.png)
-1.1.2 Manejo de terminal y configurando pines|1 Led<br>1 R220|![practica 1](imgs/1.1_pract.png)
 
-### 1.2 Encender más LEDs
+!!! example "Parpadear un led 3 veces"
+    **Descripción:** Se debe lograr que parpadee un led 3 veces, en un intervalo de tiempo de medio segundo
+    **Material:** 
+    - 1 Led
+    - 1 R330 
+    **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
 
-Descripción| Materiales | Diagrama pictórico 
--|-|-
-1.2.1 Control de más salidas y su configuración|2 Led<br>2 R220|![practica 2](imgs/1.2_pract.png)
-**1.2.2 Control de más salidas y su configuración**|x Led<br>x R220|![practica 2](imgs/1.2.2_pract.png)
-1.2.3 Parpadear LED con un intervalo de un cuarto de segundo (**tmr**) |2 Led<br>2 R220|![practica 2](imgs/1.2_pract.png)
-**1.2.4 Parpadear LED con un intervalo de medio segundo y de un segundo** (**tmr**)|2 Led<br>2 R220|![practica 2](imgs/1.2_pract.png)
-1.2.5 Realizar un **semáforo** sencillo |3 Led<br>3 R220|![practica 2](imgs/1.2.4_pract.png)
-**1.2.6 Realizar dos semáforos en una intersección, deben trabajar complementariamente**|3 Led<br>3 R220|![practica 2](imgs/semaforo.jpg)
+!!! example "Parpadear leds de manera indefinida"
+    **Descripción:** Deben quedar 2 leds parpadeando de manera indefinida, encendidos 2 segundos y apagados un segundo
+    **Material:** 
+    - 2 Led
+    - 2 R330 
+    **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
 
-## 2. Control I/O
 
-### 2.1 Leer push button y encender led
+!!! example "Semáforo de crucero"
+    **Descripción:** Realizar dos semáforos en una intersección, deben trabajar de manera complementaria.
+    **Material:** 
+    - 6 Leds (rojo,verde y ámbar)
+    - 6 R330 
+    **Diagrama:** <br> ![practica 2](imgs/1.2.4_pract.png)
+    **Ejemplo:**![practica 2](imgs/semaforo.jpg)
 
-Descripción| Materiales | Diagrama pictórico 
--|:-:|-
-2.1.1 Leer una entrada digital, encenderá el LED mientras se mantenga presionado el push button|1 Led<br>1 R1k<br>1 R220<br>1 push button|![practica 3](imgs/2.1.1_pract.png)
-**2.1.2 Mientras se presione el botón los LEDs deben parpadear medio segundo**|1 Led<br>1 R1k<br>1 R220<br>1 push button|![practica 3](imgs/2.1.1_pract.png)
-2.1.3 Control de 2 leds por medio de un push button; mientras se mantiene presionado el push button deben estar encendidos los leds, de lo contrario estrán apagados |2 Led<br>2 R1k<br>1 push button|![practica 3](imgs/2.1.3_pract.png)
-2.1.4 Control de 2 leds, cada uno con su propio push button, mientras sea presionado el push button debe matenerse encendido su respectivo LED|2 Led<br>2 R1k<br>1 push button|![practica 3](imgs/2.1.4_pract.png)
-2.1.5 **Toggle**: Al presionar el push button se debe encender el led y mantenerce en ese estado; hasta que se vuelva a presionar el led regresará a su estado anterior|2 Led<br>2 R1k<br>1 push button|![practica 3](imgs/2.1.1_pract.png)
-2.1.6 **Toggle**: Control de 2 leds, cada uno con su propio push button, al presionar el push button se debe encender su respectivo led y mantenerce en ese estado; hasta que se vuelva a presionar el led regresará a su estado anterior|2 Led<br>2 R1k<br>1 push button|![practica 3](imgs/2.1.4_pract.png)
 
-### 2.2 Operadores lógicos
+![practica 3](imgs/2.1.1_pract.png) |
+| Control de 2 leds por medio de un push button; mientras se mantiene presionado el push button deben estar encendidos los leds, de lo contrario estarán apagados                                                                  
 
-Descripción| Materiales | Diagrama pictórico 
--|:-:|-
-2.2.1 Control de 2 leds, cada uno con su propio push button, mientras sea presionado el push button debe parpadear a 1/4 de segundo, encendido su respectivo LED|2 Led<br>2 R1k<br>1 push button | ![practica 3](imgs/2.1.4_pract.png)
-2.2.2 Control de 2 leds, cada uno con su propio push button, mientras sea presionado el push button debe parpadear a 1/4 de segundo, encendido su respectivo LED; en caso que sean presionados ambos push button al mismo tiempo los leds van a parpadear juntos cada 200mS|2 Led<br>2 R1k<br>1 push button|![practica 3](imgs/2.1.4_pract.png)
+----
 
-## 3 Display de 7 segmentos
-
-#### Display
-
-Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays con mayores segmentos, hasta una matriz de puntos de diferentes resoluciones.
-
-![display](imgs/display.png)
-
-Descripción| Materiales | Diagrama pictórico 
--|-|-
-3.1.1 Creación de un contador básico con un display de 7 segmentos, el cual comenzará en 0 y terminará en F, haciendo un conteo hexadecimal, el intervalo de tiempo será de medio segundo|1 display de 7-segmentos, una vez que termine se reinicia automáticamente<br>7 R220|![practica 3](imgs/3.1.1_pract.png)
-**3.1.2 Creación de un contador básico con un display de 7 segmentos, el cual comenzará en 0 y terminará en F, haciendo un conteo hexadecimal, el intercambio de digito será atraves de un push button**|1 display de 7-segmentos<br>7 R220<br>1 push button<br>1 R1k|![practica 3](imgs/3.1.1_pract.png)
-**3.1.3 Crear un mensaje que se vaya leyendo en el display de 7 segmentos que diga "HOLA", el intervalor de cada letra será de medio segundo**|1 display de 7-segmentos<br>7 R220<br>1 push button<br>1 R1k|![practica 3](imgs/3.1.1_pract.png)
-**3.1.4 Crear un mensaje que se vaya leyendo en el display de 7 segmentos, *tu elijes la palabra o frase*, el intervalor de cada letra será de medio segundo**|1 display de 7-segmentos<br>7 R220<br>1 push button<br>1 R1k|![practica 3](imgs/3.1.1_pract.png)
-3.1.5 Creación de un contador básico con un display de 7 segmentos, el cual comenzará en 0 y terminará en F, el cambio se hará cada vez que sea presionado un push button|1 display de 7-segmentos<br>7 R220<br>1 push button<br>1 R1k|![practica 3](imgs/3.1.4_pract.png)
+## Ignorar
 
 ## 4 Control de motores
 
@@ -105,3 +88,21 @@ Descripción| Materiales | Diagrama pictórico
 ## Varios
 
 ### Control de cargas de alta potencia (Relay)
+
+### Ajustar estos ejercicios
+
+### Sensores
+
+#### Salidas digitales 
+1. Simula un sensor de luz el cual haga encender un foco cuando incida poca luz (por debajo del 45%). En caso que supere esa cantidad de luz el foco se debe mantener apagado.
+2. Simula un sensor de distancia (infrarrojo). Carrito seguido de luz. Se tendran 2 sensores infrarrojos, el derecho e izquierdo, cuando el sensor derecho detecte luz debe arrancar una llanta (motor DC izquierdo), cuando el sensor izquierdo reciba luz debe encender la llanta derecha (motor DC derecho). Cuando no reciba luz ningun sensor debe apagar ambos motores, si ambos reciben luz deben encender ambos motores.
+
+### entrandas analogicas
+
+1. Leer 2 potenciometros, cada uno controla una barra de leds, en el rango del 0 al 100% los leds iran encendiendo.
+2. Leer un potenciometro e indicar por terminal el porcentaje equivalente, es decir, si se recibe 0.0 es equivalente al 0%, si recibes el 0.5 se imprime 50%, hasta llegar al 100%.
+
+### sensores Analogicos
+
+. Simular un sensor de luz junto con un sensor de presencia (digital). Dicho sensores trabajan a la par, si hay poca luz y existe presencia en el cuarto se debe encender un foco. En caso que no exista presencia sin importar la intensidad de la luz, el foco no enciende.
+3. Simular un sensor infrarrojo para accionar el movimiento de un servomotor, entre mas luz incida debe incrementar el angulo del servomotor. Es decir, entre mas cerca se incrementa el angulo, entre mas lejos es menor el angulo.

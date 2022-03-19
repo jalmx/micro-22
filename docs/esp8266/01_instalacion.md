@@ -15,6 +15,7 @@ Para cargar el firmware tenemos varias maneras.
 - [esptool.py](https://github.com/espressif/esptool): Libreria de hecha en python para preparar al microcontrolador (Win/Linux/Mac)
 - [PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher): Herramienta visual que utiliza `esptool.py` (Win/Mac)
 - [Thonny IDE](https://thonny.org): Entorno de desarrollo para python, incluido placas de desarrollo para ser programados con python, micropython, circuitpython, y todo lo que termine en python (Win/Linux/Mac)
+- [nodemcu-flasher](https://github.com/nodemcu/nodemcu-flasher): Una herramienta para flashear el firmware para nodemcu (Win). (*No se mostrara como usarse*)
 
 
 ### esptoo.py
@@ -144,23 +145,5 @@ Ahora elegimos el puerto en donde esta nuestra tarjeta y damos `Ok`
 ![thonny editor](imgs/Thonny_6.png)
 
 > Esta listo el editor para trabajar, en caso que marque error verificar el puerto, probar con cerrar el programar y desconectar la placa; posteriormente conectar la placa y después, abrir el programa.
-
-## Especificaciones técnicas del SoC ESP8266
-
-Especificaciones técnicas del microcontrolador obtenidas del datasheet. Este microcontrolador cuenta con un modulo WiFi integrado.
-
-- Architecture: Xtensa lx106
-- CPU frequency: 80MHz overclockable to 160MHz
-- Total RAM available: 96KB (part of it reserved for system)
-- BootROM: 64KB
-- Internal FlashROM: None
-- External FlashROM: code and data, via SPI Flash. Normal sizes 512KB-4MB.
-- GPIO: 16 + 1 (GPIOs are multiplexed with other functions, including external FlashROM, UART, deep sleep wake-up, etc.)
-- UART: One RX/TX UART (no hardware handshaking), one TX-only UART.
-- SPI: 2 SPI interfaces (one used for FlashROM).
-- I2C: No native external I2C (bitbang implementation available on any pins).
-- I2S: 1.
-- Programming: using BootROM bootloader from UART. Due to external FlashROM and always-available BootROM bootloader, ESP8266 is not brickable.
-
 
 <!-- http://docs.micropython.org/en/latest/esp8266/general.html -->
