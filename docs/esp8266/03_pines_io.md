@@ -19,25 +19,25 @@ True|1|High|3.3V
 
 La serigrafía que viene en la placa no coincide con los valores que podemos asignar, aquí están los valores correspondientes a  la serigrafía y el numero que debemos pasar para indicar lo que queremos controlar.
 
-Micropython|Físico|Consideraciones
+|Micropython|Físico|Consideraciones|
 |:-:|:-:|-|
-**0**|`D3` | 
-**1**|`Rx` | No usar
-**2**|`D4` | Led incorporado en `bajo`
-**3**|Tx | No usar
-**4**|`D2` | 
-**5**|`D1` | 
-**6**|X | No usar
-**7**|X | No usar
-**8**|X | No usar
-**9**|X | No usar
-**10**|X | No usar
-**11**|X | No usar
-**12**|`D6` | 
-**13**|`D7` | 
-**14**|`D5` | 
-**15**|`D8` | 
-**16**|`D0` | Tiene varias limitaciones
+|**0**|`D3` | |
+|**1**|`Rx` | No usar|
+|**2**|`D4` | Led incorporado, enciende en `bajo`|
+|**3**|Tx | No usar|
+|**4**|`D2` | |
+|**5**|`D1` | |
+|**6**|X | No usar|
+|**7**|X | No usar|
+|**8**|X | No usar|
+|**9**|X | No usar|
+|**10**|X | No usar|
+|**11**|X | No usar|
+|**12**|`D6` | |
+|**13**|`D7` | |
+|**14**|`D5` | |
+|**15**|`D8` | |
+|**16**|`D0` | Tiene varias limitaciones|
 
 Por ejemplo si colocamos el valor de 
 

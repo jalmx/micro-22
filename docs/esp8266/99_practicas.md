@@ -32,8 +32,65 @@
     **Ejemplo:**![practica 2](imgs/semaforo.jpg)
 
 
-![practica 3](imgs/2.1.1_pract.png) |
-| Control de 2 leds por medio de un push button; mientras se mantiene presionado el push button deben estar encendidos los leds, de lo contrario estarán apagados                                                                  
+
+!!! example "Controlando 2 leds con sus botones"
+    - **Descripción:** Control de 2 leds, cada uno con su propio push button, mientras sea presionado el push button debe mantenerse encendido su respectivo LED, de lo contrario se deben apagar
+    - **Material:** 
+        - 2 Led
+        - 2 R330 
+        - 2 Push button
+        - 2 R1k
+    - **Diagrama:** <br> ![practica 2](imgs/2.1.4_pract.png)
+
+
+!!! example "Controlando 2 leds blink, con sus botones"
+    - **Descripción:** Control de 2 leds, cada uno con su propio push button, mientras sea presionado el push button debe parpadear a 1/4 de segundo, encendido su respectivo LED
+    - **Material:** 
+        - 2 Led
+        - 2 R330 
+        - 2 Push button
+        - 2 R1k
+    - **Diagrama:** <br> ![practica 2](imgs/2.1.4_pract.png)
+
+
+!!! example "Toggle 2"
+    - **Descripción:** Hay 2 leds con sus respectivos botones. Al presionar el push button se debe encender el led y mantenerse en ese estado; hasta que se vuelva a presionar el led regresará a su estado anterior
+    - **Material:** 
+        - 2 Led
+        - 2 R330 
+        - 2 Push button
+        - 2 R1k
+    - **Diagrama:** <br> ![practica 2](imgs/2.1.4_pract.png)
+
+
+!!! example "Display de 7 segmentos"
+    - **Descripción:** Crear un mensaje que se vaya leyendo en el display de 7 segmentos, *tu elijes la palabra o frase*, el intervalo de cada letra será de medio segundo
+    - **Material:** 
+        - 1 Display 7 segmentos, cátodo común
+        - 7 R330 
+    - **Diagrama:** <br> ![practica 3](imgs/3.1.1_pract.png)
+
+!!! example "Frases con display 7-seg"
+    - **Descripción:** Realizar el control de un display de 7 segmentos, mandando un mensaje. Es decir, mandará una palabra la cual el programador elegía, esta palabra se debe poder escribir con los segmentos con los que cuenta el display. 
+    Desplegará su palabra, después desplegará la palabra "cbtis" y terminará con "85", todas las palabras deben ser separadas por un guion. *Ejemplo: HOLA-Cbtis-85*
+    Debe quedar de manera indefinida la frase.
+    - **Material:** 
+        - 1 Display 7 segmentos cátodo común
+        - 7 R330 
+        - 1 Push button
+        - 1 R1k
+    - **Diagrama:** <br> ![practica 3](imgs/3.1.1_pract.png)
+
+!!! example "Frases con display 7-seg"
+    - **Descripción:** Utilizando el problema anterior, pero se agregará un botón; es decir, se mantendrá la palabra repitiéndose infinitamente hasta que se presione el botón, para hacer el cambio de palabra. Ejemplos, desplegará la palabra "HOLA", cuando se presione el botón se desplegará la siguiente frase "Cbtis-85", se vuelve a presionar el botón y regresa a la palabra anterior, y esto se repetirá
+    - **Material:** 
+        - 1 Display 7 segmentos cátodo común
+        - 7 R330 
+        - 1 Push button
+        - 1 R1k
+    - **Diagrama:** <br> ![practica 3](imgs/3.1.4_pract.png)
+
+
 
 ----
 

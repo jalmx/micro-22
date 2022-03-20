@@ -9,7 +9,7 @@ Primero que nada se tiene que descargar el firmware que utilizara el ESP8266 ([i
 Esto es un pedazo de software que se instala en el microcontrolador para que sea capas de leer los archivos de python que vamos a cargar y con ello poder realizar todas las acciones que necesitemos. Dentro del firmware vienen las [librerías nucleo](http://docs.micropython.org/en/latest/library/index.html) que serán las que podremos utilizar para manipular todas las entradas y salidas fisicas y virtuales, en otras palabras _**vendría siendo el interprete de python que va dentro del chip**_.
 
 ## Cargando el Firmware
-
+lugin is not installed
 Para cargar el firmware tenemos varias maneras.
 
 - [esptool.py](https://github.com/espressif/esptool): Libreria de hecha en python para preparar al microcontrolador (Win/Linux/Mac)
