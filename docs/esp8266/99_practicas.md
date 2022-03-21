@@ -1,35 +1,35 @@
 # Prácticas
 
 !!! example "Encender LEDs"
-    **Descripción:** Hacer parpadear los leds, encendidos deben estar 2 segundos, y apagados un segundo, esto debe repetirse 5 veces
-    **Material:** 
-    - 1 Led
-    - 1 R330 
-    **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
+    - **Descripción:** Hacer parpadear los leds, encendidos deben estar 2 segundos, y apagados un segundo, esto debe repetirse 5 veces
+    - **Material:** 
+        - 1 Led
+        - 1 R330 
+    - **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
 
 
 !!! example "Parpadear un led 3 veces"
-    **Descripción:** Se debe lograr que parpadee un led 3 veces, en un intervalo de tiempo de medio segundo
-    **Material:** 
-    - 1 Led
-    - 1 R330 
-    **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
+    - **Descripción:** Se debe lograr que parpadee un led 3 veces, en un intervalo de tiempo de medio segundo
+    - **Material:** 
+        - 1 Led
+        - 1 R330 
+    - **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
 
 !!! example "Parpadear leds de manera indefinida"
-    **Descripción:** Deben quedar 2 leds parpadeando de manera indefinida, encendidos 2 segundos y apagados un segundo
-    **Material:** 
-    - 2 Led
-    - 2 R330 
-    **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
+    - **Descripción:** Deben quedar 2 leds parpadeando de manera indefinida, encendidos 2 segundos y apagados un segundo
+    - **Material:** 
+        - 2 Led
+        - 2 R330 
+    - **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
 
 
 !!! example "Semáforo de crucero"
-    **Descripción:** Realizar dos semáforos en una intersección, deben trabajar de manera complementaria.
-    **Material:** 
-    - 6 Leds (rojo,verde y ámbar)
-    - 6 R330 
-    **Diagrama:** <br> ![practica 2](imgs/1.2.4_pract.png)
-    **Ejemplo:**![practica 2](imgs/semaforo.jpg)
+    - **Descripción:** Realizar dos semáforos en una intersección, deben trabajar de manera complementaria.
+    - **Material:** 
+        - 6 Leds (rojo,verde y ámbar)
+        - 6 R330 
+    - **Diagrama:** <br> ![practica 2](imgs/1.2.4_pract.png)
+    - **Ejemplo:**![practica 2](imgs/semaforo.jpg)
 
 
 
