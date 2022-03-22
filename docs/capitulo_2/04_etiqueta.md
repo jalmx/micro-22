@@ -1,5 +1,5 @@
 ---
-title: Python
+title: Label
 author: Alejandro Leyva
 date: 2022-03-22
 ---
