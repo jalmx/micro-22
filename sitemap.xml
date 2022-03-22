@@ -6,7 +6,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/Fuentes/</loc>
+         <loc>https://www.alejandro-leyva.com/micro_22/99_Fuentes/</loc>
          <lastmod>2022-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -132,6 +132,11 @@
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/09_checkbox/</loc>
+         <lastmod>2022-03-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/10_Layout/</loc>
          <lastmod>2022-03-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
