@@ -1,3 +1,9 @@
+---
+title: Módulos
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 ![banner](../assets/banner.png)
 
 # Módulos
@@ -178,7 +184,7 @@ Este módulo es enfocado a matemáticas, tiene funciones que nos facilitan reali
 - `cos(x)`: coseno de x en radianes
 - `sin(x)`: seno de x en radianes
 - `tan(x)`: tangente de x en radianes
-- `pi`: Devuelve el valor de PI =π = 3.141592...
+- `pi`: Devuelve el valor de PI = $\pi$ = 3.141592...
 - `e`: Devuelve el valor de E (Euler) = 2.718281...
 
 
@@ -207,7 +213,7 @@ print(f'Redondeo hacia arriba {r_arriba}')
 
 
 ```python
-# Potencia y raiz cuadrada
+# Potencia y raíz cuadrada
 
 potencia = math.pow(2,3) # 2^3 = 2**3
 raiz = math.sqrt(25) # raiz cuadrada de 25

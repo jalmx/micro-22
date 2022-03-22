@@ -1,3 +1,9 @@
+---
+title: Python
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 # Entry - Entrada de texto
 
 Este widget es un campo de texto de entrada. En el cual podremos escribir cualquier texto, normalmente un mensaje corto, sin importar si son número o letras.

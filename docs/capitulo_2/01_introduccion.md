@@ -1,4 +1,10 @@
-# Introducción
+---
+title: Introducción a GUI
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
+# Introducción a Interfaz gráfica (GUI)
 
 El paquete `tkinter` (`Tk interface`) es una interface estándar de  Python para el toolkit Tcl/Tk GUI (Interfaz Gráfica de Usuario). Ambos `Tk` y `tkinter` esta disponible en la mayoría de las plataformas Unix, incluida macOS, como también en sistemas Windows.
 

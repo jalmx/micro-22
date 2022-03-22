@@ -1,3 +1,9 @@
+---
+title: Estructura de repetición - while
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 ![banner](../assets/banner.png)
 
 # Estructura de repetición `while` 
@@ -16,7 +22,7 @@ while condicion_verdadera:
     ...
 ```
 
-La forma de leerla es: **mientras la condición se cumpla seguira dentro del ciclo**.
+La forma de leerla es: **mientras la condición se cumpla seguirá dentro del ciclo**.
 
 *Lo que tiene esta estructura es que al momento de preguntar por primera vez, sino cumple la condición no entra al ciclo.*
 

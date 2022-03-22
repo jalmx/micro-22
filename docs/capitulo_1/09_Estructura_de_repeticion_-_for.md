@@ -1,3 +1,10 @@
+---
+title: Estructura de repetición - for
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
+
 ![banner](../assets/banner.png)
 
 # Estructura de repetición `for`

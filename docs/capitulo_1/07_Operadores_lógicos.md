@@ -1,3 +1,9 @@
+---
+title: Operadores lógicos
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 ![banner](../assets/banner.png)
 
 # Operadores lógicos
@@ -6,7 +12,7 @@ Contamos con los operadores lógicos básicos, `AND`, `OR` y `NOT`. Los operador
 
 Estos operadores nos ayudan a realizar operaciones más complejas en las decisiones y ciclos.
 
-Todo objeto con algun contenido será tomado como `True`, a menos que:
+Todo objeto con algún contenido será tomado como `True`, a menos que:
 
 - El objetos esté vacío, como `[]`, `()`, `{}`
 - El objeto es `False`

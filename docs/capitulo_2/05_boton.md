@@ -1,3 +1,9 @@
+---
+title: Python
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 # Botón - Button
 
 El botón es el widget que seguramente vamos a utlizar mas, para hacerlo primero debemos importar el objeto `Button` del módulo `tkinter`. Como todo widget primero debemos pasarle su widget padre y después el texto con el contenido que tendrá.

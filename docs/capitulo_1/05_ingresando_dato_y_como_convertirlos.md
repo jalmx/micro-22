@@ -1,3 +1,9 @@
+---
+title: Ingresando dato y cómo convertirlos
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 ![banner](../assets/banner.png)
 
 # Ingresando dato y cómo convertirlos

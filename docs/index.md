@@ -9,7 +9,18 @@ En la segunda parte se abordan los conceptos básicos de GUI para la realizació
 
 > Nota: No se abordara nada relacionado a POO (Programación Orientada a Objetos), ni creación de clases, etc.
 
-
 ## Mapa del sitio
 
 <!-- Map site insert -->
+
+<!-- Map site start -->
+<!-- AUTO GENERATED -->
+```markmap
+# Programa Tarjetas Electrónicas de control para sistemas Mecatrónicos 2022
+
+## [Fuentes](Fuentes#fuentes)
+
+
+
+```
+<!-- Map site end -->

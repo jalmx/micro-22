@@ -1,6 +1,12 @@
+---
+title: Check box
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 # Checkbutton - Botón de chequeo
 
-Este tipo de widget para cuando el usuario puede elegir varias opciones que le damos.
+Este tipo de widget para cuando el usuario puede elegir varias opciones que le damos. Habitualmente es conocido como `checkbox`, sin embargo, aquí se conocerá como `checkbutton`.
 
 ```python
 from tkinter import Tk, Checkbutton

@@ -1,3 +1,9 @@
+---
+title: Strings (str)
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 ![banner](../assets/banner.png)
 
 # Strings (str)

@@ -1,3 +1,9 @@
+---
+title: Python
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 # Frames - Marcos
 
 > Marco contenedor de widgets.

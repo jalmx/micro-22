@@ -1,13 +1,19 @@
+---
+title: Funciones
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 ![banner](../assets/banner.png)
 
 # Funciones
 
-Bloque de codigo reutilizable que puede ser llamado n cantidad de veces, debe ser corta,  hacer una sola cosa (resuelve un problema) y hacerla bien.
+Bloque de código reutilizable que puede ser llamado n cantidad de veces, debe ser corta,  hacer una sola cosa (resuelve un problema) y hacerla bien.
 
 ## Como se nombran las funciones (Buenas practicas)
 
-- El nombre es una `accion` es decir un verbo
-- El nombre debe ser en minusculas
+- El nombre es una `acción`, es decir un verbo
+- El nombre debe ser en minúsculas
 - No tiene espacios el nombre, por lo tanto, son `separados por guion bajo(_)`
 
 ## Como escribo una función y como la utilizo

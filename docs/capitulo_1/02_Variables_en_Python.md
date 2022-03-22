@@ -1,3 +1,9 @@
+---
+title: Variables en Python
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 ![banner](../assets/banner.png)
 
 # Variables en Python

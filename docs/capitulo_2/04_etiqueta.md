@@ -1,3 +1,9 @@
+---
+title: Python
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 # Etiqueta de Texto - Label
 
 Es un `widget` que no ayuda a desplegar texto o etiquetas que queramos mostrar en la aplicación, etc.

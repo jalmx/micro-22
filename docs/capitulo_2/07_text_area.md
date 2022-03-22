@@ -1,3 +1,9 @@
+---
+title: Text
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 # Text - Área de texto
 
 Un área de texto es una zona para ingresar una cantidad de texto densa, en la cual esta hecha para que podamos escribir todo lo que necesitemos.

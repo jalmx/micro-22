@@ -1,3 +1,9 @@
+---
+title: Radio button
+author: Alejandro Leyva
+date: 2022-03-22
+---
+
 # Radio Button 
 
 Este tipo de widget en general lo usamos cuando queremos dar opciones, pero solo una puede ser elegida.
