@@ -1,26 +1,20 @@
 from tkinter import *
 
-def seleccionar():    
-    if (opcion_1.get()):
-        print("opción 1 marcada")
-    else:
-        print("opción 1 desmarcada")
-        
-    if (opcion_2.get()):
-        print("opción 2 marcada")
-    else:
-        print("opción 2 desmarcada")
-
-# Configuración de la raíz
 root = Tk()
-root.title("Mi aplicación")
-root.config(bd=15) 
+root.geometry("200x200")
 
-opcion_1 = IntVar()    # 1 si, 0 no
-opcion_2 = IntVar()   # 1 si, 0 no
+# button widget
+b2 = Button(root, text = "Botón 2 detrás del botón 1")
+b2.pack(fill = X, expand = True, ipady = 10)
 
-Checkbutton(root, text="Opción 1", variable=opcion_1, onvalue=1, offvalue=0, command=seleccionar).pack()
+# button widget
+b1 = Button(root, text = "Click me !")
 
-Checkbutton(root, text="Opción 2", variable=opcion_2, onvalue=1, offvalue=0, command=seleccionar).pack()
+# This is where b1 is placed inside b2 with in_ option
+b1.place(in_= b2, relx = 0.5, rely = 0.5, anchor = CENTER)
 
-root.mainloop()
+# label widget
+l = Label(root, text = "Etiqueta ")
+l.place(anchor = NW)
+
+mainloop()
