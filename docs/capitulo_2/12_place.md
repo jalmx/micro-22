@@ -8,6 +8,8 @@ date: 2022-03-22
 
 Este manejador de geometría permite ubicar widgets indicando su posición exacta (`x` e `y`) respecto a su contenedor padre.
 
+> Este manager de geometría es muy versátil y flexible para ir posicionando los elementos de manera libre.
+
 ## Sintaxis
 
 ```python
@@ -15,7 +17,16 @@ widget.place( place_options... )
 ```
 Los argumentos que puede recibe la función `place` son:
 
-- `anchor`: The exact spot of widget other options refer to: may be N, E, S, W, NE, NW, SE, or SW, compass directions indicating the corners and sides of widget; default is NW (the upper left corner of widget)
+- `anchor`: El lugar exacto donde se va a posicionar el widget, las opciones que puede recibir son:- `NW`: `northwest`, arriaba a la izquierda
+  - `N`: `North`: Norte, arriba
+  - `NE`: arriaba a la derecha
+  - `W`: A la derecha
+  - `CENTER`: Centrado horizontalmente y verticalmente
+  - `E`: Derecha
+  - `SW`: Abajo a la izquierda
+  - `S`: Abajo
+  - `SE`: Abajo a la derecha
+  - ![show](https://www.tutorialspoint.com/python/images/tkanchor.jpg)
 - `bordermode`: Modo del border del widget, por default es `INSIDE`, el otro valor puede ser `OUTSIDE`.
 
 ## Posicionamiento absoluto 
@@ -28,6 +39,8 @@ Los argumentos que puede recibe la función `place` son:
 > Todas estos valores son en pixels.
 
 ## Posicionamiento relativo
+
+Todas estas propiedades son con respecto a las dimensiones del widget padre.
 
 - `relx`: Offset en `horizontal` con respecto al padre, en proporción, los valores van de `0.0` (**0%**) hasta `1.0` (**100%**)
 - `rely`: Offset en `vertical` con respecto al padre, en proporción, los valores van de `0.0` (**0%**) hasta `1.0` (**100%**)
@@ -74,21 +87,23 @@ from tkinter import *
 root = Tk()
 root.geometry("200x200")
 
-# button widget
-b2 = Button(root, text = "Botón 2 detrás del botón 1")
-b2.pack(fill = X, expand = True, ipady = 10)
+etiqueta = Label(root, text="Etiqueta con un texto", background="gray")
 
-# button widget
-b1 = Button(root, text = "Click me !")
+position_x = 16 # le doy un espaciado (margen) izquierdo de 16px
 
-# This is where b1 is placed inside b2 with in_ option
-b1.place(in_= b2, relx = 0.5, rely = 0.5, anchor = CENTER)
+position_y = 10  # le doy un espaciado (margen) superior de 10px
 
-# label widget
-l = Label(root, text = "Etiqueta ")
-l.place(anchor = NW)
+etiqueta.place(x=position_x, y=position_y )
+
+boton = Button(text="Da click en el boton")
+
+boton_width = etiqueta.winfo_reqwidth() # quiero que el boton tenga el mismo ancho que el contenido de la etiqueta
+boton_position_y = position_y + etiqueta.winfo_reqheight() + 10 # sumo el alto de la etiqueta, con el margen que tiene la misma, mas 10px de separación entre la etiqueta y el boton
+
+boton.place(x=position_x, y=boton_position_y, width=boton_width)
 
 mainloop()
+
 ```
 ![place 2](img/place_2.png)
 
@@ -96,4 +111,3 @@ mainloop()
 ## Referencias:
 
 - https://www.tutorialspoint.com/python3/tk_place.htm
-- 

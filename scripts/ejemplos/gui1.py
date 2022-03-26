@@ -3,18 +3,19 @@ from tkinter import *
 root = Tk()
 root.geometry("200x200")
 
-# button widget
-b2 = Button(root, text = "Botón 2 detrás del botón 1")
-b2.pack(fill = X, expand = True, ipady = 10)
+etiqueta = Label(root, text="Etiqueta con un texto", background="gray")
 
-# button widget
-b1 = Button(root, text = "Click me !")
+position_x = 16 # le doy un espaciado (margen) izquierdo de 16px
 
-# This is where b1 is placed inside b2 with in_ option
-b1.place(in_= b2, relx = 0.5, rely = 0.5, anchor = CENTER)
+position_y = 10  # le doy un espaciado (margen) superior de 10px
 
-# label widget
-l = Label(root, text = "Etiqueta ")
-l.place(anchor = NW)
+etiqueta.place(x=position_x, y=position_y )
+
+boton = Button(text="Da click en el boton")
+
+boton_width = etiqueta.winfo_reqwidth() # quiero que el boton tenga el mismo ancho que el contenido de la etiqueta
+boton_position_y = position_y + etiqueta.winfo_reqheight() + 10 # sumo el alto de la etiqueta, con el margen que tiene la misma, mas 10px de separación entre la etiqueta y el boton
+
+boton.place(x=position_x, y=boton_position_y, width=boton_width)
 
 mainloop()

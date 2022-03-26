@@ -6,7 +6,7 @@ date: 2022-03-22
 
 # Manejador `Grid`
 
-Este manejador de geometría es una especie de **tabla** o **rejilla** donde se irán colocando los elementos dentro del contenedor padre.
+Este manejador de geometría es una especie de **tabla** o **rejilla** donde se irán colocando los elementos dentro del contenedor padre. Es mas complejo de usar pero a la vez mas flexible para el posicionamiento de los widgets.
 
 ## Sintaxis
 
