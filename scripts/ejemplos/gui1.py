@@ -1,21 +1,16 @@
-from tkinter import *
+from tkinter import Tk, Label, RIDGE
 
 root = Tk()
-root.geometry("200x200")
 
-etiqueta = Label(root, text="Etiqueta con un texto", background="gray")
+courses = ['C','C++','Python','Java','Unix','DevOps'] 
+r = ['course'] 
 
-position_x = 16 # le doy un espaciado (margen) izquierdo de 16px
+for c in courses:
+    Label(root,text=c, width=15).grid(column=0)
+    Label(root,text=r, relief=RIDGE, width=15).grid(column=1)
 
-position_y = 10  # le doy un espaciado (margen) superior de 10px
 
-etiqueta.place(x=position_x, y=position_y )
-
-boton = Button(text="Da click en el boton")
-
-boton_width = etiqueta.winfo_reqwidth() # quiero que el boton tenga el mismo ancho que el contenido de la etiqueta
-boton_position_y = position_y + etiqueta.winfo_reqheight() + 10 # sumo el alto de la etiqueta, con el margen que tiene la misma, mas 10px de separación entre la etiqueta y el boton
-
-boton.place(x=position_x, y=boton_position_y, width=boton_width)
-
-mainloop()
+root.mainloop()
+#https://www.educba.com/tkinter-grid/
+# https://www.pythontutorial.net/tkinter/tkinter-grid/
+# https://www.youtube.com/watch?v=y69rqjEfwYI&list=PLqlQ2-9ypflQQEepQJvGQ6RJ8llnzk6Kj&index=4&t=178s

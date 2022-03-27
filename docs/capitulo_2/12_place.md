@@ -47,6 +47,7 @@ Todas estas propiedades son con respecto a las dimensiones del widget padre.
 - `relwidth`: Ancho del widget en proporción al padre,  los valores van de `0.0` (**0%**) hasta `1.0` (**100%**).
 - `relheight`: Alto del widget en proporción al padre,  los valores van de `0.0` (**0%**) hasta `1.0` (**100%**).
 
+> Se pueden combinar todos los parámetros, es decir, puede contener un parámetros relativo y el otro parámetro absoluto.
 
 ## Ejemplos
 
