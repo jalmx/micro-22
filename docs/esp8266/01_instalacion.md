@@ -9,7 +9,7 @@ Primero que nada se tiene que descargar el firmware que utilizara el ESP8266 ([i
 Esto es un pedazo de software que se instala en el microcontrolador para que sea capas de leer los archivos de python que vamos a cargar y con ello poder realizar todas las acciones que necesitemos. Dentro del firmware vienen las [librerías nucleo](http://docs.micropython.org/en/latest/library/index.html) que serán las que podremos utilizar para manipular todas las entradas y salidas fisicas y virtuales, en otras palabras _**vendría siendo el interprete de python que va dentro del chip**_.
 
 ## Cargando el Firmware
-lugin is not installed
+
 Para cargar el firmware tenemos varias maneras.
 
 - [esptool.py](https://github.com/espressif/esptool): Libreria de hecha en python para preparar al microcontrolador (Win/Linux/Mac)
@@ -146,4 +146,4 @@ Ahora elegimos el puerto en donde esta nuestra tarjeta y damos `Ok`
 
 > Esta listo el editor para trabajar, en caso que marque error verificar el puerto, probar con cerrar el programar y desconectar la placa; posteriormente conectar la placa y después, abrir el programa.
 
-<!-- http://docs.micropython.org/en/latest/esp8266/general.html -->
+> [Mas detalles en la documentación oficial de Micropython](http://docs.micropython.org/en/latest/esp8266/general.html)

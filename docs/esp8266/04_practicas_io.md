@@ -25,8 +25,8 @@ title: Ejemplos de I/O Digitales
 !!! example "Encender más LEDs"
     - **Descripción:** Control de más salidas y su configuración, activar D1 y D2
     - **Material:** 
-        - 1 Led
-        - 1 R330 
+        - 2 Led
+        - 2 R330 
     - **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
     **Código:** 
         ```python
@@ -43,8 +43,8 @@ title: Ejemplos de I/O Digitales
 !!! example "Parpadear un led 3 veces"
     - **Descripción:** Se debe lograr que parpadee un led 3 veces, en un intervalo de tiempo de medio segundo
     - **Material:** 
-        - 1 Led
-        - 1 R330 
+        - 2 Led
+        - 2 R330 
     - **Diagrama:** <br> ![practica 2](imgs/1.2_pract.png)
     - **Código:** 
         ```python
@@ -71,8 +71,8 @@ title: Ejemplos de I/O Digitales
 !!! example "Blink"
     - **Descripción:** Debe quedar parpadeando un Led por tiempo indefinido, el intervalo sera de 2 segundos.
     - **Material:** 
-        - 2 Leds (rojo,verde y ámbar)
-        - 2 R330 
+        - 1 Leds (rojo,verde y ámbar)
+        - 1 R330 
     - **Diagrama:** <br> ![practica 2](imgs/1.1_pract.png)
     - **Código:** 
         ```python
@@ -99,6 +99,44 @@ title: Ejemplos de I/O Digitales
     - **Diagrama:** <br> ![practica 2](imgs/1.2.4_pract.png)
     - **Código:** 
         ```python
+        from machine import Pin #Importo el modulo para manejo de pines
+        from time import sleep # importa el modulo para los retardos
+
+        time_wait_long = 4 # declaro una variable que usare para los retardos de la luz mas largo
+        time_wait_a = 2 # declaro una variable que usare para los retardos para el amarillo
+        time_wait_blink = 0.5 # declaro una variable que usare para los retardos para el blink del verde
+        led_rojo = machine.Pin(5, machine.Pin.OUT, value=0) #D1 configuro el pin 0 como salida y lo pongo en bajo
+        led_ambar = machine.Pin(4, machine.Pin.OUT, value=0) #D2 configuro el pin 0 como salida y lo pongo en bajo
+        led_verde = machine.Pin(0, machine.Pin.OUT, value=0) #D3 configuro el pin 0 como salida y lo pongo en bajo
+
+        while True: #ciclo infinito
+            
+            led_rojo.on() # enciendo el led rojo
+            led_ambar.off()  # apago el led ambar
+            led_verde.off()  # apago el led verde
+            sleep(time_wait_long) #espero un segundo
+            
+            led_rojo.off() # apago el led rojo
+            led_ambar.on()  # enciendo el led ambar
+            sleep(time_wait_a) #espero un segundo
+            
+            led_ambar.off()  # apago el led ambar
+            led_verde.on()  # enciendo el led verde
+            sleep(time_wait_a) #espero un segundo
+            led_verde.off()  # apago el led verde
+            
+            # Hago el parpadeo de la luz verde
+            sleep(time_wait_blink) # hago el primer parpadeo del verde
+            led_verde.on()  # enciendo el led verde
+            sleep(time_wait_blink) # hago el primer parpadeo del verde
+            led_verde.off()  # apago el led verde
+            sleep(time_wait_blink) # hago el primer parpadeo del verde
+            led_verde.on()  # enciendo el led verde
+            sleep(time_wait_blink) # hago el primer parpadeo del verde
+            led_verde.off()  # apago el led verde
+            sleep(time_wait_blink) # hago el primer parpadeo del verde
+            led_verde.on()  # enciendo el led verde
+            sleep(time_wait_blink) # hago el primer parpadeo del verde
         ```
 
 ## Leyendo entradas
@@ -121,7 +159,7 @@ title: Ejemplos de I/O Digitales
 
         while True: # ciclo infinito
                 
-            if boton.value(): # leo el valor del botón, si es 1 entro al bloque de código
+            if boton.value() == 1: # leo el valor del botón, si es 1 entro al bloque de código
                 pin1.on() #enciendo mi led
                 sleep_ms(10) #doy un tiempo mínimo para no saturar al micro
                 
@@ -146,7 +184,7 @@ title: Ejemplos de I/O Digitales
 
         while True: # ciclo infinito
                 
-            if boton.value(): # leo el valor del botón, si es 1 entro al bloque de código
+            if boton.value() == 1: # leo el valor del botón, si es 1 entro al bloque de código
                 pin1.on() #enciendo el led
                 sleep_ms(500) #doy un tiempo mínimo para no saturar al micro
                 pin1.off() #apago el led
@@ -155,16 +193,46 @@ title: Ejemplos de I/O Digitales
             pin1.off() # apago el led 
         ```
 
-!!! example "Leyendo entrada y blick led"
+!!! example "Leyendo 2 entradas y blink de 2 leds"
     - **Descripción:** Control de 2 leds, cada uno con su propio push button, mientras sea presionado el push button debe parpadear a 1/4 de segundo, encendido su respectivo LED; en caso que sean presionados ambos push button al mismo tiempo los leds van a parpadear juntos cada 200mS
     - **Material:** 
-        - 1 Led
-        - 3 R330 
-        - 1 Push button
-        - 1 R1k
-    - **Diagrama:** <br> ![practica 2](imgs/2.1.1_pract.png)
+        - 2 Led
+        - 2 R330 
+        - 2 Push button
+        - 2 R1k
+    - **Diagrama:** <br> ![practica 2](imgs/2.1.4_pract.png)
     - **Código:** 
         ```python
+        from machine import Pin
+        from time import sleep_ms # importo la función sleep_ms 
+
+        pin1 = Pin(4, Pin.OUT, value=0) #configuro D1 como salida
+        boton1 = Pin(5, Pin.IN) # configuro D2 como salida
+        pin2 = Pin(0, Pin.OUT, value=0) #configuro D3 como salida y lo pongo en bajo
+        boton2 = Pin(2, Pin.IN) # configuro D4 como entrada
+
+        while True: # ciclo infinito
+            
+            if boton1.value() == 1 and boton2.value() == 1:
+                pin1.on() #enciendo el led
+                pin2.on() #enciendo el led
+                sleep_ms(200) #doy los 200mS
+                pin1.off() #apago el led
+                pin2.off() #apago el led
+                sleep_ms(200) #doy los 200mS
+            elif boton1.value() == 1: # leo el valor del botón 1, si es 1 entro al bloque de código
+                pin1.on() #enciendo el led
+                sleep_ms(250) #enciendo 1/4 de segundo
+                pin1.off() #apago el led
+                sleep_ms(250) #apago 1/4 de segundo
+            elif boton2.value() == 1: # leo el valor del botón 1, si es 1 entro al bloque de código
+                pin2.on() #enciendo el led
+                sleep_ms(250) #enciendo 1/4 de segundo
+                pin2.off() #apago el led
+                sleep_ms(250) #apago 1/4 de segundo
+            else:            
+                pin1.off() # apago el led 1
+                pin2.off() # apago el led 2
         ```
 
 !!! example "Toggle"
@@ -177,6 +245,43 @@ title: Ejemplos de I/O Digitales
     - **Diagrama:** <br> ![practica 2](imgs/2.1.1_pract.png)
     - **Código:** 
         ```python
+        # Version de código V1, version fea y larga
+        from machine import Pin
+        from time import sleep_ms # importo la función sleep_ms 
+
+        pin1 = Pin(4, Pin.OUT, value=0) #configuro D1 como salida
+        boton1 = Pin(5, Pin.IN) # configuro D2 como salida
+
+        status = 0
+
+        while True: # ciclo infinito
+            
+            if boton1.value() and status == 0 : # leo el valor del botón 1, si es 1 entro al bloque de código
+                sleep_ms(100) #le doy un tiempo para no saturar 
+                pin1.on() #enciendo el led
+                status = 1 # cambio el estado de mi variable, con ella se si fue o no presionado el boton
+                
+            if boton1.value and status == 1: # leo el valor del botón 1, si es 1 entro al bloque de código
+                sleep_ms(100) #le doy un tiempo para no saturar 
+                pin1.off() # apago el led
+                status = 0 # cambio el estado de mi variable, con ella se si fue o no presionado el boton
+        ```
+        ---
+
+        ```python
+        # Version de código V2, version Hacker pro
+        from machine import Pin
+        from time import sleep_ms # importo la función sleep_ms 
+
+        pin1 = Pin(4, Pin.OUT, value=0) #configuro D1 como salida
+        boton1 = Pin(5, Pin.IN) # configuro D2 como entrada
+
+        while True: # ciclo infinito
+            
+            if boton1.value(): # leo el valor del botón 1, si es 1 entro al bloque de código
+                sleep_ms(200) #le doy un tiempo por el rebote del boton
+                pin1.value( not pin1.value() ) #tomo el valor actual del pin e invierto su estado y lo asigno al pin, es decir,
+                # si esta encendido, invierto ese valor, por ende; se apaga el led, y viseversa
         ```
 
 ## Display 7 segmentos

@@ -62,6 +62,23 @@
         - 2 R1k
     - **Diagrama:** <br> ![practica 2](imgs/2.1.4_pract.png)
 
+!!! example "Secuencia de luces"
+    - **Descripción:** Realizar una secuencia de leds básica, se deben ir encendiendo en secuencia, el tiempo lo decide el programador, primero enciende el primero, unos instantes después el segundo, un instante, después el ultimo, quedan encendido todos y unos segundos después se apagan y vuelve a comenzar la secuencia.
+    - **Material:** 
+        - 2 Led
+        - 2 R330 
+        - 2 Push button
+        - 2 R1k
+    - **Diagrama:** <br> ![practica 2](imgs/secuencia.png)
+
+!!! example "Tren"
+    - **Descripción:** Simular las luces de alto en un cruce de ferrocarril, como se muestra en la imagen animada. Se debe simular con un botón el paso del ferrocarril, que si se presiona haga los parpadeos de las luces, mientras no este presionado el botón, las luces deben quedar encendidas; es decir, que no estaría pasando el tren. 
+    - **Material:** 
+        - 4 Led
+        - 4 R330 
+        - 1 Push button
+        - 1 R1k
+    - **Diagrama:** <br> ![practica 2](imgs/ferrocarril.gif)
 
 !!! example "Display de 7 segmentos"
     - **Descripción:** Crear un mensaje que se vaya leyendo en el display de 7 segmentos, *tu elijes la palabra o frase*, el intervalo de cada letra será de medio segundo
@@ -102,16 +119,6 @@
   - Calcular la resistencia para el control del motor DC
 - Motor PAP
 
-## 5 Ciclos (while)
-
-### LEDs
-
-Descripción| Materiales | Diagrama pictórico 
--|-|-
-5.1.1 Realizar una secuencia de leds básica, aplicando un ciclo |3 LEDs <br>3 Resistencias<br> |![ciclo_leds](imgs/secuencia.png)
-**5.1.2 Simular las luces de alto en un cruce de ferrocarril, como se muestra en la imagén**|4 LEDs <br>4 Resistencias<br> |![ferrocarril](imgs/ferrocarril.gif)
-
-
 ### DTH11
 
 Descripción| Materiales | Diagrama pictórico 
@@ -120,13 +127,6 @@ Descripción| Materiales | Diagrama pictórico
 6.2.2 Leer los valores de Temperatura y humedad mostrandolo en la LCD|1 DTH11<br>1 LCD con I2C|![DTH11](imgs/dth11_lcd.png)
 6.2.3 Leer los valores de Temperatura y humedad mostrandolo en la LCD, mostrar la temperatura en grados celsius y grados farenheit|1 DTH11<br>1 LCD con I2C|![DTH11](imgs/dth11_lcd.png)
 6.2.4 Leer la temperatura,con forme vaya incrementando la temperatura vayán encendiendo los leds, y apagando en secuencia en función de la temperatura|1 LCD con I2C <br>3 LEDs<br>3 Resistencias|![DTH11](imgs/dth11_lcd_leds.png)
-
-## Entras y salidas analógicas
-
-### Entradas analógicas (ADC)
-
-- Leer un potenciómetro y mostrarlo en terminal
-- Leer LDR
 
 ## Salidas analógicas (PWM)
 
