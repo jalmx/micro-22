@@ -11,16 +11,13 @@ En la segunda parte se abordan los conceptos básicos de GUI para la realizació
 
 ## Mapa del sitio
 
-<!-- Map site insert -->
-
-<!-- Map site start -->
-<!-- AUTO GENERATED -->
 ```markmap
 # Programa Tarjetas Electrónicas de control para sistemas Mecatrónicos 2022
 
+## [Capítulo 1](capitulo_1/)
+## [Capítulo 2](capitulo_2/)
+## [Micropython ESP8266](esp8266/)
+## [IoT](capitulo_2/)
 ## [Fuentes](Fuentes#fuentes)
 
-
-
 ```
-<!-- Map site end -->

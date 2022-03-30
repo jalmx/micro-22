@@ -9,7 +9,7 @@
     - **Descripción:** Encender el led configurando un pin como salida D1
     - **Material:** 
         - 1 Potenciómetro
-    - **Diagrama:** <br>![adc_1]()
+    - **Diagrama:** <br>![adc_1](imgs/adc_0.png)
     - **Código:** 
         ```python
         import machine # importo el modulo para control y configuración de pines

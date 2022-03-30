@@ -281,7 +281,7 @@ title: Ejemplos de I/O Digitales
             if boton1.value(): # leo el valor del botón 1, si es 1 entro al bloque de código
                 sleep_ms(200) #le doy un tiempo por el rebote del boton
                 pin1.value( not pin1.value() ) #tomo el valor actual del pin e invierto su estado y lo asigno al pin, es decir,
-                # si esta encendido, invierto ese valor, por ende; se apaga el led, y viseversa
+                # si esta encendido, invierto ese valor, por ende; se apaga el led, y viceversa
         ```
 
 ## Display 7 segmentos
@@ -319,4 +319,41 @@ Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays co
     - **Diagrama:** <br> ![practica 3](imgs/3.1.4_pract.png)
     - **Código:** 
         ```python
+        ```
+
+## Control básico de Motor DC
+
+En esta primera sección vamos realizar un control básico de un motor DC de 5V DC. Recuerda que la salida de señal del ESP8266 en alto es de `3.3V`, por lo tanto, se necesita una fuente adicional.
+ 
+### Driver L293D (Controlador)
+
+Puesto que los microcontroladores son elementos de control, no son capaces para alimentar cargas altas o cargas especiales (como inductivas), debemos utilizar algún elemento que nos ayude a realizar esta tarea. En este caso vamos a usar el Driver L293D por ser el mas común, no es el único (puedes usar el que quieras o necesites en función de tu carga).
+
+Aqui coloco un esquemático de conexión obtenido del [datasheet](https://www.ti.com/lit/ds/slrs008c/slrs008c.pdf)
+
+![L293D](imgs/esquematico_L293D.png)
+
+!!! example "Control ON/OFF para motor DC"
+    - **Descripción:** Con un push boton debes encender el motor, y cuando se vuelva a pulsar el motor se debe apagar
+    - **Material:** 
+        - 1 Push button
+        - 1 R1k
+        - 1 Motor DC de 5V
+        - 1 Puente H L293
+        - 1 Fuente de 5V externa
+    - **Diagrama:** <br> ![motor](imgs/motor_on_off.png)
+    - **Código:** 
+        ```python
+        from machine import Pin
+        from time import sleep_ms # importo la función sleep_ms 
+
+        motor = Pin(4, Pin.OUT, value=0) #configuro D1 como salida y el motor comienza apagado
+        boton = Pin(5, Pin.IN) # configuro D2 como entrada
+
+        while True: # ciclo infinito
+            
+            if boton.value(): # leo el valor del botón 1, si es 1 entro al bloque de código
+                sleep_ms(200) #le doy un tiempo por el rebote del boton
+                motor.value( not motor.value() ) #tomo el valor actual del pin e invierto su estado y lo asigno al pin, es decir,
+                # si esta encendido, invierto ese valor, por ende; se apaga el led, y viceversa
         ```

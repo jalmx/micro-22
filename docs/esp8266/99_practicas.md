@@ -109,12 +109,6 @@
 
 
 
-----
-
-## Ignorar
-
-## 4 Control de motores
-
 - Control de un motor DC (ON-OFF)
   - Calcular la resistencia para el control del motor DC
 - Motor PAP

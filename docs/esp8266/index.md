@@ -144,3 +144,8 @@ tim = Timer(-1)
 tim.init(period=5000, mode=Timer.ONE_SHOT, callback=lambda t:print(1))
 tim.init(period=2000, mode=Timer.PERIODIC, callback=lambda t:print(2))
 ```
+## Fuentes
+
+Para la creación de los esquemáticos se usa [Fritzing](https://fritzing.org) y el componente del [ESP8266](https://github.com/prasertsakd/esp8266_fritzing) desde https://github.com/prasertsakd/esp8266_fritzing
+
+![esp8266](https://raw.githubusercontent.com/prasertsakd/esp8266_fritzing/master/preview.png)
