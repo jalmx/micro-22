@@ -329,7 +329,7 @@ En esta primera sección vamos realizar un control básico de un motor DC de 5V 
 
 Puesto que los microcontroladores son elementos de control, no son capaces para alimentar cargas altas o cargas especiales (como inductivas), debemos utilizar algún elemento que nos ayude a realizar esta tarea. En este caso vamos a usar el Driver L293D por ser el mas común, no es el único (puedes usar el que quieras o necesites en función de tu carga).
 
-Aqui coloco un esquemático de conexión obtenido del [datasheet](https://www.ti.com/lit/ds/slrs008c/slrs008c.pdf)
+Aquí coloco un esquemático de conexión obtenido del [datasheet](https://www.ti.com/lit/ds/slrs008c/slrs008c.pdf).
 
 ![L293D](imgs/esquematico_L293D.png)
 
@@ -341,14 +341,15 @@ Aqui coloco un esquemático de conexión obtenido del [datasheet](https://www.ti
         - 1 Motor DC de 5V
         - 1 Puente H L293
         - 1 Fuente de 5V externa
+        - 1 Diodo 1N4158 o 1N4001
     - **Diagrama:** <br> ![motor](imgs/motor_on_off.png)
     - **Código:** 
         ```python
         from machine import Pin
         from time import sleep_ms # importo la función sleep_ms 
 
-        motor = Pin(4, Pin.OUT, value=0) #configuro D1 como salida y el motor comienza apagado
-        boton = Pin(5, Pin.IN) # configuro D2 como entrada
+        motor = Pin(5, Pin.OUT, value=0) #configuro D1 como salida y el motor comienza apagado
+        boton = Pin(4, Pin.IN) # configuro D2 como entrada
 
         while True: # ciclo infinito
             
@@ -356,4 +357,38 @@ Aqui coloco un esquemático de conexión obtenido del [datasheet](https://www.ti
                 sleep_ms(200) #le doy un tiempo por el rebote del boton
                 motor.value( not motor.value() ) #tomo el valor actual del pin e invierto su estado y lo asigno al pin, es decir,
                 # si esta encendido, invierto ese valor, por ende; se apaga el led, y viceversa
+        ```
+!!! example "Control bidireccional motor DC"
+    - **Descripción:** Realizar un control bidireccional de un motor DC, con un boton gira hacia un sentido, presionando el otro boton en sentido inverso. Mientras esta presionado debe funcionar, de lo contrario se mantiene apagado.
+    - **Material:** 
+        - 1 Push button
+        - 1 R1k
+        - 1 Motor DC de 5V
+        - 1 Puente H L293
+        - 1 Fuente de 5V externa
+        - 4 Diodo 1N4158 o 1N4001
+    - **Diagrama:** <br> ![motor](imgs/motor_bi.png)
+    - **Código:** 
+        ```python
+        from machine import Pin
+        from time import sleep_ms # importo la función sleep_ms 
+
+        motor_derecha = Pin(5, Pin.OUT, value=0) #configuro D1 como salida y el motor comienza apagado
+        motor_izquierda = Pin(4, Pin.OUT, value=0) #configuro D2 como salida y el motor comienza apagado
+        boton_derecha = Pin(0, Pin.IN) # configuro D3 como entrada
+        boton_izquierda = Pin(2, Pin.IN) # configuro D4 como entrada
+
+        while True: # ciclo infinito
+            
+            if boton_derecha.value(): # leo el valor del botón para giro hacia la derecha, realiza el giro
+                sleep_ms(200) #le doy un tiempo por el rebote del boton
+                motor_derecha.on() 
+                motor_izquierda.off()
+            elif boton_izquierda.value(): # leo el valor del botón para giro hacia la izquierda, realiza el giro
+                sleep_ms(200) #le doy un tiempo por el rebote del boton
+                motor_derecha.off()
+                motor_izquierda.on()
+            else: # de lo contrario se queda apagado
+                motor_izquierda.off()
+                motor_derecha.off()
         ```
