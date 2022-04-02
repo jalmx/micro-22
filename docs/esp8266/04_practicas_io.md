@@ -392,3 +392,45 @@ Aquí coloco un esquemático de conexión obtenido del [datasheet](https://www.t
                 motor_izquierda.off()
                 motor_derecha.off()
         ```
+## Control básico de Motor PAP
+
+
+
+## Control de cargas AC
+
+!!! example "Módulo de Relay"
+    - **Descripción:** Encender el modulo del Relay
+    - **Material:** 
+        - 1 Módulo de Relay
+    - **Diagrama:** <br>![relay](imgs/relay_alone.png)
+    - **Código:** 
+        ```python
+        from machine import Pin#Importo el modulo para manejo de pines
+
+        relay = Pin(5, Pin.OUT) #configuro el pin D1 como salida
+
+        relay.on() # Mando un 1 a la salida del pin 0
+        ```
+
+!!! example "Módulo de Relay con boton"
+    - **Descripción:** Encender el modulo del Relay
+    - **Material:** 
+        - 1 Módulo de Relay
+        - 1 R1k
+        - 1 Push button
+    - **Diagrama:** <br>![relay](imgs/relay_button.png)
+    - **Código:** 
+        ```python
+        from machine import Pin
+        from time import sleep_ms # importo la función sleep_ms 
+
+        relay = Pin(5, Pin.OUT,value=0) #configuro D1 como salida
+        boton = Pin(0, Pin.IN) # configuro D0 como entrada
+
+        while True: # ciclo infinito
+                
+            if boton.value(): # leo el valor del botón, si es 1 entro al bloque de código
+                sleep_ms(250) #doy un tiempo mínimo para no saturar al micro
+                relay.value( not relay.value() ) #enciendo el led
+        ```
+

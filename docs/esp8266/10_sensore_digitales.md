@@ -14,7 +14,7 @@ Este sensor nos manda una señal alta de 3.3V cuando existe presencia o recibe r
     **Descripción:**
     Tenemos un sensor PIR, que cuando exista presencia mande a activar un parpadeo de LEDs de forma rápida (medio segundo), mientras no exista presencia los LEDs deben parpadear de manera lenta (2seg)
     **Materiales:**
-    **Circuito:** 
+    **Circuito:** <br> ![pir](imgs/pir.png)
     **Código:**
 
 
@@ -22,7 +22,7 @@ Este sensor nos manda una señal alta de 3.3V cuando existe presencia o recibe r
     **Descripción:**
     Ahora tenemos un sensor de presencia junto a un switch en una habitación. Lo que queremos es que si existe presencia y el switch se presiona se encienda la luz del cuarto, pero si la persona deja la habitación pero no apago la luz se debe apagar el foco en un tiempo definido. Al salir del cuarto se presiona el switch se debe apagar el foco.
     **Materiales:**
-    **Circuito:** 
+    **Circuito:**  <br> ![pir](imgs/pir.png)
     **Código:**
 
 ## Sensor de Temperatura y Humedad DTH11
@@ -49,3 +49,5 @@ d.measure()
 d.temperature() # eg. 23.6 (°C)
 d.humidity()    # eg. 41.3 (% RH)
 ```
+
+![dth11](imgs/dth11_1.png)
