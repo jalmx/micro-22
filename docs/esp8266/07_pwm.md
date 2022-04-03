@@ -4,27 +4,41 @@ title: Salida analógica - PWM
 
 # Salida analógica PWM
 
-Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin. It achieves this by rapidly toggling the pin from low to high. There are two parameters associated with this: the frequency of the toggling, and the duty cycle. The duty cycle is defined to be how long the pin is high compared with the length of a single period (low plus high time). Maximum duty cycle is when the pin is high all of the time, and minimum is when it is low all of the time.
+Modulación de Ancho de Pulso (`Pulse width modulation` (`PWM`)) es una manera artificial de generar una salida analógica en un pin digital. Existen dos parámetros asociados al PWM que son la ==frecuencia== y el ==ciclo de trabajo== (*duty cycle*).
+El ciclo de trabajo define que tan largo sera el estado del pin en alto de `un periodo`. El máximo ciclo de trabajo es cuando el pin esta todo el tiempo en alto (100%) y el mínimo todo el tiempo en bajo (0%).
 
-On the ESP8266 the pins 0, 2, 4, 5, 12, 13, 14 and 15 all support PWM. The limitation is that they must all be at the same frequency, and the frequency must be between 1Hz and 1kHz.
+En el ESP8266 todos los pines (excepto el GPIO16 o el pin 0) soportan PWM en su salida. 
 
-To use PWM on a pin you must first create the pin object, for example:
+!!! warning "Limitación del PWM"
+    La limitación es que todos deben correr a la misma frecuencia de trabajo, la cual esta entre 1Hz y 1kHz
 
-To use PWM on a pin you must first create the pin object, for example:
+![pwm signal](https://www.allaboutcircuits.com/uploads/articles/PWMDAC1_diagram1.JPG)
 
-    import machine
-    p12 = machine.Pin(12)
+![pwm concepts](https://www.researchgate.net/profile/Ahmed-Elmahalawy-2/publication/271437313/figure/fig4/AS:668441367306246@1536380249520/PWM-signal-with-its-two-basic-time-periods.png)
 
-Then create the PWM object using:
+## Aplicación de PWM
 
+Para usar el PWM, primero se debe crear un objeto 
 
-    pwm12 = machine.PWM(p12)
+```python
+import machine
+p12 = machine.Pin(12)
+```
+Después, creas un objeto PWM:
 
-You can set the frequency and duty cycle using:
+```python
+pwm12 = machine.PWM(p12)
+```
+Se puede ajustar la frecuencia y el ciclo de trabajo con:
 
-    pwm12.freq(500)
-    pwm12.duty(512)
+```python
+pwm12.freq(500)
+pwm12.duty(512)
+```
+
+- La frecuencia va de entre `1` a `1000`, esto es equivalente a 1Hz hasta 1kHz.
+- El ciclo de trabajo va de `0` a `1023`, esto es equivalente a `0%` hasta `100%`
+
+## Referencias
 
 http://docs.micropython.org/en/latest/esp8266/tutorial/pwm.html
-
-PWM can be enabled on all pins except Pin(16). There is a single frequency for all channels, with range between 1 and 1000 (measured in Hz). The duty cycle is between 0 and 1023 inclusive.

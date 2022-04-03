@@ -1,4 +1,4 @@
-#  Sensores Digitales
+#  Ejemplos con Sensores Digitales
 
 La simulación de sensores digitales básicos es muy sencillo aplicando la configuración pull-up o pull-down. Dado que la señal de un alto o bajo representa un estado u otro.
 

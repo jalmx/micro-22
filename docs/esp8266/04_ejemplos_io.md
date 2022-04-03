@@ -321,7 +321,7 @@ Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays co
         ```python
         ```
 
-## Control básico de Motor DC
+## Control básico de Motores
 
 En esta primera sección vamos realizar un control básico de un motor DC de 5V DC. Recuerda que la salida de señal del ESP8266 en alto es de `3.3V`, por lo tanto, se necesita una fuente adicional.
  
@@ -392,7 +392,62 @@ Aquí coloco un esquemático de conexión obtenido del [datasheet](https://www.t
                 motor_izquierda.off()
                 motor_derecha.off()
         ```
-## Control básico de Motor PAP
+### Control básico de Motor PAP
+
+#### Motores Paso a Pasa (PAP) Unipolar vs Bipolar
+
+Existen 2 tipos de motores Paso a Paso, los cuales son muy similares, lo que los diferencia es la cantidad de bobinas y derivaciones. Su control es muy parecido, al final lo que se debe realizar es una conmutación al de las bobinas, con ello se configura su dirección y velocidad, esto consiste en hacer combinación de polos magnéticos en las bobinas del motor.
+
+![motor pap](imgs/bipolar-unipolar.png)
+
+**Secuencia para controlar motores paso a paso Bipolares**
+
+Un motor paso a paso bipolar necesita invertir la corriente que circula por sus bobinas en una secuencia determinada para provocar el movimiento del eje.
+
+Paso|Bobina 1A|Bobina 1B|Bobina 2A|Bobina 2B
+:-:|:-:|:-:|:-:|:-:
+Paso 1 |1|0|1|0
+Paso 2 |1|0|0|1
+Paso 3 |0|1|0|1
+Paso 4 |0|1|1|0
+
+Secuencia para controlar motores paso a paso Unipolares
+
+Hay tres secuencias para controlar los motores paso a paso unipolares
+
+**Simple o wave drive**: Es una secuencia donde se activa una bobina a la vez. Esto hace que el motor tenga un paso más suave pero por el contrario tenga menos torque y menos retención.
+
+Paso |Bobina A |Bobina B |Bobina C |Bobina D
+:-:|:-:|:-:|:-:|:-:
+Paso 1|1|0|0|0
+Paso 2|0|1|0|0
+Paso 3|0|0|1|0
+Paso 4|0|0|0|1
+
+**Normal**: Es la secuencia más usada y la que recomiendan los fabricantes. Con esta secuencia el motor avanza un paso por vez y siempre hay dos bobinas activadas. Con esto se obtiene un mayor torque y retención.
+
+Paso|Bobina A|Bobina B|Bobina C|Bobina D
+:-:|:-:|:-:|:-:|:-:
+Paso 1|1|1|0|0
+Paso 2|0|1|1|0
+Paso 3|0|0|1|1
+Paso 4|1|0|0|1
+
+**Medio paso**: Se activan primero dos bobinas y después solo una y así sucesivamente. Esto provoca que el motor avance la mitad del paso real.  Esto se traduce en un giro más suave y preciso.
+
+Paso|Bobina A|Bobina B|Bobina C|Bobina D
+:-:|:-:|:-:|:-:|:-:
+Paso 1|1|0|0|0
+Paso 2|1|1|0|0
+Paso 3|0|1|0|0
+Paso 4|0|1|1|0
+Paso 5|0|0|1|0
+Paso 6|0|0|1|1
+Paso 7|0|0|0|1
+Paso 8|1|0|0|1
+
+Documentación recomendada Articulo de Adafruit [Types of Steppers](https://learn.adafruit.com/all-about-stepper-motors/types-of-steppers)
+
 
 !!! example "Motor PAP a medio paso"
     - **Descripción:** Hacer funcionar en un sentido el motor PAP en medio paso

@@ -11,9 +11,9 @@ Un sensor en es un sistema el cual capta una variable física y reacciona para l
 - Acoplamiento de señal del transductor
 - Salida (Pasa la señal o acciona un actuador)
 
-![diagrama de bloques](TODO.png)
+![diagrama de bloques](imgs/proceso_sensor.svg)
 
-*Un sensor es todo aquello que tiene una propiedad sensible a una magnitud del medio, y al variar esta magnitud también varía con cierta intensidad la propiedad, es decir, manifiesta la presencia de dicha magnitud, y también su medida...[Definción wikipedia](https://es.wikipedia.org/wiki/Sensor)*
+*Un sensor es todo aquello que tiene una propiedad sensible a una magnitud del medio, y al variar esta magnitud también varía con cierta intensidad la propiedad, es decir, manifiesta la presencia de dicha magnitud, y también su medida...[Extraido de wikipedia](https://es.wikipedia.org/wiki/Sensor)*
 
 ## Variable física
 
