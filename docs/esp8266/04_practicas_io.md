@@ -394,7 +394,51 @@ Aquí coloco un esquemático de conexión obtenido del [datasheet](https://www.t
         ```
 ## Control básico de Motor PAP
 
+!!! example "Motor PAP a medio paso"
+    - **Descripción:** Hacer funcionar en un sentido el motor PAP en medio paso
+    - **Material:** 
+        - 1 Motor PAP
+        - 1 Driver ULN2003
+        - Fuente externa
+    - **Diagrama:** <br>![relay](imgs/motor_pap.png)
+    - **Código:** 
+        ```python
+        ```
 
+!!! example "Motor PAP a paso completo"
+    - **Descripción:** Hacer funcionar en un sentido el motor PAP en medio paso
+    - **Material:** 
+        - 1 Motor PAP
+        - 1 Driver ULN2003
+        - Fuente externa
+    - **Diagrama:** <br>![relay](imgs/motor_pap.png)
+    - **Código:** 
+        ```python
+        ```
+!!! example "Motor PAP medio y paso completo"
+    - **Descripción:** Cuando se presione un boton el motor debe girar en un sentido a medio paso, y cuando se suelte debe detenerse, en caso que presione el otro boton debe girar a paso completo y cuando se deje de presionar que se detenga, en caso que se presionen ambos botones, no debe girar en ningún sentido.
+    - **Material:** 
+        - 1 Motor PAP
+        - 1 Driver ULN2003
+        - 2 Push button
+        - 2 R1k
+        - Fuente externa
+    - **Diagrama:** <br>![relay](imgs/motor_pap_push.png)
+    - **Código:** 
+        ```python
+        ```
+!!! example "Invertir Motor PAP"
+    - **Descripción:** Cuando se presione un boton el motor debe girar hacia un sentido, y cuando se suelte debe detenerse, en caso que presione el otro boton debe girar en sentido contrario y cuando se deje de presionar que se detenga, en caso que se presionen ambos botones, no debe girar en ningún sentido.
+    - **Material:** 
+        - 1 Motor PAP
+        - 1 Driver ULN2003
+        - 2 Push button
+        - 2 R1k
+        - Fuente externa
+    - **Diagrama:** <br>![relay](imgs/motor_pap_push.png)
+    - **Código:** 
+        ```python
+        ```
 
 ## Control de cargas AC
 
@@ -433,4 +477,3 @@ Aquí coloco un esquemático de conexión obtenido del [datasheet](https://www.t
                 sleep_ms(250) #doy un tiempo mínimo para no saturar al micro
                 relay.value( not relay.value() ) #enciendo el led
         ```
-
