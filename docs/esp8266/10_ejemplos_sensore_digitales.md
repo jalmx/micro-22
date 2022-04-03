@@ -25,6 +25,8 @@ Este sensor nos manda una señal alta de 3.3V cuando existe presencia o recibe r
     **Circuito:**  <br> ![pir](imgs/pir.png)
     **Código:**
 
+![](img/pir_basic.png)
+
 ## Sensor de Temperatura y Humedad DTH11
 
 [datasheet](https://www.mouser.com/datasheet//DHT11-Technical-Data-Sheet-Translated-Version-.pdf)
