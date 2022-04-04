@@ -50,6 +50,18 @@ Existen varios sensores de luz, aquí estamos abarcando el mas sencillo y básic
             sleep_ms(100) # Doy un tiempo de espera
         ```
 
+!!! example "Luces del parque"
+    - **Descripción:** Cuando el sensor detecte que ha obscurecido debe mandar a encender de manera secuencial 5 lamparas, las cuales están ubicadas en el parque, es decir, se irán prendiendo una a una hasta quedar todas encendidas. A la salida del sol las luces se deben apagar de la misma manera hasta que se apaguen todas
+    - **Material:** 
+        - 1 LDR
+        - 1 R10k
+        - 5 LED
+        - 5 R330
+    - **Diagrama:** <br>![adc_1](imgs/)
+    - **Código:** 
+        ```python
+        ```
+
 ## Sensor de Temperatura LM35 
 
 Existe una enorme variedad de sensores de temperatura, estaremos viendo el **[LM35](https://www.ti.com/lit/ds/symlink/lm35.pdf)**, sensor de temperatura lineal.
@@ -58,5 +70,25 @@ Existe una enorme variedad de sensores de temperatura, estaremos viendo el **[LM
 
 ![lm35](imgs/lm35.png)
 
-!!! example "Termómetro"
-    Vamos a realizar un termómetro con el LM35. La temperatura se mandará a la terminal. Debe mandar la temperatura en grados Celsius y grados Fahrenheit
+!!! example "Termómetro básico"
+    - **Descripción:**     Vamos a realizar un termómetro con el LM35. La temperatura se mandará a la terminal. Debe mandar la temperatura en grados Celsius.
+    - **Material:** 
+        - 1 LDR
+        - 1 R10k
+        - 1 LED
+        - 1 R330
+    - **Diagrama:** <br>![adc_1](imgs/)
+    - **Código:** 
+        ```python
+        ```
+!!! example "Termómetro Celsius/Fahrenheit"
+    - **Descripción:**     Vamos a realizar un termómetro con el LM35. La temperatura se mandará a la terminal. Debe mandar la temperatura en grados Celsius y grados Fahrenheit
+    - **Material:** 
+        - 1 LDR
+        - 1 R10k
+        - 1 LED
+        - 1 R330
+    - **Diagrama:** <br>![adc_1](imgs/)
+    - **Código:** 
+        ```python
+        ```

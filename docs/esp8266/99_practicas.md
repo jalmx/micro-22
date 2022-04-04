@@ -158,7 +158,16 @@ Descripción| Materiales | Diagrama pictórico
 1. Leer 2 potenciometros, cada uno controla una barra de leds, en el rango del 0 al 100% los leds iran encendiendo.
 2. Leer un potenciometro e indicar por terminal el porcentaje equivalente, es decir, si se recibe 0.0 es equivalente al 0%, si recibes el 0.5 se imprime 50%, hasta llegar al 100%.
 
-### sensores Analogicos
+### sensores Analógicos
 
-. Simular un sensor de luz junto con un sensor de presencia (digital). Dicho sensores trabajan a la par, si hay poca luz y existe presencia en el cuarto se debe encender un foco. En caso que no exista presencia sin importar la intensidad de la luz, el foco no enciende.
+Simular un sensor de luz junto con un sensor de presencia (digital). Dicho sensores trabajan a la par, si hay poca luz y existe presencia en el cuarto se debe encender un foco. En caso que no exista presencia sin importar la intensidad de la luz, el foco no enciende.
 3. Simular un sensor infrarrojo para accionar el movimiento de un servomotor, entre mas luz incida debe incrementar el angulo del servomotor. Es decir, entre mas cerca se incrementa el angulo, entre mas lejos es menor el angulo.
+
+!!! example "Carrito seguido de luz"
+    - **Descripción:** El carrito debe reaccionar a la estimulación de la luz. El carrito debe seguir la dirección de la luz. Por ende, las llantitas deben activarse para lograr dicho efecto.
+    - **Material:** 
+        - 2 LDR
+        - 2 R10k
+        - 2 Motor DC
+        - 1 L293D
+    - **Esquema:** <br>![carrito](imgs/carrito.svg)
