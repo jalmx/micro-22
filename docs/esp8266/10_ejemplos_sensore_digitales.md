@@ -14,9 +14,9 @@ Este sensor nos manda una señal alta de 3.3V cuando existe presencia o recibe r
     - **Descripción:**
     Tenemos un sensor PIR, que cuando exista presencia mande a activar un parpadeo de LEDs de forma rápida (medio segundo), mientras no exista presencia los LEDs deben parpadear de manera lenta (2seg)
     - **Materiales:**
-      - 1 Sensor PIR
-      - 1 Led
-      - 1 R330
+        - 1 Sensor PIR
+        - 1 Led
+        - 1 R330
     - **Circuito:** <br> ![pir](imgs/pir_basic.png)
     - **Código:**
         ```python
@@ -46,11 +46,11 @@ Este sensor nos manda una señal alta de 3.3V cuando existe presencia o recibe r
 !!! example "Luz automática"
     - **Descripción:** Ahora tenemos un sensor de presencia junto a un push button en una habitación. Lo que queremos es que si existe presencia y el push button se presiona se encienda la luz del cuarto, pero si la persona deja la habitación pero no apago la luz se debe apagar el foco en un tiempo definido. Al salir del cuarto se presiona el push button se debe apagar el foco.
     - **Materiales:**
-      - 1 Sensor PIR
-      - 1 Led
-      - 1 R330
-      - 1 Push button
-      - 1 R1k
+        - 1 Sensor PIR
+        - 1 Led
+        - 1 R330
+        - 1 Push button
+        - 1 R1k
     - **Circuito:**  <br> ![pir](imgs/pir_boton.png)
     - **Código:**
         ```python
@@ -120,7 +120,7 @@ d.humidity()    # eg. 41.3 (% RH)
 !!! example "Obteniendo los datos del DTH11"
     - **Descripción:** Vamos a obtener los datos del sensor y mandarlos a la terminal, el invervalo sera de cada 1 segundo
     - **Materiales:**
-      - 1 Sensor DTH11
+        - 1 Sensor DTH11
     - **Circuito:** <br> ![dth11](imgs/dth11_1.png)
     - **Código:**
         ```python
