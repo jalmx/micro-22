@@ -11,6 +11,71 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/01_instalacion/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/02_esp8266/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/03_pines_io/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/04_ejemplos_io/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/05_entrada_adc/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/06_ejemplos_adc/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/07_pwm/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/08_ejemplos_pwm/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/09_sensores/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/10_ejemplos_sensore_digitales/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/11_ejemplos_sensores_analogicos/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/99_practicas/</loc>
+         <lastmod>2022-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/</loc>
          <lastmod>2022-04-04</lastmod>
          <changefreq>daily</changefreq>
@@ -207,71 +272,6 @@
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/practicas/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/01_instalacion/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/02_esp8266/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/03_pines_io/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/04_ejemplos_io/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/05_entrada_adc/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/06_ejemplos_adc/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/07_pwm/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/08_ejemplos_pwm/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/09_sensores/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/10_ejemplos_sensore_digitales/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/11_ejemplos_sensores_analogicos/</loc>
-         <lastmod>2022-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/esp8266/99_practicas/</loc>
          <lastmod>2022-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
