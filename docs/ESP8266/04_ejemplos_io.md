@@ -154,8 +154,8 @@ title: Ejemplos de I/O Digitales
         from machine import Pin
         from time import sleep_ms # importo la función sleep_ms 
 
-        pin1 = Pin(5, Pin.OUT,value=0) #configuro D1 como salida
-        boton = Pin(16, Pin.IN) # configuro D0 como entrada
+        boton = Pin(5, Pin.IN) # configuro D0 como entrada
+        pin1 = Pin(4, Pin.OUT,value=0) #configuro D1 como salida
 
         while True: # ciclo infinito
                 
@@ -179,8 +179,8 @@ title: Ejemplos de I/O Digitales
         from machine import Pin
         from time import sleep_ms # importo la función sleep_ms 
 
-        pin1 = Pin(5, Pin.OUT,value=0) #configuro D1 como salida
-        boton = Pin(16, Pin.IN) # configuro D0 como entrada
+        boton = Pin(5, Pin.IN) # configuro D0 como entrada
+        pin1 = Pin(4, Pin.OUT,value=0) #configuro D1 como salida
 
         while True: # ciclo infinito
                 
@@ -209,7 +209,8 @@ title: Ejemplos de I/O Digitales
         pin1 = Pin(4, Pin.OUT, value=0) #configuro D1 como salida
         boton1 = Pin(5, Pin.IN) # configuro D2 como salida
         pin2 = Pin(0, Pin.OUT, value=0) #configuro D3 como salida y lo pongo en bajo
-        boton2 = Pin(2, Pin.IN) # configuro D4 como entrada
+        boton2 = Pin(2, Pin.IN) # configuro D4 como entrada,
+        #Nota: Si el pin 2 te da problemas, cambialo a otro pin
 
         while True: # ciclo infinito
             
@@ -291,13 +292,39 @@ Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays co
 ![display](imgs/display.png)
 
 !!! example "Display de 7 segmentos"
-    - **Descripción:** Creación de un contador básico con un display de 7 segmentos, el cual comenzará en 0 y terminará en F, haciendo un conteo hexadecimal, el intervalo de tiempo será de un segundo, una vez que termine se reinicia automáticamente
+    - **Descripción:** Creación de un contador básico con un display de 7 segmentos, el cual comenzará en **0** y terminará en **F**, haciendo un conteo hexadecimal, el intervalo de tiempo será de un segundo, una vez que termine se reinicia automáticamente, volviendo a comenzar el conteo.
     - **Material:** 
         - 1 Display 7 segmentos cátodo común
         - 7 R330 
-    - **Diagrama:** <br> ![practica 3](imgs/3.1.1_pract.png)
+    - **Diagrama:** <br> ![practica 3](imgs/display_7s.png)
     - **Código:** 
         ```python
+        from machine import Pin
+        from time import sleep # importo la función sleep_ms 
+
+        def display(A,B,C,D,E,F,G,time=1):
+            # segmentos del display
+            Pin(5, Pin.OUT, value=a) # segmento A - D1
+            Pin(4, Pin.OUT, value=a) # segmento B - D2
+            Pin(0, Pin.OUT, value=a) # segmento C - D3
+            Pin(2, Pin.OUT, value=a) # segmento D - D4
+            Pin(14, Pin.OUT, value=a) # segmento E - D5
+            Pin(12, Pin.OUT, value=a) # segmento F - D6
+            Pin(13, Pin.OUT, value=a) # segmento G - D7
+            sleep(time) # tiempo entre cambio de numero
+            
+        while True:
+            # creo el digito 0
+            print('digito 0')
+            display(1,1,1,1,1,1,0)
+            print('digito 1')
+            display(0,1,1,0,0,0,0)
+            print('digito 2')
+            display(1,1,0,1,1,0,1)
+            print('digito 3')
+            display(1,1,1,1,0,0,1)
+            print('digito F')
+            display(1,0,0,0,1,1,1)
         ```
 
 !!! example "Mensaje con Display de 7-seg"
@@ -305,10 +332,51 @@ Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays co
     - **Material:** 
         - 1 Display 7 segmentos cátodo común
         - 7 R330 
-    - **Diagrama:** <br> ![practica 3](imgs/3.1.1_pract.png)
+    - **Diagrama:** <br> ![practica 3](imgs/display_7s.png)
     - **Código:** 
         ```python
+        from machine import Pin
+        from time import sleep # importo la función sleep_ms 
+
+        def display(number_display=tuple(), time=1):
+            # segmentos del display
+            Pin(5, Pin.OUT, value=number_display[0]) # segmento A - D1
+            Pin(4, Pin.OUT, value=number_display[1]) # segmento B - D2
+            Pin(0, Pin.OUT, value=number_display[2]) # segmento C - D3
+            Pin(2, Pin.OUT, value=number_display[3]) # segmento D - D4
+            Pin(14, Pin.OUT, value=number_display[4]) # segmento E - D5
+            Pin(12, Pin.OUT, value=number_display[5]) # segmento F - D6
+            Pin(13, Pin.OUT, value=number_display[6]) # segmento G - D7
+            sleep(time) # tiempo entre cambio de numero
+
+        boton = Pin(16, Pin.IN)
+        number = 0
+
+        numbers = [
+                (), # H
+                (1,1,1,1,1,1,0), # O
+                (), # L
+                (), # A
+            ]
+
+        display(numbers[0]) # para mostrar el 0 desde el inicio
+        print('digito ', number)
+
+        while True:
+            # creo el digito 0
+            
+            if boton.value():
+                number += 1
+                sleep(0.1)
+                if number < len(numbers) :
+                    print('digito ', number)
+                    display(numbers[number])
+                else:
+                    number=0 # reinicio el contador para que comience mostrando el cero
+                    display(numbers[number])
+                    print('digito ', number)
         ```
+
 !!! example "Display de 7 segmentos por botón"
     - **Descripción:** Creación de un contador básico con un display de 7 segmentos, el cual comenzará en 0 y terminará en F, el cambio se hará cada vez que sea presionado un push button
     - **Material:** 
@@ -316,9 +384,50 @@ Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays co
         - 7 R330 
         - 1 Push button
         - 1 R1k
-    - **Diagrama:** <br> ![practica 3](imgs/3.1.4_pract.png)
+    - **Diagrama:** <br> ![practica 3](imgs/display_7s_push.png)
     - **Código:** 
         ```python
+        from machine import Pin
+        from time import sleep # importo la función sleep_ms 
+
+        def display(number_display=tuple(), time=1):
+            # segmentos del display
+            Pin(5, Pin.OUT, value=number_display[0]) # segmento A - D1
+            Pin(4, Pin.OUT, value=number_display[1]) # segmento B - D2
+            Pin(0, Pin.OUT, value=number_display[2]) # segmento C - D3
+            Pin(2, Pin.OUT, value=number_display[3]) # segmento D - D4
+            Pin(14, Pin.OUT, value=number_display[4]) # segmento E - D5
+            Pin(12, Pin.OUT, value=number_display[5]) # segmento F - D6
+            Pin(13, Pin.OUT, value=number_display[6]) # segmento G - D7
+            sleep(time) # tiempo entre cambio de numero
+
+        boton = Pin(16, Pin.IN)
+        number = 0
+
+        numbers = [
+                (1,1,1,1,1,1,0), # 0
+                (0,1,1,0,0,0,0), # 1
+                (1,1,0,1,1,0,1), # 2
+                (1,1,1,1,0,0,1), # 3
+                (1,0,0,0,1,1,1)  # 4
+            ]
+
+        display(numbers[0]) # para mostrar el 0 desde el inicio
+        print('digito ', number)
+
+        while True:
+            # creo el digito 0
+            
+            if boton.value():
+                number += 1
+                sleep(0.1)
+                if number < len(numbers) :
+                    print('digito ', number)
+                    display(numbers[number])
+                else:
+                    number=0 # reinicio el contador para que comience mostrando el cero
+                    display(numbers[number])
+                    print('digito ', number)
         ```
 
 ## Control básico de Motores
