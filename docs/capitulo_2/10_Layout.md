@@ -16,7 +16,7 @@ Contamos con 3 tipos de manejadores de layout (`geometry manager`), que son:
 - `place`: 
 - `grid`:
 
-!!! danger "No se mezclan estos manejadores"
+!!! danger "No mezclar los manejadores"
     No se deben combinar estas manejadores dentro de un mismo contenedor. Se pueden tener diversos contenedores y en cada uno manejar un tipo distinto, si. Pero nunca dentro del mismo contenedor.
 
 ![geometry](https://s3.ap-south-1.amazonaws.com/s3.studytonight.com/tutorials/uploads/pictures/1592987369-71449.jpg)

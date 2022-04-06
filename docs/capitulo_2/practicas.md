@@ -1,8 +1,10 @@
 # Practicas
 
+Ahora vamos a poner en practica las bases para la generación de aplicaciones
+
 ## Generador de contraseñas seguras
 
-![pedndiente la imagen]()
+![pedndiente la imagen](examples/password_generator/pass_ui.svg)
 
 ## Ley de Ohm
 

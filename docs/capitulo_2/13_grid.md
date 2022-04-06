@@ -17,7 +17,7 @@ Podemos ajustar cuantos secciones (celdas) abarcará un widget
 ## Sintaxis
 
 ```python
-widget.grid( grid_options... )
+widget.grid( **grid_options... )
 ```
 Los argumentos que puede recibe la función `grid` son:
 
@@ -34,3 +34,69 @@ Los argumentos que puede recibe la función `grid` son:
 
 ## Ejemplos
 
+```python
+from tkinter import Tk, Label, RIDGE
+
+root = Tk()
+root.geometry("320x240")
+
+courses = ['Electronica','Digitales','Neumática','Dibujo 3D','Mediciones','PLC'] 
+r = 'Cursos' 
+
+
+for i, c in enumerate(courses):
+    Label(root,text=c, width=15).grid(column=0, row=i, ipadx=4, ipady=4, padx=4, pady=4)
+    Label(root,text=r, relief=RIDGE, width=15).grid(column=1, row=i, ipadx=4, ipady=4, padx=4, pady=4)
+
+root.mainloop()
+``` 
+![grid](img/grid_course.png)
+
+
+Se tiene le diseño que se quiere obtener:
+
+![grid login](https://www.pythontutorial.net/wp-content/uploads/2020/11/Tkinter-Grid-row-and-column-configruation.png)
+
+```python
+from tkinter import Tk, Label, Entry, Button, W, E
+
+# root window
+root = Tk()
+root.geometry("300x110")
+root.title('Login')
+root.resizable(0, 0) # se evita que se pueda cambiar el tamaño de la ventana
+
+# se configura el grid, cada columna con un peso distinto para que midan en proporcion, se definen 2 columnas
+root.columnconfigure(0, weight=1)
+root.columnconfigure(1, weight=3)
+# en total seria 4, es decir, el de peso de 1 tendria un 1/4 y el de 3 tendria 3/4 del espacio
+
+
+# usuario
+username_label = Label(root, text="Usuario:")
+username_label.grid(column=0, row=0, sticky=W, padx=5, pady=5)
+
+username_entry = Entry(root)
+username_entry.grid(column=1, row=0, sticky=E, padx=5, pady=5)
+
+# contraseña
+password_label = Label(root, text="Contraseña:")
+password_label.grid(column=0, row=1, sticky=W, padx=5, pady=5)
+
+password_entry = Entry(root,  show="*")
+password_entry.grid(column=1, row=1, sticky=E, padx=5, pady=5)
+
+# boton de iniciar sesión
+login_button = Button(root, text="Iniciar sesión")
+login_button.grid(column=1, row=3, sticky=E, padx=5, pady=5)
+
+
+root.mainloop()
+```
+
+![grid_login](img/grid_login.png)
+
+### Referencias
+
+https://pythonguides.com/python-tkinter-grid/
+https://www.pythontutorial.net/tkinter/tkinter-grid/
