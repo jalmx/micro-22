@@ -526,82 +526,206 @@ Hay tres secuencias para controlar los motores paso a paso unipolares
 
 **Simple o wave drive**: Es una secuencia donde se activa una bobina a la vez. Esto hace que el motor tenga un paso más suave pero por el contrario tenga menos torque y menos retención.
 
-Paso |Bobina A |Bobina B |Bobina C |Bobina D
-:-:|:-:|:-:|:-:|:-:
-Paso 1|1|0|0|0
-Paso 2|0|1|0|0
-Paso 3|0|0|1|0
-Paso 4|0|0|0|1
+|Paso |Bobina A |Bobina B |Bobina C |Bobina D|
+|:-:|:-:|:-:|:-:|:-:|
+|Paso 1|1|0|0|0|
+|Paso 2|0|1|0|0|
+|Paso 3|0|0|1|0|
+|Paso 4|0|0|0|1|
 
-**Normal**: Es la secuencia más usada y la que recomiendan los fabricantes. Con esta secuencia el motor avanza un paso por vez y siempre hay dos bobinas activadas. Con esto se obtiene un mayor torque y retención.
+**Normal - Full Step**: Es la secuencia más usada y la que recomiendan los fabricantes. Con esta secuencia el motor avanza un paso por vez y siempre hay dos bobinas activadas. Con esto se obtiene un mayor torque y retención.
 
-Paso|Bobina A|Bobina B|Bobina C|Bobina D
-:-:|:-:|:-:|:-:|:-:
-Paso 1|1|1|0|0
-Paso 2|0|1|1|0
-Paso 3|0|0|1|1
-Paso 4|1|0|0|1
+|Paso|Bobina A|Bobina B|Bobina C|Bobina D|
+|:-:|:-:|:-:|:-:|:-:|
+|Paso 1|1|1|0|0|
+|Paso 2|0|1|1|0|
+|Paso 3|0|0|1|1|
+|Paso 4|1|0|0|1|
 
 **Medio paso**: Se activan primero dos bobinas y después solo una y así sucesivamente. Esto provoca que el motor avance la mitad del paso real.  Esto se traduce en un giro más suave y preciso.
 
-Paso|Bobina A|Bobina B|Bobina C|Bobina D
-:-:|:-:|:-:|:-:|:-:
-Paso 1|1|0|0|0
-Paso 2|1|1|0|0
-Paso 3|0|1|0|0
-Paso 4|0|1|1|0
-Paso 5|0|0|1|0
-Paso 6|0|0|1|1
-Paso 7|0|0|0|1
-Paso 8|1|0|0|1
+|Paso|Bobina A|Bobina B|Bobina C|Bobina D|
+|:-:|:-:|:-:|:-:|:-:|
+|Paso 1|1|0|0|0|
+|Paso 2|1|1|0|0|
+|Paso 3|0|1|0|0|
+|Paso 4|0|1|1|0|
+|Paso 5|0|0|1|0|
+|Paso 6|0|0|1|1|
+|Paso 7|0|0|0|1|
+|Paso 8|1|0|0|1|
 
 Documentación recomendada Articulo de Adafruit [Types of Steppers](https://learn.adafruit.com/all-about-stepper-motors/types-of-steppers)
 
 
-!!! example "Motor PAP a medio paso"
-    - **Descripción:** Hacer funcionar en un sentido el motor PAP en medio paso
+!!! example "Motor PAP simple"
+    - **Descripción:** Hacer funcionar en un sentido el motor PAP a paso simple, con inversion de giro automático
     - **Material:** 
         - 1 Motor PAP
         - 1 Driver ULN2003
         - Fuente externa
-    - **Diagrama:** <br>![relay](imgs/motor_pap.png)
+    - **Diagrama:** <br>![motor pap](imgs/motor_pap.png)
     - **Código:** 
         ```python
+        from machine import Pin
+        from time import sleep_ms, sleep
+
+        def pap(pin,signal):
+            Pin(pin[0], Pin.OUT, value=signal[0]) # bobina A  
+            Pin(pin[1], Pin.OUT, value=signal[1]) # bobina B
+            Pin(pin[2], Pin.OUT, value=signal[2]) # bobina C
+            Pin(pin[3], Pin.OUT, value=signal[3]) # bobina D
+
+        TIME = 250
+
+        PINS = [5,4,0,2] # numero de los pines que usare en el orden de las bobinas A,B,C,D
+        #cuatro pasos
+        izquierda = ( 
+            (0,0,0,1),
+            (0,0,1,0),
+            (0,1,0,0),
+            (1,0,0,0),
+            )
+        #cuatro pasos
+        derecha = ( 
+            (1,0,0,0),
+            (0,1,0,0),
+            (0,0,1,0),
+            (0,0,0,1),
+            )
+
+        while True:
+            print("derecha")
+            for _ in range(8): # para que de un giro de 360º
+                for secuencia in derecha:
+                    print(secuencia)
+                    pap(PINS,secuencia)
+                    sleep_ms(500)
+            
+            sleep(1) # espero 1 segundo a dar la vuelta
+
+            print("izquierda")
+            for _ in range(8):
+                for secuencia in izquierda:
+                    print(secuencia)
+                    pap(PINS,secuencia)
+                    sleep_ms(500)
         ```
 
-!!! example "Motor PAP a paso completo"
-    - **Descripción:** Hacer funcionar en un sentido el motor PAP en medio paso
+!!! example "Motor PAP a paso normal"
+    - **Descripción:** Hacer funcionar en un sentido el motor PAP a paso normal, de ida y vuelta
     - **Material:** 
         - 1 Motor PAP
         - 1 Driver ULN2003
         - Fuente externa
-    - **Diagrama:** <br>![relay](imgs/motor_pap.png)
+    - **Diagrama:** <br>![motor pap](imgs/motor_pap.png)
     - **Código:** 
         ```python
+        from machine import Pin
+        from time import sleep_ms, sleep
+
+        def pap(pin,signal):
+            Pin(pin[0], Pin.OUT, value=signal[0]) # bobina A  
+            Pin(pin[1], Pin.OUT, value=signal[1]) # bobina B
+            Pin(pin[2], Pin.OUT, value=signal[2]) # bobina C
+            Pin(pin[3], Pin.OUT, value=signal[3]) # bobina D
+
+        TIME = 250
+
+        PINS = [5,4,0,2] # numero de los pines que usare en el orden de las bobinas A,B,C,D
+        #cuatro pasos
+        izquierda = ( 
+            (0,0,1,1),
+            (0,1,1,0),
+            (1,1,0,0),
+            (1,0,0,1),
+            )
+        #cuatro pasos
+        derecha = ( 
+            (1,1,0,0),
+            (0,1,1,0),
+            (0,0,1,1),
+            (1,0,0,1),
+            )
+
+        while True:
+            print("derecha")
+            for _ in range(8):
+                for secuencia in derecha:
+                    print(secuencia)
+                    pap(PINS,secuencia)
+                    sleep_ms(500)
+            
+            print("izquierda")
+            sleep(1)
+            
+            for _ in range(8):
+                for secuencia in izquierda:
+                    print(secuencia)
+                    pap(PINS,secuencia)
+                    sleep_ms(500)
         ```
-!!! example "Motor PAP medio y paso completo"
-    - **Descripción:** Cuando se presione un boton el motor debe girar en un sentido a medio paso, y cuando se suelte debe detenerse, en caso que presione el otro boton debe girar a paso completo y cuando se deje de presionar que se detenga, en caso que se presionen ambos botones, no debe girar en ningún sentido.
+
+!!! example "Motor PAP a medio paso"
+    - **Descripción:** Hacer funcionar en un sentido el motor PAP a medio paso, de ida y vuelta
     - **Material:** 
         - 1 Motor PAP
         - 1 Driver ULN2003
-        - 2 Push button
-        - 2 R1k
         - Fuente externa
-    - **Diagrama:** <br>![relay](imgs/motor_pap_push.png)
+    - **Diagrama:** <br>![motor pap](imgs/motor_pap.png)
     - **Código:** 
         ```python
-        ```
-!!! example "Invertir Motor PAP"
-    - **Descripción:** Cuando se presione un boton el motor debe girar hacia un sentido, y cuando se suelte debe detenerse, en caso que presione el otro boton debe girar en sentido contrario y cuando se deje de presionar que se detenga, en caso que se presionen ambos botones, no debe girar en ningún sentido.
-    - **Material:** 
-        - 1 Motor PAP
-        - 1 Driver ULN2003
-        - 2 Push button
-        - 2 R1k
-        - Fuente externa
-    - **Diagrama:** <br>![relay](imgs/motor_pap_push.png)
-    - **Código:** 
-        ```python
+        from machine import Pin
+        from time import sleep_ms, sleep
+
+        def pap(pin,signal):
+            Pin(pin[0], Pin.OUT, value=signal[0]) # bobina A  
+            Pin(pin[1], Pin.OUT, value=signal[1]) # bobina B
+            Pin(pin[2], Pin.OUT, value=signal[2]) # bobina C
+            Pin(pin[3], Pin.OUT, value=signal[3]) # bobina D
+
+        TIME = 250
+
+        PINS = [5,4,0,2] # numero de los pines que usare en el orden de las bobinas A,B,C,D
+        #ocho pasos
+        izquierda = ( 
+            (0,0,0,1),
+            (0,0,1,1),
+            (0,0,1,0),
+            (0,1,1,0),
+            (0,1,0,0),
+            (1,1,0,0),
+            (1,0,0,0),
+            (1,0,0,1),
+            )
+        #ocho pasos
+        derecha = ( 
+            (1,0,0,0),
+            (1,1,0,0),
+            (0,1,0,0),
+            (0,1,1,0),
+            (0,0,1,0),
+            (0,0,1,1),
+            (0,0,0,1),
+            (1,0,0,1),
+            )
+
+        while True:
+            print("derecha")
+            for _ in range(8):
+                for secuencia in derecha:
+                    print(secuencia)
+                    pap(PINS,secuencia)
+                    sleep_ms(500)
+            
+            print("izquierda")
+            sleep(1)
+            
+            for _ in range(8):
+                for secuencia in izquierda:
+                    print(secuencia)
+                    pap(PINS,secuencia)
+                    sleep_ms(500)
         ```
 
 ## Control de cargas AC
@@ -610,7 +734,8 @@ Documentación recomendada Articulo de Adafruit [Types of Steppers](https://lear
     - **Descripción:** Encender el modulo del Relay
     - **Material:** 
         - 1 Módulo de Relay
-    - **Diagrama:** <br>![relay](imgs/relay_alone.png)
+        - 1 Carga en AC
+    - **Diagrama:** <br>![carga ac](imgs/relay_alone.png)
     - **Código:** 
         ```python
         from machine import Pin#Importo el modulo para manejo de pines
@@ -624,6 +749,7 @@ Documentación recomendada Articulo de Adafruit [Types of Steppers](https://lear
     - **Descripción:** Encender el modulo del Relay
     - **Material:** 
         - 1 Módulo de Relay
+        - 1 Carga AC
         - 1 R1k
         - 1 Push button
     - **Diagrama:** <br>![relay](imgs/relay_button.png)
