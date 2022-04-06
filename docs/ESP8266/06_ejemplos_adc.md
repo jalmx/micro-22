@@ -12,15 +12,39 @@ En esta sección estaremos utilizando el ADC del microcontrolador.
     - **Código:** 
         ```python
         import machine # importo el modulo para control y configuración de pines
-        from time import sleep
+        from time import sleep, sleep_ms
 
         adc = machine.ADC(0) # configuro el GPIO0 como ADC o entrada analógica
-        
+        sleep(1) # esperamos un tiempo de estabilización
+
         while True:
             valor = adc.read() # esta función nos retorna el valor que existe en la entrada
-
+            
             print(valor) # mando a la terminal el valor del ADC
-            sleep(1) # espero un segundo
+            sleep_ms(250) # espero un segundo
+        ```
+
+!!! example "Voltimetro"
+    - **Descripción:** Encender el led configurando un pin como salida D1
+    - **Material:** 
+        - 1 Potenciómetro
+    - **Diagrama:** <br>![adc_1](imgs/adc_0.png)
+    - **Código:** 
+        ```python
+        # voltimetro
+        from machine import ADC # importo el modulo para control y configuración de pines
+        from time import sleep, sleep_ms
+
+        adc = ADC(0) # configuro el GPIO0 como ADC o entrada analógica
+        sleep(1) # esperamos un tiempo de estabilización
+
+        while True:
+            voltaje = adc.read() # esta función nos retorna el valor que existe en la entrada
+            
+            valor = (voltaje/1024) * 3
+            
+            print(valor) # mando a la terminal el valor del ADC
+            sleep_ms(250) # espero un segundo
         ```
 
 !!! example "Sensor de luz en la terminal"
@@ -34,15 +58,16 @@ En esta sección estaremos utilizando el ADC del microcontrolador.
     - **Código:** 
         ```python
         import machine # importo el modulo para control y configuración de pines
-        from time import sleep
+        from time import sleep, sleep_ms
 
-        adc = machine.ADC(0) # configuro el GPIO0 como ADC o entrada analógica
-        
+        sensor_luz = machine.ADC(0) # configuro el GPIO0 como ADC o entrada analógica
+        sleep(1) # esperamos un tiempo de estabilización
+
         while True:
-            value_adc = adc.read() # esta función nos retorna el valor que existe en la entrada
-
-            print(value_adc) # mando a la terminal el valor del ADC
-            sleep(1) # espero un segundo
+            luz = sensor_luz.read() # esta función nos retorna el valor que existe en la entrada
+            
+            print(luz) # mando a la terminal el valor del ADC
+            sleep_ms(250) # espero un segundo
         ```
 
 !!! example "Encendido secuencial de luces"
@@ -110,3 +135,7 @@ En esta sección estaremos utilizando el ADC del microcontrolador.
                 
             sleep(0.25) # espero un segundo
         ```
+
+---
+
+[Ver ejemplos con pyFirmata]()
