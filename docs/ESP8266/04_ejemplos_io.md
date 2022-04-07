@@ -353,10 +353,10 @@ Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays co
         number = 0
 
         numbers = [
-                (), # H
+                (0,1,1,0,1,1,1), # H
                 (1,1,1,1,1,1,0), # O
-                (), # L
-                (), # A
+                (0,0,0,1,1,1,0), # L
+                (1,1,1,0,1,1,1), # A
             ]
 
         display(numbers[0]) # para mostrar el 0 desde el inicio
