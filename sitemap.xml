@@ -2,312 +2,312 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/99_Fuentes/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/01_instalacion/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/02_esp8266/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/03_pines_io/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/04_ejemplos_io/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/05_entrada_adc/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/06_ejemplos_adc/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/07_pwm/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/08_ejemplos_pwm/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/09_sensores/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/10_ejemplos_sensore_digitales/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/11_ejemplos_sensores_analogicos/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/ESP8266/99_practicas/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/IOT/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/IOT/01_wifi/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/IOT/02_server/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/IOT/03_request/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/IOT/04_mqtt/</loc>
+         <lastmod>2022-04-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://www.alejandro-leyva.com/micro_22/IOT/proyectos_de_referencia/</loc>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/28BYJ-48-driver/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/28BYJ-48-motor/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/EscornaKeypad/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/NeoPixel/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/NodeMCUv3/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/Sensirion-SCD30/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/buzzer-active/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/assets/motor_step/step_motor/buzzer-passive/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/01_Introducci%C3%B3n_a_python/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/02_Variables_en_Python/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/03_Concatenacion_de_Strings/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/04_Operadores_aritm%C3%A9ticos/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/05_ingresando_dato_y_como_convertirlos/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/06_Decision_if/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/07_Operadores_l%C3%B3gicos/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/08_Estructura_de_Repeticion_-_while/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/09_Estructura_de_repeticion_-_for/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/10_Colecciones/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/11_Funciones/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/12_Archivos/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/13_Strings/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_1/14_Modulos/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/01_introduccion/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/02_tk/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/03_frame/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/04_etiqueta/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/05_boton/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/06_entry/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/07_text_area/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/08_radio/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/09_checkbox/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/10_Layout/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/11_pack/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/12_place/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/13_grid/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/14_dialog_box/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/capitulo_2/practicas/</loc>
-         <lastmod>2022-04-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/iot/</loc>
-         <lastmod>2022-04-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/iot/01_wifi/</loc>
-         <lastmod>2022-04-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/iot/02_server/</loc>
-         <lastmod>2022-04-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/iot/03_request/</loc>
-         <lastmod>2022-04-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/iot/04_mqtt/</loc>
-         <lastmod>2022-04-06</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.alejandro-leyva.com/micro_22/iot/proyectos_de_referencia/</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://www.alejandro-leyva.com/micro_22/tags.html</loc>
-         <lastmod>2022-04-06</lastmod>
+         <lastmod>2022-04-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

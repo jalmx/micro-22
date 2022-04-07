@@ -65,7 +65,7 @@ def generate_password(length=4)-> str:
     return password
 
 def main():
-    generate_password(100)
+    print(generate_password(20))
     
 if __name__ == "__main__":
     main()
