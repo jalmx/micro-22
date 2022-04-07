@@ -138,4 +138,4 @@ En esta sección estaremos utilizando el ADC del microcontrolador.
 
 ---
 
-[Ver ejemplos con pyFirmata]()
+[Ver ejemplos con pyFirmata](https://www.alejandro-leyva.com/micro-21/web/32_salidas_digitales.html)

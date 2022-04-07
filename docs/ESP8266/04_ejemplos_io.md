@@ -145,7 +145,7 @@ title: Ejemplos de I/O Digitales
     - **Descripción:** Leer una entrada digital, encenderá el LED mientras se mantenga presionado el push button
     - **Material:** 
         - 1 Led
-        - 3 R330 
+        - 1 R330 
         - 1 Push button
         - 1 R1k
     - **Diagrama:** <br> ![practica 2](imgs/2.1.1_pract.png)
@@ -170,7 +170,7 @@ title: Ejemplos de I/O Digitales
     - **Descripción:** Mientras se presione el botón los LEDs deben parpadear medio segundo
     - **Material:** 
         - 1 Led
-        - 3 R330 
+        - 1 R330 
         - 1 Push button
         - 1 R1k
     - **Diagrama:** <br> ![practica 2](imgs/2.1.1_pract.png)
@@ -240,7 +240,7 @@ title: Ejemplos de I/O Digitales
     - **Descripción:** Al presionar el push button se debe encender el led y mantenerse en ese estado; hasta que se vuelva a presionar el led regresará a su estado anterior; es decir, que se apague
     - **Material:** 
         - 1 Led
-        - 3 R330 
+        - 1 R330 
         - 1 Push button
         - 1 R1k
     - **Diagrama:** <br> ![practica 2](imgs/2.1.1_pract.png)
@@ -304,13 +304,13 @@ Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays co
 
         def display(A,B,C,D,E,F,G,time=1):
             # segmentos del display
-            Pin(5, Pin.OUT, value=a) # segmento A - D1
-            Pin(4, Pin.OUT, value=a) # segmento B - D2
-            Pin(0, Pin.OUT, value=a) # segmento C - D3
-            Pin(2, Pin.OUT, value=a) # segmento D - D4
-            Pin(14, Pin.OUT, value=a) # segmento E - D5
-            Pin(12, Pin.OUT, value=a) # segmento F - D6
-            Pin(13, Pin.OUT, value=a) # segmento G - D7
+            Pin(5, Pin.OUT, value=A) # segmento A - D1
+            Pin(4, Pin.OUT, value=B) # segmento B - D2
+            Pin(0, Pin.OUT, value=C) # segmento C - D3
+            Pin(2, Pin.OUT, value=D) # segmento D - D4
+            Pin(14, Pin.OUT, value=E) # segmento E - D5
+            Pin(12, Pin.OUT, value=F) # segmento F - D6
+            Pin(13, Pin.OUT, value=G) # segmento G - D7
             sleep(time) # tiempo entre cambio de numero
             
         while True:
@@ -330,7 +330,7 @@ Display de 7 segmentos puede ser de ánodo o cátodo común; existen displays co
 !!! example "Mensaje con Display de 7-seg"
     - **Descripción:** Crear un mensaje que se vaya leyendo en el display de 7 segmentos que diga "HOLA", el intervalo de cada letra será de medio segundo; debe quedar de manera indefinida.
     - **Material:** 
-        - 1 Display 7 segmentos cátodo común
+        - 1 Display 7 segmentos cátodo común, en caso que sea ánodo comun hacer el cambio en el código
         - 7 R330 
     - **Diagrama:** <br> ![practica 3](imgs/display_7s.png)
     - **Código:** 
