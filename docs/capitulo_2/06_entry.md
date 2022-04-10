@@ -19,5 +19,11 @@ entry.pack() # agregamos el entry a la ventana
 
 root.mainloop()
 ```
+
 ![entry](img/entry.png)
 
+## Funciones importantes
+
+- Obtener el texto que este escrito `get()`
+- Borrando el texto `delete()`
+- Insertar el texto `insert()`

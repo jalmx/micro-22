@@ -27,7 +27,7 @@ Los argumentos que puede recibe la función `grid` son:
 - `rowspan`: La cantidad de renglones que va a ocupar el widget; por default es 1.
 - `padx`/`pady`: Margen en `x` y `y`. Es la distancia entre widget y widget. Padding externo.
 - `padx`/`ipady`: Padding en `x` y `y`. Es la distancia entre el contenido y la pared del widget. Padding interno.
-- `sticky`: Por si necesitas que el widget abarque mas de una celda. By default, with sticky='', widget is centered in its cell. sticky may be the string concatenation of zero or more of N, E, S, W, NE, NW, SE, and SW, compass directions indicating the sides and corners of the cell to which widget sticks.
+- `sticky`: Por si necesitas que el widget abarque mas de una celda. Por default, wl widget queda centrado en la celda. Se pueden combinar un o mas posiciones de `N`, `E`, `S`, `W`, `NE`, `NW`, `SE`, y `SW`.
 - `rowconfigure`:  con el parámetro **`weight=1`** indicamos que la fila se expanden o contrae
 - `columnconfigure`: con el parámetro **`weight=1`** indicamos que la columna se expanden o contrae
 

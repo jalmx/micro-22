@@ -45,3 +45,11 @@ root.mainloop()
 ``` 
 
 ![personalizado](img/texto_2.png)
+
+### Referencias
+
+Para destalles comparto algunos enlaces
+
+- [https://www.geeksforgeeks.org/python-tkinter-text-widget/](https://www.geeksforgeeks.org/python-tkinter-text-widget/)
+
+- [https://tkdocs.com/shipman/text.html](https://tkdocs.com/shipman/text.html)
