@@ -24,8 +24,8 @@ En esta sección estaremos utilizando el ADC del microcontrolador.
             sleep_ms(250) # espero un segundo
         ```
 
-!!! example "Voltimetro"
-    - **Descripción:** Encender el led configurando un pin como salida D1
+!!! example "Voltímetro"
+    - **Descripción:** Se desea tener un voltimetro con el ADC, y que la información la mande a la terminal.
     - **Material:** 
         - 1 Potenciómetro
     - **Diagrama:** <br>![adc_1](imgs/adc_0.png)

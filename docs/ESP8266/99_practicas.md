@@ -119,7 +119,7 @@
     - **Diagrama:** <br>![motor pap](imgs/motor_pap_push.png)
 
 !!! example "Invertir Motor PAP"
-    - **Descripción:** Cuando se presione un boton el motor debe girar hacia un sentido, y cuando se suelte debe detenerse, en caso que presione el otro boton debe girar en sentido contrario y cuando se deje de presionar que se detenga, en caso que se presionen ambos botones, no debe girar en ningún sentido.
+    - **Descripción:** Cuando se presione un botón el motor debe girar hacia un sentido, y cuando se suelte debe detenerse, en caso que presione el otro botón debe girar en sentido contrario y cuando se deje de presionar que se detenga, en caso que se presionen ambos botones, no debe girar en ningún sentido.
     - **Material:** 
         - 1 Motor PAP
         - 1 Driver ULN2003
@@ -128,67 +128,63 @@
         - Fuente externa
     - **Diagrama:** <br>![motor pap](imgs/motor_pap_push.png)
 
-- Control de un motor DC (ON-OFF)
-  - Calcular la resistencia para el control del motor DC
-- Motor PAP
+!!! example "Encendido secuencial de luces"
+    - **Descripción:** Utilizar el divisor de tension con la LDR, para ir encendiendo 5 leds en un punto de disparo, es decir, que se elija un valor como indicativo de que hace falta encender las lamparas porque esta oscureciendo, al detectar este punto los leds se deben encender de manera secuencial, uno por uno hasta quedar todos los leds encendidos, y se baja ese punto de referencia, se deben ir apagando secuencialmente, parecido a como se fueron encendiendo.
+    - **Material:** 
+        - 1 Potenciómetro
+        - 5 leds
+        - 5 R330
+    - **Diagrama:** <br>![adc_1](imgs/ldr_sec_led.png)
 
----
-
-### DTH11
-
-Descripción| Materiales | Diagrama pictórico 
--|-|-
-6.2.1 Leer los valores de Temperatura y humedad relativa en la terminal|1 DTH11<br>|![DTH11](imgs/dth11_1.png)
-6.2.2 Leer los valores de Temperatura y humedad mostrandolo en la LCD|1 DTH11<br>1 LCD con I2C|![DTH11](imgs/dth11_lcd.png)
-6.2.3 Leer los valores de Temperatura y humedad mostrandolo en la LCD, mostrar la temperatura en grados celsius y grados farenheit|1 DTH11<br>1 LCD con I2C|![DTH11](imgs/dth11_lcd.png)
-6.2.4 Leer la temperatura,con forme vaya incrementando la temperatura vayán encendiendo los leds, y apagando en secuencia en función de la temperatura|1 LCD con I2C <br>3 LEDs<br>3 Resistencias|![DTH11](imgs/dth11_lcd_leds.png)
-
-## Salidas analógicas (PWM)
-
-- Control de Led RGB
-- Control de un motor DC
-  - Regulador de velocidad motor DC
-  - Giro de un motor DC
-- Servo
-
-1. Control de velocidad de un motor DC, se controlara la velocidad del motor a traves de un potenciómetro. Si el potenciómetro esta en 0 el motor debe estar apagado, si esta al 50% el motor girara a la mitad de su velocidad, cuando llegue a 100% el motor debe girar a su maxima velocidad.
-2. Control de la intensidad de varias luces, se tendrán 3 leds cada uno controlado con su respectivo potenciómetro para hacer variar la intensidad de la luz de cada uno. Todos de manera independiente.
-3. Control de la intensidad de varias luces, se tendrán 3 luces. 2 leds cada uno controlado con su respectivo potenciómetro para hacer variar la intensidad de la luz de cada uno, un tercero controlado con botones, uno para incrementar y otro para decrementar la intensidad. Todos de manera independiente.
-4. Utilizando un servomotor que se utilizara para controlar la pluma de la entrada de estacionamiento. Se simula un sensor infrarrojo para detectar el auto y se levante la pluma (180°), cuando no detecte el auto, bajara la pluma (0°)
-
-## Sensores digitales
-
-### Sensor PIR
-
-## Sensores analógicos
-
-## Varios
-
-### Control de cargas de alta potencia (Relay)
-
-### Ajustar estos ejercicios
-
-### Sensores
-
-#### Salidas digitales 
-1. Simula un sensor de luz el cual haga encender un foco cuando incida poca luz (por debajo del 45%). En caso que supere esa cantidad de luz el foco se debe mantener apagado.
-2. Simula un sensor de distancia (infrarrojo). Carrito seguido de luz. Se tendran 2 sensores infrarrojos, el derecho e izquierdo, cuando el sensor derecho detecte luz debe arrancar una llanta (motor DC izquierdo), cuando el sensor izquierdo reciba luz debe encender la llanta derecha (motor DC derecho). Cuando no reciba luz ningun sensor debe apagar ambos motores, si ambos reciben luz deben encender ambos motores.
-
-### entrandas analogicas
-
-1. Leer 2 potenciometros, cada uno controla una barra de leds, en el rango del 0 al 100% los leds iran encendiendo.
-2. Leer un potenciometro e indicar por terminal el porcentaje equivalente, es decir, si se recibe 0.0 es equivalente al 0%, si recibes el 0.5 se imprime 50%, hasta llegar al 100%.
-
-### sensores Analógicos
-
-Simular un sensor de luz junto con un sensor de presencia (digital). Dicho sensores trabajan a la par, si hay poca luz y existe presencia en el cuarto se debe encender un foco. En caso que no exista presencia sin importar la intensidad de la luz, el foco no enciende.
-3. Simular un sensor infrarrojo para accionar el movimiento de un servomotor, entre mas luz incida debe incrementar el angulo del servomotor. Es decir, entre mas cerca se incrementa el angulo, entre mas lejos es menor el angulo.
+## Entradas analógicas - ADC
 
 !!! example "Carrito seguido de luz"
-    - **Descripción:** El carrito debe reaccionar a la estimulación de la luz. El carrito debe seguir la dirección de la luz. Por ende, las llantitas deben activarse para lograr dicho efecto.
+    - **Descripción:** El carrito debe reaccionar a la estimulación de la luz. El carrito debe seguir la dirección de la luz. Por ende, las llantas deben activarse para lograr dicho efecto.
     - **Material:** 
         - 2 LDR
         - 2 R10k
         - 2 Motor DC
         - 1 L293D
     - **Esquema:** <br>![carrito](imgs/carrito.svg)
+
+## Salidas analógicas (PWM)
+
+!!! example "Colores al azar"
+    - **Descripción:** Genera colores de manera ramdon
+    - **Material:** 
+        - 3 R330
+        - 1 Led RGB (cátodo común)
+    - **Diagrama:** <br>![motor pwm push](imgs/rgb_basic_pwm.png)
+
+!!! example "Viendo los 16 millones de colores con Pot"
+    - **Descripción:** Realizar un barrido de los colores con un led RGB, se tendrá un botón para seleccionar el color que sera modificado, y este sera variado con un potenciómetro.
+    - **Material:** 
+        - 3 R330
+        - 1 Led RGB
+        - 1 Push button
+        - 1 R1k
+        - 1 Potenciómetro
+    - **Diagrama:** <br>![motor pwm push](imgs/rgb_basic_bt.png)
+
+- Control de un motor DC
+  - Regulador de velocidad motor DC
+  - Giro de un motor DC
+- Servo
+## Sensores Digitales
+
+!!! example "Sensor Temperatura y Humedad"
+    - **Descripción:** Leer los valores de Temperatura y humedad relativa en la terminal|1 DTH11
+    - **Material:** 
+        - 2 DTH11
+    - **Esquema:** <br>![carrito](imgs/dth11_1.png)
+
+- Control de velocidad de un motor DC, se controlara la velocidad del motor a traves de un potenciómetro. Si el potenciómetro esta en 0 el motor debe estar apagado, si esta al 50% el motor girara a la mitad de su velocidad, cuando llegue a 100% el motor debe girar a su maxima velocidad.
+- Control de la intensidad de varias luces, se tendrán 3 leds cada uno controlado con su respectivo potenciómetro para hacer variar la intensidad de la luz de cada uno. Todos de manera independiente.
+- Control de la intensidad de varias luces, se tendrán 3 luces. 2 leds cada uno controlado con su respectivo potenciómetro para hacer variar la intensidad de la luz de cada uno, un tercero controlado con botones, uno para incrementar y otro para decrementar la intensidad. Todos de manera independiente.
+- Utilizando un servomotor que se utilizara para controlar la pluma de la entrada de estacionamiento. Se simula un sensor infrarrojo para detectar el auto y se levante la pluma (180°), cuando no detecte el auto, bajara la pluma (0°)
+
+### sensores Analógicos
+
+Simular un sensor de luz junto con un sensor de presencia (digital). Dicho sensores trabajan a la par, si hay poca luz y existe presencia en el cuarto se debe encender un foco. En caso que no exista presencia sin importar la intensidad de la luz, el foco no enciende.
+3. Simular un sensor infrarrojo para accionar el movimiento de un servomotor, entre mas luz incida debe incrementar el angulo del servomotor. Es decir, entre mas cerca se incrementa el angulo, entre mas lejos es menor el angulo.
+

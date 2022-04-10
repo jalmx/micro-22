@@ -19,7 +19,7 @@ El servomotor se mueve con base a una señal PWM, pero la librería nos ahorra e
         led = PWM(pin) # configuro el pin como salida PWM
         
         while True:
-            for i in range(0,1024):
+            for i in range(0,1024,10):
                 led.duty(i) # cargo el valor de 0 a 1023
                 print(i) # mando a la terminal el valor
                 sleep(0.5) # espero medio segundo
@@ -35,6 +35,31 @@ El servomotor se mueve con base a una señal PWM, pero la librería nos ahorra e
     - **Diagrama:** <br>![led pwm](imgs/led_pwm_bt.png)
     - **Código:** 
         ```python
+        from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
+        from time import sleep_ms
+
+        pin = Pin(5) #Creo el pin 
+        led = PWM(pin) # configuro el pin como salida PWM
+
+        btn_up = Pin(4,Pin.IN)
+        btn_down = Pin(0,Pin.IN)
+
+        value = 0
+        led.duty(value) #para comenzar apagados desde el principio
+
+        while True:
+            
+            if btn_up.value() and value <= 1024:
+                value += 8
+                led.duty(value) # cargo el valor para incrementar el brillo
+                print("incrementa", value)
+                sleep_ms(250)
+                
+            if btn_down.value() and value >0:
+                value -= 8
+                led.duty(value) # cargo el valor para decrementar el brillo
+                print("decrementa", value)
+                sleep_ms(250)
         ```
 
 !!! example "Cambiando el brillo de un LED con Potenciómetro"
@@ -46,6 +71,25 @@ El servomotor se mueve con base a una señal PWM, pero la librería nos ahorra e
     - **Diagrama:** <br>![led pwm](imgs/led_pwm.png)
     - **Código:** 
         ```python
+        from machine import Pin, PWM, ADC# importo el modulo para PWM, ADC y configuración de pines
+        from time import sleep_ms
+
+        adc = ADC(0) # configuro el GPIO0 como ADC o entrada analógica
+
+        pin = Pin(5) #Creo el pin 
+        led = PWM(pin) # configuro el pin como salida PWM
+
+        value = 0
+        led.duty(value) #para comenzar apagados desde el principio
+
+        while True:
+            
+            value = adc.read()
+                
+            if value < 1024 and value > 0:
+                led.duty(value) # cargo el valor para incrementar el brillo
+                print("valor", value)
+                sleep_ms(100)
         ```
 
 ## LED RGB
@@ -56,14 +100,12 @@ Para conocer mas detalles de los Leds RGB [ir a esta documentación](https://www
     - **Descripción:** Realizar un barrido de los colores con un led RGB. 
     - **Material:** 
         - 1 R330
-        - 1 Led RGB
-        - 2 Push button
-        - 2 R1k
+        - 1 Led RGB (cátodo común)
     - **Diagrama:** <br>![motor pwm push](imgs/rgb_basic_pwm.png)
     - **Código:** 
         ```python
         from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
-        from time import sleep
+        from time import sleep_ms
 
         led_r = Pin(5) #Creo el pin 
         led_g = Pin(4) #Creo el pin 
@@ -71,30 +113,78 @@ Para conocer mas detalles de los Leds RGB [ir a esta documentación](https://www
         red = PWM(led_r) # configuro el pin como salida PWM
         green = PWM(led_g) # configuro el pin como salida PWM
         blue = PWM(led_b) # configuro el pin como salida PWM
-        
+
         while True:
-            for r in range(0,255):
+            for r in range(0,1025,8):
                 red.duty(r) # cargo el valor de 0 a 1023
-                for g in range(0,255):
+                for g in range(0,1025,8):
                     green.duty(g) # cargo el valor de 0 a 1023
-                    for b in range(0,255):
+                    for b in range(0,1025,8):
+                        print(r,b,g)
                         blue.duty(b) # cargo el valor de 0 a 1023
-                        sleep(0.25) # espero medio segundo
+                        sleep_ms(10) # espero medio segundo
         ```
 
-!!! example "Viendo los 16 millones de colores con Pot"
-    - **Descripción:** Realizar un barrido de los colores con un led RGB, se tendrá un botón para seleccionar el color que sera modificado, y este sera variado con un potenciómetro.
+!!! example "Viendo los 16 millones de colores"
+    - **Descripción:** Realizar un barrido de los colores con un led RGB, utilizando un botón para color, al ser presionado debe incrementar el valor de salida y cuando llegue al limite que vuelva a cero, reiniciando el conteo. 
     - **Material:** 
-        - 3 R330
-        - 1 Led RGB
-        - 1 Push button
+        - 1 R330
+        - 1 Led RGB (cátodo común)
+        - 1 push button
         - 1 R1k
-        - 1 Potenciómetro
-    - **Diagrama:** <br>![motor pwm push](imgs/rgb_basic_bt.png)
+    - **Diagrama:** <br>![motor pwm push](imgs/rgb_basic_3btn.png)
     - **Código:** 
         ```python
-        ```
+        from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
+        from time import sleep_ms
 
+        led_r = Pin(5) #Creo el pin 
+        led_g = Pin(4) #Creo el pin 
+        led_b = Pin(0) #Creo el pin 
+        red = PWM(led_r) # configuro el pin como salida PWM
+        green = PWM(led_g) # configuro el pin como salida PWM
+        blue = PWM(led_b) # configuro el pin como salida PWM
+
+        btn_r = Pin(14, Pin.IN)
+        btn_g = Pin(12, Pin.IN)
+        btn_b = Pin(13, Pin.IN)
+
+        value_r = 0
+        value_g = 0
+        value_b = 0
+
+        while True:
+            
+            if btn_r.value():
+                if value_r >= 1024:
+                    value_r = 0
+                    red.duty(value_r)
+                    
+                elif value_r < 1025:
+                    value_r += 8
+                    red.duty(value_r) # cargo el valor de 0 a 1023
+                
+            
+            if btn_g.value() :
+                if value_g >= 1024:
+                    value_g = 0
+                    green.duty(value_g)
+                elif value_g < 1025:
+                    value_g += 8
+                    green.duty(value_g) # cargo el valor de 0 a 1023
+                    
+            if btn_b.value():
+                if value_b >= 1024:
+                    value_b = 0
+                    blue.duty(value_b)
+                elif value_b < 1025:
+                    value_b += 8
+                    blue.duty(value_b) # cargo el valor de 0 a 1023
+                
+            
+            print(value_r,value_b,value_g)
+            sleep_ms(250) # espero medio segundo
+        ```
 ## Control de velocidad de Motor DC
 
 !!! example "Regulador de velocidad motor DC con botones"

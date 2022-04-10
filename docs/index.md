@@ -12,7 +12,7 @@ En la segunda parte se abordan los conceptos básicos de GUI para la realizació
 ## Mapa del sitio
 
 ```markmap
-# Programa Tarjetas Electrónicas de control para sistemas Mecatrónicos 2022
+# Programa Tarjetas Electrónicas
 
 ## [Capítulo 1](capitulo_1/)
 ## [Capítulo 2](capitulo_2/)
