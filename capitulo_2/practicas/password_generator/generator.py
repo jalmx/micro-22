@@ -1,5 +1,8 @@
 from random import choice
 
+""" Module to generate secure password 
+"""
+
 def generate_numbers()-> list:
     """Generate a list of numbers, from 0 to 9
 
