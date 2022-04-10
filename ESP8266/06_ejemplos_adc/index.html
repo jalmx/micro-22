@@ -9,7 +9,7 @@
 
     <span class=nb>print</span><span class=p>(</span><span class=n>valor</span><span class=p>)</span> <span class=c1># mando a la terminal el valor del ADC</span>
     <span class=n>sleep_ms</span><span class=p>(</span><span class=mi>250</span><span class=p>)</span> <span class=c1># espero un segundo</span>
-</code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Voltimetro</p> <ul> <li><strong>Descripción:</strong> Encender el led configurando un pin como salida D1</li> <li><strong>Material:</strong> <ul> <li>1 Potenciómetro</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt=adc_1 src=../imgs/adc_0.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=c1># voltimetro</span>
+</code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Voltímetro</p> <ul> <li><strong>Descripción:</strong> Se desea tener un voltimetro con el ADC, y que la información la mande a la terminal.</li> <li><strong>Material:</strong> <ul> <li>1 Potenciómetro</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt=adc_1 src=../imgs/adc_0.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=c1># voltimetro</span>
 <span class=kn>from</span> <span class=nn>machine</span> <span class=kn>import</span> <span class=n>ADC</span> <span class=c1># importo el modulo para control y configuración de pines</span>
 <span class=kn>from</span> <span class=nn>time</span> <span class=kn>import</span> <span class=n>sleep</span><span class=p>,</span> <span class=n>sleep_ms</span>
 

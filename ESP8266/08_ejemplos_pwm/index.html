@@ -5,14 +5,56 @@
 <span class=n>led</span> <span class=o>=</span> <span class=n>PWM</span><span class=p>(</span><span class=n>pin</span><span class=p>)</span> <span class=c1># configuro el pin como salida PWM</span>
 
 <span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
-    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>1024</span><span class=p>):</span>
+    <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>1024</span><span class=p>,</span><span class=mi>10</span><span class=p>):</span>
         <span class=n>led</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=c1># cargo el valor de 0 a 1023</span>
         <span class=nb>print</span><span class=p>(</span><span class=n>i</span><span class=p>)</span> <span class=c1># mando a la terminal el valor</span>
         <span class=n>sleep</span><span class=p>(</span><span class=mf>0.5</span><span class=p>)</span> <span class=c1># espero medio segundo</span>
-</code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Cambiando el brillo de un LED con botones</p> <ul> <li><strong>Descripción:</strong> Vamos a controlar el intensidad de un LED con 2 botones, uno que incremente y con otro que decremente la intensidad</li> <li><strong>Material:</strong> <ul> <li>1 R330</li> <li>1 Led</li> <li>2 Push button</li> <li>2 R1k</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="led pwm" src=../imgs/led_pwm_bt.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code>
-</code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Cambiando el brillo de un LED con Potenciómetro</p> <ul> <li><strong>Descripción:</strong> Vamos a controlar el intensidad de un LED con potenciómetro la variar su intensidad.</li> <li><strong>Material:</strong> <ul> <li>1 Potenciómetro</li> <li>1 R330</li> <li>1 Led</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="led pwm" src=../imgs/led_pwm.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code>
-</code></pre></div></li> </ul> </div> <h2 id=led-rgb>LED RGB</h2> <p>Para conocer mas detalles de los Leds RGB <a href=https://www.alejandro-leyva.com/analogica/capitulo2/06_leds_propocito_especial/#led-rgb>ir a esta documentación</a>.</p> <div class="admonition example"> <p class=admonition-title>Viendo los 16 millones de colores automáticamente</p> <ul> <li><strong>Descripción:</strong> Realizar un barrido de los colores con un led RGB. </li> <li><strong>Material:</strong> <ul> <li>1 R330</li> <li>1 Led RGB</li> <li>2 Push button</li> <li>2 R1k</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="motor pwm push" src=../imgs/rgb_basic_pwm.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>machine</span> <span class=kn>import</span> <span class=n>Pin</span><span class=p>,</span> <span class=n>PWM</span> <span class=c1># importo el modulo para PWM y configuración de pines</span>
-<span class=kn>from</span> <span class=nn>time</span> <span class=kn>import</span> <span class=n>sleep</span>
+</code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Cambiando el brillo de un LED con botones</p> <ul> <li><strong>Descripción:</strong> Vamos a controlar el intensidad de un LED con 2 botones, uno que incremente y con otro que decremente la intensidad</li> <li><strong>Material:</strong> <ul> <li>1 R330</li> <li>1 Led</li> <li>2 Push button</li> <li>2 R1k</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="led pwm" src=../imgs/led_pwm_bt.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>machine</span> <span class=kn>import</span> <span class=n>Pin</span><span class=p>,</span> <span class=n>PWM</span> <span class=c1># importo el modulo para PWM y configuración de pines</span>
+<span class=kn>from</span> <span class=nn>time</span> <span class=kn>import</span> <span class=n>sleep_ms</span>
+
+<span class=n>pin</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span> <span class=c1>#Creo el pin </span>
+<span class=n>led</span> <span class=o>=</span> <span class=n>PWM</span><span class=p>(</span><span class=n>pin</span><span class=p>)</span> <span class=c1># configuro el pin como salida PWM</span>
+
+<span class=n>btn_up</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span><span class=n>Pin</span><span class=o>.</span><span class=n>IN</span><span class=p>)</span>
+<span class=n>btn_down</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=n>Pin</span><span class=o>.</span><span class=n>IN</span><span class=p>)</span>
+
+<span class=n>value</span> <span class=o>=</span> <span class=mi>0</span>
+<span class=n>led</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value</span><span class=p>)</span> <span class=c1>#para comenzar apagados desde el principio</span>
+
+<span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+
+    <span class=k>if</span> <span class=n>btn_up</span><span class=o>.</span><span class=n>value</span><span class=p>()</span> <span class=ow>and</span> <span class=n>value</span> <span class=o>&lt;=</span> <span class=mi>1024</span><span class=p>:</span>
+        <span class=n>value</span> <span class=o>+=</span> <span class=mi>8</span>
+        <span class=n>led</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value</span><span class=p>)</span> <span class=c1># cargo el valor para incrementar el brillo</span>
+        <span class=nb>print</span><span class=p>(</span><span class=s2>"incrementa"</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
+        <span class=n>sleep_ms</span><span class=p>(</span><span class=mi>250</span><span class=p>)</span>
+
+    <span class=k>if</span> <span class=n>btn_down</span><span class=o>.</span><span class=n>value</span><span class=p>()</span> <span class=ow>and</span> <span class=n>value</span> <span class=o>&gt;</span><span class=mi>0</span><span class=p>:</span>
+        <span class=n>value</span> <span class=o>-=</span> <span class=mi>8</span>
+        <span class=n>led</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value</span><span class=p>)</span> <span class=c1># cargo el valor para decrementar el brillo</span>
+        <span class=nb>print</span><span class=p>(</span><span class=s2>"decrementa"</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
+        <span class=n>sleep_ms</span><span class=p>(</span><span class=mi>250</span><span class=p>)</span>
+</code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Cambiando el brillo de un LED con Potenciómetro</p> <ul> <li><strong>Descripción:</strong> Vamos a controlar el intensidad de un LED con potenciómetro la variar su intensidad.</li> <li><strong>Material:</strong> <ul> <li>1 Potenciómetro</li> <li>1 R330</li> <li>1 Led</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="led pwm" src=../imgs/led_pwm.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>machine</span> <span class=kn>import</span> <span class=n>Pin</span><span class=p>,</span> <span class=n>PWM</span><span class=p>,</span> <span class=n>ADC</span><span class=c1># importo el modulo para PWM, ADC y configuración de pines</span>
+<span class=kn>from</span> <span class=nn>time</span> <span class=kn>import</span> <span class=n>sleep_ms</span>
+
+<span class=n>adc</span> <span class=o>=</span> <span class=n>ADC</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span> <span class=c1># configuro el GPIO0 como ADC o entrada analógica</span>
+
+<span class=n>pin</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span> <span class=c1>#Creo el pin </span>
+<span class=n>led</span> <span class=o>=</span> <span class=n>PWM</span><span class=p>(</span><span class=n>pin</span><span class=p>)</span> <span class=c1># configuro el pin como salida PWM</span>
+
+<span class=n>value</span> <span class=o>=</span> <span class=mi>0</span>
+<span class=n>led</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value</span><span class=p>)</span> <span class=c1>#para comenzar apagados desde el principio</span>
+
+<span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+
+    <span class=n>value</span> <span class=o>=</span> <span class=n>adc</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
+
+    <span class=k>if</span> <span class=n>value</span> <span class=o>&lt;</span> <span class=mi>1024</span> <span class=ow>and</span> <span class=n>value</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>:</span>
+        <span class=n>led</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value</span><span class=p>)</span> <span class=c1># cargo el valor para incrementar el brillo</span>
+        <span class=nb>print</span><span class=p>(</span><span class=s2>"valor"</span><span class=p>,</span> <span class=n>value</span><span class=p>)</span>
+        <span class=n>sleep_ms</span><span class=p>(</span><span class=mi>100</span><span class=p>)</span>
+</code></pre></div></li> </ul> </div> <h2 id=led-rgb>LED RGB</h2> <p>Para conocer mas detalles de los Leds RGB <a href=https://www.alejandro-leyva.com/analogica/capitulo2/06_leds_propocito_especial/#led-rgb>ir a esta documentación</a>.</p> <div class="admonition example"> <p class=admonition-title>Viendo los 16 millones de colores automáticamente</p> <ul> <li><strong>Descripción:</strong> Realizar un barrido de los colores con un led RGB. </li> <li><strong>Material:</strong> <ul> <li>1 R330</li> <li>1 Led RGB (cátodo común)</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="motor pwm push" src=../imgs/rgb_basic_pwm.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>machine</span> <span class=kn>import</span> <span class=n>Pin</span><span class=p>,</span> <span class=n>PWM</span> <span class=c1># importo el modulo para PWM y configuración de pines</span>
+<span class=kn>from</span> <span class=nn>time</span> <span class=kn>import</span> <span class=n>sleep_ms</span>
 
 <span class=n>led_r</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span> <span class=c1>#Creo el pin </span>
 <span class=n>led_g</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>4</span><span class=p>)</span> <span class=c1>#Creo el pin </span>
@@ -22,14 +64,63 @@
 <span class=n>blue</span> <span class=o>=</span> <span class=n>PWM</span><span class=p>(</span><span class=n>led_b</span><span class=p>)</span> <span class=c1># configuro el pin como salida PWM</span>
 
 <span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
-    <span class=k>for</span> <span class=n>r</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>255</span><span class=p>):</span>
+    <span class=k>for</span> <span class=n>r</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>1025</span><span class=p>,</span><span class=mi>8</span><span class=p>):</span>
         <span class=n>red</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>r</span><span class=p>)</span> <span class=c1># cargo el valor de 0 a 1023</span>
-        <span class=k>for</span> <span class=n>g</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>255</span><span class=p>):</span>
+        <span class=k>for</span> <span class=n>g</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>1025</span><span class=p>,</span><span class=mi>8</span><span class=p>):</span>
             <span class=n>green</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>g</span><span class=p>)</span> <span class=c1># cargo el valor de 0 a 1023</span>
-            <span class=k>for</span> <span class=n>b</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>255</span><span class=p>):</span>
+            <span class=k>for</span> <span class=n>b</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=mi>1025</span><span class=p>,</span><span class=mi>8</span><span class=p>):</span>
+                <span class=nb>print</span><span class=p>(</span><span class=n>r</span><span class=p>,</span><span class=n>b</span><span class=p>,</span><span class=n>g</span><span class=p>)</span>
                 <span class=n>blue</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>b</span><span class=p>)</span> <span class=c1># cargo el valor de 0 a 1023</span>
-                <span class=n>sleep</span><span class=p>(</span><span class=mf>0.25</span><span class=p>)</span> <span class=c1># espero medio segundo</span>
-</code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Viendo los 16 millones de colores con Pot</p> <ul> <li><strong>Descripción:</strong> Realizar un barrido de los colores con un led RGB, se tendrá un botón para seleccionar el color que sera modificado, y este sera variado con un potenciómetro.</li> <li><strong>Material:</strong> <ul> <li>3 R330</li> <li>1 Led RGB</li> <li>1 Push button</li> <li>1 R1k</li> <li>1 Potenciómetro</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="motor pwm push" src=../imgs/rgb_basic_bt.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code>
+                <span class=n>sleep_ms</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span> <span class=c1># espero medio segundo</span>
+</code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Viendo los 16 millones de colores</p> <ul> <li><strong>Descripción:</strong> Realizar un barrido de los colores con un led RGB, utilizando un botón para color, al ser presionado debe incrementar el valor de salida y cuando llegue al limite que vuelva a cero, reiniciando el conteo. </li> <li><strong>Material:</strong> <ul> <li>1 R330</li> <li>1 Led RGB (cátodo común)</li> <li>1 push button</li> <li>1 R1k</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="motor pwm push" src=../imgs/rgb_basic_3btn.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>machine</span> <span class=kn>import</span> <span class=n>Pin</span><span class=p>,</span> <span class=n>PWM</span> <span class=c1># importo el modulo para PWM y configuración de pines</span>
+<span class=kn>from</span> <span class=nn>time</span> <span class=kn>import</span> <span class=n>sleep_ms</span>
+
+<span class=n>led_r</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span> <span class=c1>#Creo el pin </span>
+<span class=n>led_g</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>4</span><span class=p>)</span> <span class=c1>#Creo el pin </span>
+<span class=n>led_b</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span> <span class=c1>#Creo el pin </span>
+<span class=n>red</span> <span class=o>=</span> <span class=n>PWM</span><span class=p>(</span><span class=n>led_r</span><span class=p>)</span> <span class=c1># configuro el pin como salida PWM</span>
+<span class=n>green</span> <span class=o>=</span> <span class=n>PWM</span><span class=p>(</span><span class=n>led_g</span><span class=p>)</span> <span class=c1># configuro el pin como salida PWM</span>
+<span class=n>blue</span> <span class=o>=</span> <span class=n>PWM</span><span class=p>(</span><span class=n>led_b</span><span class=p>)</span> <span class=c1># configuro el pin como salida PWM</span>
+
+<span class=n>btn_r</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>14</span><span class=p>,</span> <span class=n>Pin</span><span class=o>.</span><span class=n>IN</span><span class=p>)</span>
+<span class=n>btn_g</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>12</span><span class=p>,</span> <span class=n>Pin</span><span class=o>.</span><span class=n>IN</span><span class=p>)</span>
+<span class=n>btn_b</span> <span class=o>=</span> <span class=n>Pin</span><span class=p>(</span><span class=mi>13</span><span class=p>,</span> <span class=n>Pin</span><span class=o>.</span><span class=n>IN</span><span class=p>)</span>
+
+<span class=n>value_r</span> <span class=o>=</span> <span class=mi>0</span>
+<span class=n>value_g</span> <span class=o>=</span> <span class=mi>0</span>
+<span class=n>value_b</span> <span class=o>=</span> <span class=mi>0</span>
+
+<span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+
+    <span class=k>if</span> <span class=n>btn_r</span><span class=o>.</span><span class=n>value</span><span class=p>():</span>
+        <span class=k>if</span> <span class=n>value_r</span> <span class=o>&gt;=</span> <span class=mi>1024</span><span class=p>:</span>
+            <span class=n>value_r</span> <span class=o>=</span> <span class=mi>0</span>
+            <span class=n>red</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value_r</span><span class=p>)</span>
+
+        <span class=k>elif</span> <span class=n>value_r</span> <span class=o>&lt;</span> <span class=mi>1025</span><span class=p>:</span>
+            <span class=n>value_r</span> <span class=o>+=</span> <span class=mi>8</span>
+            <span class=n>red</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value_r</span><span class=p>)</span> <span class=c1># cargo el valor de 0 a 1023</span>
+
+
+    <span class=k>if</span> <span class=n>btn_g</span><span class=o>.</span><span class=n>value</span><span class=p>()</span> <span class=p>:</span>
+        <span class=k>if</span> <span class=n>value_g</span> <span class=o>&gt;=</span> <span class=mi>1024</span><span class=p>:</span>
+            <span class=n>value_g</span> <span class=o>=</span> <span class=mi>0</span>
+            <span class=n>green</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value_g</span><span class=p>)</span>
+        <span class=k>elif</span> <span class=n>value_g</span> <span class=o>&lt;</span> <span class=mi>1025</span><span class=p>:</span>
+            <span class=n>value_g</span> <span class=o>+=</span> <span class=mi>8</span>
+            <span class=n>green</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value_g</span><span class=p>)</span> <span class=c1># cargo el valor de 0 a 1023</span>
+
+    <span class=k>if</span> <span class=n>btn_b</span><span class=o>.</span><span class=n>value</span><span class=p>():</span>
+        <span class=k>if</span> <span class=n>value_b</span> <span class=o>&gt;=</span> <span class=mi>1024</span><span class=p>:</span>
+            <span class=n>value_b</span> <span class=o>=</span> <span class=mi>0</span>
+            <span class=n>blue</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value_b</span><span class=p>)</span>
+        <span class=k>elif</span> <span class=n>value_b</span> <span class=o>&lt;</span> <span class=mi>1025</span><span class=p>:</span>
+            <span class=n>value_b</span> <span class=o>+=</span> <span class=mi>8</span>
+            <span class=n>blue</span><span class=o>.</span><span class=n>duty</span><span class=p>(</span><span class=n>value_b</span><span class=p>)</span> <span class=c1># cargo el valor de 0 a 1023</span>
+
+
+    <span class=nb>print</span><span class=p>(</span><span class=n>value_r</span><span class=p>,</span><span class=n>value_b</span><span class=p>,</span><span class=n>value_g</span><span class=p>)</span>
+    <span class=n>sleep_ms</span><span class=p>(</span><span class=mi>250</span><span class=p>)</span> <span class=c1># espero medio segundo</span>
 </code></pre></div></li> </ul> </div> <h2 id=control-de-velocidad-de-motor-dc>Control de velocidad de Motor DC</h2> <div class="admonition example"> <p class=admonition-title>Regulador de velocidad motor DC con botones</p> <ul> <li><strong>Descripción:</strong> Regulador de velocidad motor DC con botones, es decir, con un botón incrementamos y con otro decrementamos su velocidad.</li> <li><strong>Material:</strong> <ul> <li>2 Push button</li> <li>2 R1k</li> <li>1 Motor DC</li> <li>1 Puente H L293D</li> <li>Fuente externa</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="motor pwm push" src=../imgs/motor_pwm_push.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>machine</span> <span class=kn>import</span> <span class=n>Pin</span><span class=p>,</span> <span class=n>PWM</span> <span class=c1># importo el modulo para PWM y configuración de pines</span>
 <span class=kn>from</span> <span class=nn>time</span> <span class=kn>import</span> <span class=n>sleep</span>
 </code></pre></div></li> </ul> </div> <div class="admonition example"> <p class=admonition-title>Regulador de velocidad motor DC con Potenciómetro</p> <ul> <li><strong>Descripción:</strong> Vamos a controlar la velocidad de un motor con un potenciómetro. Es decir, al 0% del potenciómetro equivale al 0% de velocidad y el máximo del ADC corresponde a la maxima velocidad del motor.</li> <li><strong>Material:</strong> <ul> <li>1 Potenciómetro</li> <li>1 Motor DC</li> <li>1 Puente H L293D</li> <li>Fuente externa</li> </ul> </li> <li><strong>Diagrama:</strong> <br><img alt="motor pwm pot" src=../imgs/motor_pwm_basic.png></li> <li><strong>Código:</strong> <div class=highlight><pre><span></span><code><span class=kn>from</span> <span class=nn>machine</span> <span class=kn>import</span> <span class=n>Pin</span><span class=p>,</span> <span class=n>ADC</span><span class=p>,</span> <span class=n>PWM</span> <span class=c1># importo el modulo para PWM y configuración de pines</span>
