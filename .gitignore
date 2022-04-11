@@ -6,3 +6,4 @@ pyvenv.cfg
 share
 etc
 .directory
+**/__pycache__/**

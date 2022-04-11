@@ -1,3 +1,6 @@
+"""Module to calculate all functions to ohm law
+    """
+
 def current(volt=0.0,resistance=0.0 )-> float:
     """The function calculate the current from ohm law
 

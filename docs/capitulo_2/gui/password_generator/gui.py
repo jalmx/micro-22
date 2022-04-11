@@ -1,14 +1,25 @@
-from tkinter import * # import all widgets from module tkinter
+from tkinter import *
+from tkinter import messagebox # import all widgets from module tkinter
 
 from generator import generate_password
 
 def put_password():
-    password = generate_password(long.get())
+    long_gui = long.get()
+    if not long_gui.isnumeric():
+        messagebox.showerror("Error", "Solo se pueden introducir números")
+        return
+        
+    password = generate_password(int(long_gui))
     clear_password()
     text_password.insert(END,password)
 
 def clear_password():
     text_password.delete("1.0",END)
+
+def send_to_clipboard():
+    root.clipboard_clear()
+    root.clipboard_append(text_password.get("1.0",END))
+    root.update()
 
 def build_gui():
     """Function to build all widgets and position
@@ -16,6 +27,7 @@ def build_gui():
     Returns:
         Tk: Return the main window
     """    
+    global root
     root = Tk()
     root.resizable(0,0)
     root.title("Password Generator - MK85")
@@ -32,12 +44,11 @@ def build_gui():
     Label(root, text="Long").grid(row=1, column=0,  sticky=W, ipadx=4, padx=16)
     
     global long
-    long = IntVar()
-    long.set(4)
+    long = StringVar() # Es el objeto que maneja el contenido dentro del widget, elijo String porque asi manejare el error de dato
+    long.set(8) # le coloco el numero 4 cuando inicia la aplicación
     input_long = Entry(root, borderwidth=2, bg="#ccd466", textvariable=long)
     input_long.grid(row=1, column=1,sticky=W)
     input_long.focus() # al iniciar la app que este activo
-    # input_long.insert(END,"4") # coloca el numero 4 en el entry
     
     btn_generate = Button(root,text="Generate", width=btn_width, command=put_password)
     btn_generate.grid(row=1, column=2, padx=16, sticky=W)
@@ -50,7 +61,7 @@ def build_gui():
     btn_clear = Button(root, text="Clear", width=btn_width, command=clear_password)
     btn_clear.grid(row=3, column=0, padx=16, pady=16, sticky=E)
     
-    btn_copy = Button(root, text="Copy", width=btn_width)
+    btn_copy = Button(root, text="Copy", width=btn_width, command=send_to_clipboard)
     btn_copy.grid(row=3, column=2,padx=16, pady=16, sticky=W)
     
     return root
@@ -58,12 +69,9 @@ def build_gui():
 
 def init_app():
     """Function main to invoke the build gui
-    """    
-    # print(generate_password(20) )
+    """
     build_gui().mainloop()
     
 
 if __name__ == "__main__":
     init_app()
-    
-# https://realpython.com/python-gui-tkinter/

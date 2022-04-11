@@ -23,12 +23,15 @@ Como medidas vamos a tomar una ==separación base de **8px**==, todo sera en fun
 
 ## Generador de contraseñas seguras
 
-
 [![ui pass generator](imgs/pass_ui.svg)](./password_generator)
 
 ## Ley de Ohm
 
 ![ley de ohm](https://raw.githubusercontent.com/jalmx/Curso-CBTIS-85/master/view.png)
+
+## Convertidor de Temp
+
+![temp](https://files.realpython.com/media/17_8_tk_temp_converter_win10.8e1ebad492b9.jpg)
 
 ## Capacitor 
 
