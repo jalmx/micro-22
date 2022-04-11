@@ -4,13 +4,22 @@ Debemos desarrollar una aplicación como esta, la que se muestra fue desarrollad
 
 Realizar una aplicación para la creación de una contraseña segura, con los siguientes solicitudes:
 
-- 
+- Aplicación que realice todas las operaciones básica de ley de ohm
+- En caso de introducir algún dato erróneo, mandar un mensaje de error
+- Replicar la interfaz que se muestra
    
 La aplicación debe ser muy parecida a la que se muestra:
 
 ![app_ohm](https://raw.githubusercontent.com/jalmx/Curso-CBTIS-85/master/view.png)
 
 ## Analizando la interfaz
+
+Tenemos 5 secciones en la interfaz, podemos aplicar con pack, porque se irán apilando todas las secciones:
+
+![ohm_grid](../imgs/ohm_grid.png)
+
+
+La sección 2 y 3  podemos aplicar aplicar pack dentro de un frame.
 
 ## Estructura
 
