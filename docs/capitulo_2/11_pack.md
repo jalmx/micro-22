@@ -17,28 +17,28 @@ widget.pack( pack_options... )
 Los argumentos que puede recibe la función `pack` son:
 
 - `side`: La posición en la que se agregará, después de ejecutar el método `pack()`
-  - `TOP`: (default), Se agrega de arriaba hacia abajo
-  - `BOTTOM`: Se acomoda de abajo hacia arriba
-  - `LEFT`: Se acomoda de izquierda a derecha
-  - `RIGHT`: Se acomoda de derecha a izquierda
+    - `TOP`: (default), Se agrega de arriaba hacia abajo
+    - `BOTTOM`: Se acomoda de abajo hacia arriba
+    - `LEFT`: Se acomoda de izquierda a derecha
+    - `RIGHT`: Se acomoda de derecha a izquierda
 - `fill`: Indica que se expanda todo el ancho posible o el alto, dependiendo si existe algún elemento al lado de él.
-  - `X`: Horizontal
-  - `Y`: Vertical
-  - `BOTH`: Ambos, tanto `x` como `y`
+    - `X`: Horizontal
+    - `Y`: Vertical
+    - `BOTH`: Ambos, tanto `x` como `y`
 - `padx`/`pady`: Margen en `x` y `y`. Es la distancia entre widget y widget. Padding externo.
 - `padx`/`ipady`: Padding en `x` y `y`. Es la distancia entre el contenido y la pared del widget. Padding interno.
 - `expand`: Ocupa todo el espacio posible, pero sin crecer el widget, vendría siendo como un margen, Recibe un valor booleano: `True`, `False`
 - `anchor`: Se le puede dar la posición con referencia a un punto; de en donde quedara el widget. Los atributos pueden ser:
-  - `NW`: `northwest`, arriaba a la izquierda
-  - `N`: `North`: Norte, arriba
-  - `NE`: arriaba a la derecha
-  - `W`: A la derecha
-  - `CENTER`: Centrado horizontalmente y verticalmente
-  - `E`: Derecha
-  - `SW`: Abajo a la izquierda
-  - `S`: Abajo
-  - `SE`: Abajo a la derecha
-  - ![show](https://www.tutorialspoint.com/python/images/tkanchor.jpg)
+    - `NW`: `northwest`, arriaba a la izquierda
+    - `N`: `North`: Norte, arriba
+    - `NE`: arriaba a la derecha
+    - `W`: A la derecha
+    - `CENTER`: Centrado horizontalmente y verticalmente
+    - `E`: Derecha
+    - `SW`: Abajo a la izquierda
+    - `S`: Abajo
+    - `SE`: Abajo a la derecha
+    - ![show](https://www.tutorialspoint.com/python/images/tkanchor.jpg)
 
 ## Ejemplos
 
