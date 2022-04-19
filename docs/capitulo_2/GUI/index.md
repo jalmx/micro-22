@@ -19,25 +19,24 @@ La estructura que vamos a manejar para los proyectos es la siguiente:
 - `main.py`: Archivo donde probaremos la librería que hagamos
 - `librería.py`: Es el archivo que tiene la lógica de lo que deb realizar el proyecto
 
-Como medidas vamos a tomar una ==separación base de **8px**==, todo sera en función de `8px` o ya mínimo `4px`.
+Como medidas vamos a tomar una ==separación base de **4px**==, todo sera en función de `4px` o ya mínimo `4px`.
 
 ## Generador de contraseñas seguras
+
+![Ir a la ejemplo](./password_generator/)
 
 [![ui pass generator](imgs/pass_ui.svg)](./password_generator)
 
 ## Ley de Ohm
 
+[Ir al ejemplo](./law_ohm/)
+
 ![ley de ohm](https://raw.githubusercontent.com/jalmx/Curso-CBTIS-85/master/view.png)
 
-## Convertidor de Temp
-
-![temp](https://files.realpython.com/media/17_8_tk_temp_converter_win10.8e1ebad492b9.jpg)
-
-## Capacitor 
-
-![App capactior](https://raw.githubusercontent.com/jalmx89/Capacitor_Calculator/master/imgs/ds1.png)
 
 ## Código de colores de Resistencia
 
-![codigo de colores](imgs/app_rest.png)
+[Ir al ejemplo](./code_color/)
+
+![código de colores](imgs/app_rest.png)
 

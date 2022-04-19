@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
 
-from uritemplate import variables
 import law_ohm
 
 VOLT_OPTION = 0
