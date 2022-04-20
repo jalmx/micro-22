@@ -220,7 +220,7 @@ Para conocer mas detalles de los Leds RGB [ir a esta documentación](https://www
 
 El servomotor que utilizaremos el SG-90, es un servomotor básico.
 
-![servo sg90](imgs/sg90.jpg)
+![servo](imgs/servo_conection.jpg)
 
 Este motor necesita la siguiente señal para poder generar su desplazamiento:
 
@@ -230,37 +230,68 @@ Este motor necesita la siguiente señal para poder generar su desplazamiento:
     Un servomotor solo se puede desplazar desde 0° hasta 180°. Por default siempre esta en 90°. Pero, comúnmente se considera 0°, dado que gira hasta 90° y -90°.
 
 !!! example "Giro del Servomotor automáticamente"
+    - **Descripción:** Realizar un barrido del servo de manera indefinida
+    - **Material:** 
+        - 1 Servomotor
+    - **Diagrama:** <br>![led pwm](imgs/servo_1.png)
+    - **Código:** 
+        ```python
+        from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
+        from time import sleep
+
+        pin_servo = Pin(5)
+        servo = PWM(pin_servo, freq=50) # configuro el pin como salida PWM
+
+        while True:
+            for i in range(50,101):
+                for d in range(1000):
+                    servo.duty(i)
+        ```
+
+!!! example "Giro del Servomotor automáticamente por posiciones"
     - **Descripción:** Controlar un Servomotor, se debe colocar en diversos ángulos y repetir de manera indefinida. Los ángulos a los que se desplazar son 0°,30°,60°,90°,120°,160°,180° y volver al inicio.
     - **Material:** 
         - 1 Servomotor
-    - **Diagrama:** <br>![led pwm](imgs/)
+    - **Diagrama:** <br>![led pwm](imgs/servo_1.png)
     - **Código:** 
         ```python
-        from machine import Pin, PWM
+        from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
         from time import sleep
+
+
+        def servo_position(angule): # función para convertir el angulo al valor correspondiente de PWM
+            return int(((angule * 5)/18) + 50)
+            
+
+        pin_servo = Pin(5)
+        servo = PWM(pin_servo, freq=50) # configuro el pin como salida PWM
+
+        while True:
+            
+            for angulo in ( 0,30,60,90,120,160,180):
+                for t in range(800):
+                    print("angulo", angulo)
+                    servo.duty(servo_position(angulo))
         ```
+
 !!! example "Giro del Servomotor con botones"
     - **Descripción:** Cambiar el angulo de un servomotor con botones, es decir, con uno incrementa su angulo y con el segundo la decrementar.
     - **Material:** 
         - 1 Servomotor
         - 2 Push button
         - 2 R1k
-    - **Diagrama:** <br>![led pwm](imgs/)
+    - **Diagrama:** <br>![led pwm](imgs/servo_btn.png)
     - **Código:** 
         ```python
-        from machine import Pin, PWM
-        from time import sleep
         ```
 
 !!! example "Giro del Servomotor con potenciómetro"
-    - **Descripción:**Hacer girar un servomotor en función de la posición de un potenciómetro. Es decir, si esta en 0 el potenciómetro, sera 0°; en 0.5 sera 90° y al 100% serán 180°.
+    - **Descripción:** Hacer girar un servomotor en función de la posición de un potenciómetro. Es decir, si esta en 0 el potenciómetro, sera 0°; en 0.5 sera 90° y al 100% serán 180°.
     - **Material:** 
         - 1 Potenciómetro
         - 1 Servomotor
-    - **Diagrama:** <br>![led pwm](imgs/)
+    - **Diagrama:** <br>![led pwm](imgs/servo_pot.png)
     - **Código:** 
         ```python
-        from machine import Pin, PWM
-        from time import sleep
         ```
 
