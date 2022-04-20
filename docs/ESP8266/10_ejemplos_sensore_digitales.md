@@ -118,7 +118,7 @@ d.humidity()    # eg. 41.3 (% RH)
 ```
 
 !!! example "Obteniendo los datos del DTH11"
-    - **Descripción:** Vamos a obtener los datos del sensor y mandarlos a la terminal, el invervalo sera de cada 1 segundo
+    - **Descripción:** Vamos a obtener los datos del sensor y mandarlos a la terminal, el intervalo sera de cada 1 segundo
     - **Materiales:**
         - 1 Sensor DTH11
     - **Circuito:** <br> ![dth11](imgs/dth11_1.png)
@@ -131,12 +131,38 @@ d.humidity()    # eg. 41.3 (% RH)
         sensor = DHT11( Pin(0) )
 
         while True:
-            sensor.measure()
+            sensor.measure()# mide el ambiente, siempre se debe mandar a llamar para generar los datos
             value_temperature = sensor.temperature() # se obtiene el valor de la temperatura
             value_humidity = sensor.humidity()    # se obtiene el valor de la humedad relativa
             
-            print(value_temperature)
-            print(value_humidity)
+            print("Temp:",value_temperature,"C")
+            print("Humedad:",value_humidity,"%")
             
             sleep(1) #esperamos 1 seg para la siguiente lectura de las variables ambientales
         ```
+
+        
+!!! example "Termómetro Celsius/Fahrenheit DTH11"
+    - **Descripción:** 
+    - **Materiales:**
+        - 1 Sensor DTH11
+    - **Circuito:** <br> ![dth11](imgs/dth11_1.png)
+    - **Código:**
+        ```python
+        from dht import DHT11
+        from machine import Pin
+        from time import sleep
+
+        sensor = DHT11( Pin(0) )
+
+        while True:
+            sensor.measure()
+            celsius = sensor.temperature() # se obtiene el valor de la temperatura
+            fahrenheit = (celsius * 1.8) + 32
+            
+            print("Temp Celsius:", celsius, " C") # mando a la terminal la temp en Celsius
+            print("Temp Fahrenheit:", fahrenheit, " F") # mando a la terminal la temp en Fahrenheit
+            
+            sleep(1) #esperamos 1 seg para la siguiente lectura de las variables ambientales
+        ```
+

@@ -1,4 +1,4 @@
-# Sensores Analógicos
+# Ejemplos con Sensores Analógicos
 
 Un sistema digital por default no puede leer señales analógicas, rangos u oscilaciones de voltajes. Entonces cómo se hace la medición?. Se utiliza un componente llamado **ADC (Analogue to Digital Converter)**, el cual hace la conversión de la señal analógica a un código binario, entonces en lugar de percibir un nivel de voltaje, estaremos viendo un código binario equivalente.
 
@@ -6,8 +6,11 @@ El ADC que trae incorporado el ESP8266 tiene una resolución de 10 bits, es deci
 
 Voltaje|Binario|Decimal|Micropython
 :-:|:-:|:-:|:-:
-0V|0b|0|0.0
-5V|0b11 1111 1111|1023|1.0
+0V|0b|0|0
+5V|0b11 1111 1111|1023|1024
+
+!!! warning
+    Recordar que el ADC del microcontrolador ESP8266 tiene una entrada de 1V, pero en la placa NodeMCU cuenta con un **divisor de tension** que acopla la señal y pueda ser de 0V a 3V. Pero puede existir variaciones físicas en las resistencias por lo tanto puede llegar a existir un pequeño rango de error al leer la señal.
 
 ## Sensor de Luz 
 
@@ -73,22 +76,44 @@ Existe una enorme variedad de sensores de temperatura, estaremos viendo el **[LM
 !!! example "Termómetro básico"
     - **Descripción:**     Vamos a realizar un termómetro con el LM35. La temperatura se mandará a la terminal. Debe mandar la temperatura en grados Celsius.
     - **Material:** 
-        - 1 LDR
-        - 1 R10k
-        - 1 LED
-        - 1 R330
-    - **Diagrama:** <br>![adc_1](imgs/)
+        - 1 Sensor LM35
+    - **Diagrama:** <br>![adc_1](imgs/lm35_base.png)
     - **Código:** 
         ```python
+        from machine import ADC # importo el modulo para control y configuración de pines
+        from time import sleep
+        from dht import DHT11
+
+        adc = ADC(0) # configuro el GPIO0 como ADC o entrada analógica
+        sleep(1) # esperamos un tiempo de estabilización
+
+        while True:
+            value = adc.read() # esta función nos retorna el valor que existe en la entrada
+            temp = (value/1024) * 300
+            
+            print("Temp:",temp,"C") # mando a la terminal el valor del ADC
+            sleep(1) # espero un segundo
         ```
 !!! example "Termómetro Celsius/Fahrenheit"
     - **Descripción:**     Vamos a realizar un termómetro con el LM35. La temperatura se mandará a la terminal. Debe mandar la temperatura en grados Celsius y grados Fahrenheit
     - **Material:** 
-        - 1 LDR
-        - 1 R10k
-        - 1 LED
-        - 1 R330
-    - **Diagrama:** <br>![adc_1](imgs/)
+        - 1 Sensor LM35
+    - **Diagrama:** <br>![adc_1](imgs/lm35_base.png)
     - **Código:** 
         ```python
+        from machine import ADC # importo el modulo para control y configuración de pines
+        from time import sleep
+
+        adc = ADC(0) # configuro el GPIO0 como ADC o entrada analógica
+        sleep(1) # esperamos un tiempo de estabilización
+
+        while True:
+            
+            value = adc.read() # esta función nos retorna el valor que existe en la entrada
+            celsius = (value/1024) * 300
+            fahrenheit = (value * 1.8) + 32
+            
+            print("Temp Celsius:", celsius, " C") # mando a la terminal la temp en Celsius
+            print("Temp Fahrenheit:", fahrenheit, " F") # mando a la terminal la temp en Fahrenheit
+            sleep(1) # espero un segundo
         ```

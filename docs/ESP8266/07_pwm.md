@@ -41,4 +41,4 @@ pwm12.duty(512)
 
 ## Referencias
 
-http://docs.micropython.org/en/latest/esp8266/tutorial/pwm.html
+[http://docs.micropython.org/en/latest/esp8266/tutorial/pwm.html](http://docs.micropython.org/en/latest/esp8266/tutorial/pwm.html)

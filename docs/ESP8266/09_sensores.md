@@ -13,7 +13,7 @@ Un sensor en es un sistema el cual capta una variable física y reacciona para l
 
 ![diagrama de bloques](imgs/proceso_sensor.svg)
 
-*Un sensor es todo aquello que tiene una propiedad sensible a una magnitud del medio, y al variar esta magnitud también varía con cierta intensidad la propiedad, es decir, manifiesta la presencia de dicha magnitud, y también su medida...[Extraido de wikipedia](https://es.wikipedia.org/wiki/Sensor)*
+*Un sensor es todo aquello que tiene una propiedad sensible a una magnitud del medio, y al variar esta magnitud también varía con cierta intensidad la propiedad, es decir, manifiesta la presencia de dicha magnitud, y también su medida...[wikipedia](https://es.wikipedia.org/wiki/Sensor)*
 
 ## Variable física
 
@@ -142,7 +142,7 @@ Pero este rango de voltaje no se puede mandar directamente al sistema digital an
 
 ## Actuadores eléctricos o electrónicos
 
-El actuador es el elemento que actua o realiza una acción a la salida de un sensor, no siempre viene el actuador incorporado al sensor.
+El actuador es el elemento que actuá o realiza una acción a la salida de un sensor, no siempre viene el actuador incorporado al sensor.
 
 Los actuadores más comunes son:
 

@@ -173,7 +173,7 @@
 ## Sensores Digitales
 
 !!! example "Sensor Temperatura y Humedad"
-    - **Descripción:** Leer los valores de Temperatura y humedad relativa en la terminal|1 DTH11
+    - **Descripción:** Leer los valores de Temperatura y humedad relativa en la terminal 1 DTH11
     - **Material:** 
         - 2 DTH11
     - **Esquema:** <br>![carrito](imgs/dth11_1.png)

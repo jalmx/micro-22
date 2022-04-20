@@ -1,0 +1,33 @@
+# TODO
+
+Secciones
+
+**Documentacion sobre los proyectos, en cuanto a lo que deben tener y documentacion**
+
+## ESP8266
+
+- [ ] Checar los de Relay
+- [ ] Terminar las practicas de ejercicios
+- [ ] Terminar practicas Motor DC
+- [ ] Probar el codigo del Servo
+- [ ] Ultrasonico
+
+## Iot
+
+- [ ] Index llenarlo
+- [ ] Conexcion con un cliente MQTT
+- [ ] Crear conexion con el Dashboard X
+  - [ ] base
+  - [ ] Leer DTH11
+  - [ ] color RGB
+  - [ ] 
+
+## capitulo 2
+
+- [ ] Colocar una grafica leyendo un ADC
+- [ ] Agregar app - Minidashboard de control por MQTT
+  - 1 boton enceder/apagar led
+  - 1 slider servor
+  - 1 adc leer valor
+  - 1 dht11 temp/humedad
+  - 1 leer boton

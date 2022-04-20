@@ -52,8 +52,6 @@ En esta sección estaremos utilizando el ADC del microcontrolador.
     - **Material:** 
         - 1 LDR
         - 1 R10k
-        - 1 LED
-        - 1 R330
     - **Diagrama:** <br>![adc_1](imgs/ldr_1.png)
     - **Código:** 
         ```python
