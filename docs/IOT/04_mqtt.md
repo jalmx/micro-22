@@ -130,3 +130,8 @@ Existen diversas aplicaciones para poder realizar el monitoreo de los dispositiv
 
 ![mqtt x](https://raw.githubusercontent.com/emqx/MQTTX/main/assets/mqttx-preview.png)
 
+**Extension de Chrome**
+
+[MQTT Box](https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf)
+
+![imgs/mqttbox.jpg](imgs/mqttbox.jpg)
