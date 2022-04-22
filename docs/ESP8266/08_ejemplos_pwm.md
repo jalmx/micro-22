@@ -199,7 +199,30 @@ Para conocer mas detalles de los Leds RGB [ir a esta documentación](https://www
     - **Código:** 
         ```python
         from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
-        from time import sleep
+        from time import sleep_ms
+
+        btn_down = Pin(4,Pin.IN)
+        btn_up = Pin(0,Pin.IN)
+
+        motor = PWM(Pin(5)) # configuro el pin como salida PWM
+
+        value_minimum = 0 # es una referencia, porque para arrancar el motor es un valor mas alto, hacer el ajuste necesario
+        value = value_minimum
+        motor.duty(value) # apago el motor
+
+        constant = 10 # es una referencia para que vaya incrementando de 10 en 10, se puede cambiar a gusto
+
+        while True:
+            
+            if btn_down.value() and value > value_minimum:
+                value -= constant
+
+            if btn_up.value() and value < 1024:
+                value += constant
+            
+            motor.duty(value) #asigno el valor de pwm 
+            print(value)
+            sleep_ms(150) # espero por el rebote del botón
         ```
 
 !!! example "Regulador de velocidad motor DC con Potenciómetro"
@@ -212,8 +235,18 @@ Para conocer mas detalles de los Leds RGB [ir a esta documentación](https://www
     - **Diagrama:** <br>![motor pwm pot](imgs/motor_pwm_basic.png)
     - **Código:** 
         ```python
-        from machine import Pin, ADC, PWM # importo el modulo para PWM y configuración de pines
-        from time import sleep
+            from machine import Pin, ADC, PWM  # importo el modulo para PWM y configuración de pines
+            from time import sleep_ms
+
+            motor = PWM(Pin(5))  # configuro el pin como salida PWM
+            adc = ADC(0)
+
+            value = adc.read()
+
+            while True:
+                value = adc.read()
+                servo.duty(value)
+                sleep_ms(100)
         ```
 
 ## Servomotor
@@ -229,60 +262,102 @@ Este motor necesita la siguiente señal para poder generar su desplazamiento:
 !!! Warning "Atención"
     Un servomotor solo se puede desplazar desde 0° hasta 180°. Por default siempre esta en 90°. Pero, comúnmente se considera 0°, dado que gira hasta 90° y -90°.
 
+!!! Warning "Fuente adicional de 5V"
+    Para hacer funcionar el servomotor se debe **implementar una fuente adicional de 5V**, ya que la propia placa NodeMCU no puede dar la suficiente corriente al motor y su sistema para funcionar adecuadamente.
+
+!!! Note Nota
+    El dato mínimo que equivale a 0 grados es 25 en el valor de PWM, y para los 180 grados o máximo es de 127. Estos valores los obtuve haciendo experimentos y pruebas con estos elementos.
+    |Angulo| PWM
+    |:-:|:-:|
+    | 0 grados |25 |
+    | 90 grados |76 |
+    | 180 grados | 127 |
+
 !!! example "Giro del Servomotor automáticamente"
-    - **Descripción:** Realizar un barrido del servo de manera indefinida
+    - **Descripción:** Realizar un barrido del servo de manera indefinida, yendo de 0 a 180 y viceversa
     - **Material:** 
         - 1 Servomotor
+        - 1 Fuente de carga
     - **Diagrama:** <br>![led pwm](imgs/servo_1.png)
     - **Código:** 
         ```python
         from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
-        from time import sleep
+        from time import sleep_ms
 
-        pin_servo = Pin(5)
-        servo = PWM(pin_servo, freq=50) # configuro el pin como salida PWM
+        servo = PWM(Pin(5), freq=50) # configuro el pin como salida PWM
 
         while True:
-            for i in range(50,101):
-                for d in range(1000):
-                    servo.duty(i)
+            
+            # de 0 a 180
+            for value in range(25,129):
+                servo.duty(value)
+                print(value)
+                sleep_ms(100)
+                
+            # de 180 a 0
+            for value in range(128,24,-1):
+                servo.duty(value)
+                print(value)
+                sleep_ms(100)        
         ```
 
 !!! example "Giro del Servomotor automáticamente por posiciones"
     - **Descripción:** Controlar un Servomotor, se debe colocar en diversos ángulos y repetir de manera indefinida. Los ángulos a los que se desplazar son 0°,30°,60°,90°,120°,160°,180° y volver al inicio.
     - **Material:** 
         - 1 Servomotor
+        - 1 Fuente de carga
     - **Diagrama:** <br>![led pwm](imgs/servo_1.png)
     - **Código:** 
         ```python
         from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
         from time import sleep
 
-
         def servo_position(angule): # función para convertir el angulo al valor correspondiente de PWM
-            return int(((angule * 5)/18) + 50)
-            
+            return int(((angule * 102)/ 180) + 25)
 
         pin_servo = Pin(5)
         servo = PWM(pin_servo, freq=50) # configuro el pin como salida PWM
 
-        while True:
-            
-            for angulo in ( 0,30,60,90,120,160,180):
-                for t in range(800):
-                    print("angulo", angulo)
-                    servo.duty(servo_position(angulo))
+        while True:    
+            for angulo in 0,30,60,90,120,160,180:
+                servo.duty(servo_position(angulo))
+                print("angulo", angulo)
+                sleep(1)
         ```
 
 !!! example "Giro del Servomotor con botones"
     - **Descripción:** Cambiar el angulo de un servomotor con botones, es decir, con uno incrementa su angulo y con el segundo la decrementar.
     - **Material:** 
         - 1 Servomotor
+        - 1 Fuente de carga
         - 2 Push button
         - 2 R1k
     - **Diagrama:** <br>![led pwm](imgs/servo_btn.png)
     - **Código:** 
         ```python
+        from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
+        from time import sleep_ms
+
+        btn_down = Pin(4,Pin.IN)
+        btn_up = Pin(0,Pin.IN)
+
+        pin_servo = Pin(5)
+        servo = PWM(pin_servo, freq=50) # configuro el pin como salida PWM
+
+        value=25 
+        servo.duty(value) # para que se coloque en 0 grados
+
+        while True:
+            
+            if btn_down.value() and value > 25:
+                value -=1
+
+            if btn_up.value() and value < 127:
+                value +=1
+            
+            servo.duty(value) #asigno el valor de pwm 
+            print(value)
+            sleep_ms(250) # espero por el rebote del botón
         ```
 
 !!! example "Giro del Servomotor con potenciómetro"
@@ -290,8 +365,42 @@ Este motor necesita la siguiente señal para poder generar su desplazamiento:
     - **Material:** 
         - 1 Potenciómetro
         - 1 Servomotor
+        - 1 Fuente de carga
     - **Diagrama:** <br>![led pwm](imgs/servo_pot.png)
     - **Código:** 
         ```python
+        from machine import Pin,ADC, PWM # importo el modulo para PWM y configuración de pines
+        from time import sleep_ms
+
+        def maps(x, min_in, max_in, min_out,max_out): # inspirada de https://www.arduino.cc/reference/en/language/functions/math/map/
+            """_summary_
+
+            Args:
+                x (number): The value to change range
+                min_in (number): Minimum value input
+                max_in (number): Maximum value input
+                min_out (number): Minimum value output
+                max_out (number): Maximum value output
+
+            Returns:
+                int: Value mapped
+            """    
+            return int(( x - min_in) * (max_out - min_out) / (max_in - min_in) + min_in)
+
+        def servo_position(angule): # función para convertir el angulo al valor correspondiente de PWM
+            return int(((angule * 102)/ 180) + 25)
+
+        servo = PWM(Pin(5), freq=50) # configuro el pin como salida PWM
+        adc = ADC(0)
+
+        value = adc.read()
+
+        while True:
+            value = adc.read()
+            angule = maps(value, 0, 1024, 0, 180)
+            duty = servo_position(angule)
+            servo.duty(duty)
+            print("angule",angule)
+            sleep_ms(250)    
         ```
 

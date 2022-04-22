@@ -46,9 +46,6 @@ class Ultrasonic(object):
         # Init echo pin (in)
         self.echo = Pin(echo_pin, mode=Pin.IN, pull=None)
 
-    def distance_in_inches(self):
-        return (self.distance_in_cm() * 0.3937)
-
     def distance_in_cm(self):
         # Send a 10us pulse
         self.trigger.on()
@@ -57,7 +54,6 @@ class Ultrasonic(object):
 
         # Wait for the pulse and calc its duration
         time_pulse = time_pulse_us(self.echo, 1, self.timeout)
-
         if time_pulse < 0:
             raise MeasurementTimeout(self.timeout)
 

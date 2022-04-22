@@ -1,18 +1,19 @@
 from machine import Pin, PWM # importo el modulo para PWM y configuración de pines
-from time import sleep
+from time import sleep_ms
 
-
-def servo_position(angule):
-    return int(((angule * 5)/18) + 50)
-    
-
-pin_servo = Pin(5)
-servo = PWM(pin_servo, freq=50) # configuro el pin como salida PWM
+servo = PWM(Pin(5), freq=50) # configuro el pin como salida PWM
 
 while True:
     
-    for angulo in ( 0,30,60,90,120,160,180):
-        for t in range(800):
-            print("angulo", angulo)
-            servo.duty(servo_position(angulo))
+    # de 0 a 180
+    for value in range(25,129):
+        servo.duty(value)
+        print(value)
+        sleep_ms(100)
+        
+    # de 180 a 0
+    for value in range(128,24,-1):
+        servo.duty(value)
+        print(value)
+        sleep_ms(100)
         

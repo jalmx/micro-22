@@ -25,7 +25,7 @@ Es el cliente que quiera recibir el `mensaje` del algún `publicador` por medio 
 
 Es el cliente que manda un `mensaje` a traves de algún `topic`.
 
-### Tópico (`topic`) 
+### Tópico (`topic`)
 
 El tópico es el nombre que se le da a la ruta por la cual se enviá o recibe un dato. Es decir, el publicador enviá su dato a traves de esa ruta (topic) y los `subscriptores` que estén registrados en ese `topic` recibirán la información.
 
@@ -118,7 +118,7 @@ The server listens on the following ports:
 
 Más información en [mqtt.org](https://mqtt.org)
 
-## Clientes 
+## Clientes
 
 Existen diversas aplicaciones para poder realizar el monitoreo de los dispositivos IoT a traves del protocolo MQTT, se pueden ocupar cualquiera, pero aquí vamos a utilizar cualquiera de las siguientes
 
@@ -135,3 +135,11 @@ Existen diversas aplicaciones para poder realizar el monitoreo de los dispositiv
 [MQTT Box](https://chrome.google.com/webstore/detail/mqttbox/kaajoficamnjijhkeomgfljpicifbkaf)
 
 ![imgs/mqttbox.jpg](imgs/mqttbox.jpg)
+
+**Cliente Dashboard IoT**
+
+> Hecho por [Alejando Leyva](https://github.com/jalmx/dashboard-iot)
+
+[Ir al cliente](http://www.alejandro-leyva.com/dashboard-iot/)
+
+[![dashboard](https://raw.githubusercontent.com/jalmx/dashboard-iot/master/imgs/screencapture-1.png)](http://www.alejandro-leyva.com/dashboard-iot/)

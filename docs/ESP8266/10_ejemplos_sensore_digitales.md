@@ -166,3 +166,41 @@ d.humidity()    # eg. 41.3 (% RH)
             sleep(1) #esperamos 1 seg para la siguiente lectura de las variables ambientales
         ```
 
+## Sensor Ultrasónico HC-SR04
+
+Distribución de pines del **Sensor Ultrasónico** (ver [datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)). Dentro de las librerías de Micropython no cuenta con soporte oficial, por ende, debemos construir un modulo dedicado a ello o conseguir alguno de manera externa.
+
+![modulo](https://3.bp.blogspot.com/-eQBidUhffIQ/WDssAwonSGI/AAAAAAAAD7Y/Z00cms7Sg-w3q1OibfB7DMpfY7dLTJkDwCLcB/s1600/Pines-Sensor-HC-SR04.png)
+
+**Funcionamiento del Sensor Ultrasónico**
+
+El modulo del sensor ultrasónico tiene 2 pines de control, con un activa sun funcionamiento y con el otro recibe la señal indicadora del tiempo que tardo el sonido ultrasónico en ir y volver, dependiendo si existe un objeto enfrente de el.
+
+![https://http2.mlstatic.com/sensor-ultrasonido-hc-sr04-para-arduino-D_NQ_NP_13866-MCO20081354161_042014-O.jpg](https://http2.mlstatic.com/sensor-ultrasonido-hc-sr04-para-arduino-D_NQ_NP_13866-MCO20081354161_042014-O.jpg)
+
+
+!!! warning
+    Este modulo debe ser alimentado con 5V para su correcto funcionamiento
+
+!!! example "Midiendo distancia con ultrasónico"
+    - **Descripción:** 
+    - **Materiales:**
+        - 1 Sensor Ultrasonico HC-SR04
+    - **Circuito:** <br> ![sr04](imgs/ultrasonic_base.png)
+    - **Código:**
+        ```python
+        from time import sleep
+        from Ultrasonic import Ultrasonic
+
+        trigger_pin = 5
+        echo_pin = 4
+            
+        sensor = Ultrasonic(trigger_pin, echo_pin)
+        sleep(1)
+
+        while True:
+            
+            print("Distancia:", sensor.distance_in_cm(),"cm")
+            sleep(1) 
+        ```
+    - **Descargar** modulo [Ultrasonic.py](imgs/Ultrasonic.py) y colocarlo dentro de la placa. [Fuente del modulo en github](https://github.com/skgsergio/MicropythonLibs/blob/master/Ultrasonic/ultrasonic.py)

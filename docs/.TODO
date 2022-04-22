@@ -1,32 +1,23 @@
 # TODO
 
-Secciones
-
-**Documentacion sobre los proyectos, en cuanto a lo que deben tener y documentacion**
+- [ ] **Documentacion sobre los proyectos, en cuanto a lo que deben tener y documentacion**
 
 ## ESP8266
 
-- [ ] Checar los de Relay
 - [ ] Terminar las practicas de ejercicios
-- [ ] Terminar practicas Motor DC
-- [ ] Probar el codigo del Servo
-- [ ] Ultrasonico
 
 ## Iot
 
-- [ ] Index llenarlo
-- [ ] Conexcion con un cliente MQTT
 - [ ] Crear conexion con el Dashboard X
-  - [ ] base
+  - [ ] servo
   - [ ] Leer DTH11
   - [ ] color RGB
+  - [ ] LED PWM
 
 ## capitulo 2
 
-- [ ] Colocar una grafica leyendo un ADC, mandar el resultado a un archivo y despues leerlo, o que al iniciar la placa, cheque un boton para ver si entra al boot o entra al programa que quiero 
 - [ ] Agregar app - Minidashboard de control por MQTT
-  - 1 boton enceder/apagar led
-  - 1 slider servor
+  - 1 slider servor, hacer la conversion
   - 1 adc leer valor
   - 1 dht11 temp/humedad
   - 1 leer boton
