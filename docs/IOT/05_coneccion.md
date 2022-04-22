@@ -129,6 +129,7 @@ while True:
 
 Ejemplo:
 
+
 ```python
 from mqtt import MQTTClient
 from machine import Pin
@@ -182,9 +183,11 @@ while True:
 
 c.disconnect()
 ```
+
 ---
 
-## Conectado Todo
+
+## Conectando Todo
 
 Vamos a conectar un led y un botón, todo controlado de manera local y remota desde un cliente
 
