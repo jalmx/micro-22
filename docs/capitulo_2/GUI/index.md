@@ -1,4 +1,4 @@
-# Practicas
+# Prácticas
 Ahora vamos a poner en practica las bases para la generación de aplicaciones
 
 La estructura que vamos a manejar para los proyectos es la siguiente:
@@ -23,7 +23,7 @@ Como medidas vamos a tomar una ==separación base de **4px**==, todo sera en fun
 
 ## Generador de contraseñas seguras
 
-![Ir a la ejemplo](./password_generator/)
+[Ir a la ejemplo](./password_generator/)
 
 [![ui pass generator](imgs/pass_ui.svg)](./password_generator)
 

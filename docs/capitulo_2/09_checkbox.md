@@ -15,15 +15,17 @@ root = Tk() # Creo mi ventana principal
 root.title("Mi aplicación")
 root.geometry("300x300")
 
-Checkbutton(root, text="Opción a elegir").pack() 
+Checkbutton(root, text="Opción a elegir").pack()
 
 root.mainloop()
 ```
-![radio event](img/radio_1.png)
+![radio event](img/checkbox_1.png)
+
+![radio event](img/checkbox_2.png)
 
 ## Parámetros de Radio Button
 
-Pero en aplicación no vamos a tener solo un botón de chequeo, tendremos mas de uno, ademas que necesitaremos conocer cual o cuales fueron las opciones marcadas. 
+Pero en aplicación no vamos a tener solo un botón de chequeo, tendremos mas de uno, ademas que necesitaremos conocer cual o cuales fueron las opciones marcadas.
 Para ello veremos mas parámetros que podemos utilizar en este tipo de widget.
 
 - `variable`: La variable que va a gestionar el contenido
@@ -34,12 +36,12 @@ Para ello veremos mas parámetros que podemos utilizar en este tipo de widget.
 ```python
 from tkinter import *
 
-def seleccionar():    
+def seleccionar():
     if (opcion_1.get()):
         print("opción 1 marcada")
     else:
         print("opción 1 desmarcada")
-        
+
     if (opcion_2.get()):
         print("opción 2 marcada")
     else:
@@ -48,7 +50,7 @@ def seleccionar():
 # Configuración de la raíz
 root = Tk()
 root.title("Mi aplicación")
-root.config(bd=15) 
+root.config(bd=15)
 
 opcion_1 = IntVar()    # 1 si, 0 no
 opcion_2 = IntVar()   # 1 si, 0 no

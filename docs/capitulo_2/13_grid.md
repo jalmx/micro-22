@@ -6,7 +6,7 @@ date: 2022-03-22
 
 # Manejador `Grid`
 
-Este manejador de geometría es una especie de **tabla** o **rejilla** donde se irán colocando los elementos dentro del contenedor padre. 
+Este manejador de geometría es una especie de **tabla** o **rejilla** donde se irán colocando los elementos dentro del contenedor padre.
 
 ![grid](https://www.pythontutorial.net/wp-content/uploads/2021/01/Tkinter-grid-Grid-Geometry.png)
 
@@ -26,7 +26,7 @@ Los argumentos que puede recibe la función `grid` son:
 - `columnspan`: Cuantas columnas va a ocupar el widget, por default es 1.
 - `rowspan`: La cantidad de renglones que va a ocupar el widget; por default es 1.
 - `padx`/`pady`: Margen en `x` y `y`. Es la distancia entre widget y widget. Padding externo.
-- `padx`/`ipady`: Padding en `x` y `y`. Es la distancia entre el contenido y la pared del widget. Padding interno.
+- `ipadx`/`ipady`: Padding en `x` y `y`. Es la distancia entre el contenido y la pared del widget. Padding interno.
 - `sticky`: Por si necesitas que el widget abarque mas de una celda. Por default, wl widget queda centrado en la celda. Se pueden combinar un o mas posiciones de `N`, `E`, `S`, `W`, `NE`, `NW`, `SE`, y `SW`.
 - `rowconfigure`:  con el parámetro **`weight=1`** indicamos que la fila se expanden o contrae
 - `columnconfigure`: con el parámetro **`weight=1`** indicamos que la columna se expanden o contrae
@@ -40,8 +40,8 @@ from tkinter import Tk, Label, RIDGE
 root = Tk()
 root.geometry("320x240")
 
-courses = ['Electronica','Digitales','Neumática','Dibujo 3D','Mediciones','PLC'] 
-r = 'Cursos' 
+courses = ['Electronica','Digitales','Neumática','Dibujo 3D','Mediciones','PLC']
+r = 'Cursos'
 
 
 for i, c in enumerate(courses):
@@ -49,7 +49,7 @@ for i, c in enumerate(courses):
     Label(root,text=r, relief=RIDGE, width=15).grid(column=1, row=i, ipadx=4, ipady=4, padx=4, pady=4)
 
 root.mainloop()
-``` 
+```
 ![grid](img/grid_course.png)
 
 

@@ -13,8 +13,8 @@ Los layout son la manera o forma de como se distribuirán los elementos en una v
 Contamos con 3 tipos de manejadores de layout (`geometry manager`), que son:
 
 - `pack`: Agrega los widget en bloque, uno después del otro, con forme se fueron agregando
-- `place`: 
-- `grid`:
+- `place`: Puedes colocar los widgets de manera arbitraria y el area que va a ocupar en funcion de otros elementos
+- `grid`: Los widgets se distribuyen en manera de tabla o grilla, asignándoles una "celda"
 
 !!! danger "No mezclar los manejadores"
     No se deben combinar estas manejadores dentro de un mismo contenedor. Se pueden tener diversos contenedores y en cada uno manejar un tipo distinto, si. Pero nunca dentro del mismo contenedor.

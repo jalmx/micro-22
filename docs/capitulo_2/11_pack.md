@@ -26,7 +26,7 @@ Los argumentos que puede recibe la función `pack` son:
     - `Y`: Vertical
     - `BOTH`: Ambos, tanto `x` como `y`
 - `padx`/`pady`: Margen en `x` y `y`. Es la distancia entre widget y widget. Padding externo.
-- `padx`/`ipady`: Padding en `x` y `y`. Es la distancia entre el contenido y la pared del widget. Padding interno.
+- `ipadx`/`ipady`: Padding en `x` y `y`. Es la distancia entre el contenido y la pared del widget. Padding interno.
 - `expand`: Ocupa todo el espacio posible, pero sin crecer el widget, vendría siendo como un margen, Recibe un valor booleano: `True`, `False`
 - `anchor`: Se le puede dar la posición con referencia a un punto; de en donde quedara el widget. Los atributos pueden ser:
     - `NW`: `northwest`, arriaba a la izquierda
@@ -83,15 +83,15 @@ root.geometry("200x100")
 # Crear un Frame y se expande para tomar el tamaño de la ventana padre
 pane = Frame(root)
 pane.pack(fill = BOTH, expand = True)
- 
+
 # Se crea un botón y se expande a toda la pantalla
 b1 = Button(pane, text = "Da click 1", bg="yellow")
 b1.pack(fill = BOTH, expand = True)
- 
+
 # Se crea un botón y se expande a toda la pantalla
 b2 = Button(pane, text = "Da click 2", bg="green")
 b2.pack(fill = BOTH, expand = True)
- 
+
 root.mainloop()
 ```
 ![pack 2](img/pack_2.png)
@@ -109,25 +109,25 @@ root.geometry("300x100")
 # Crear un Frame y se expande para tomar el tamaño de la ventana padre
 pane = Frame(root)
 pane.pack(fill = BOTH, expand = True)
- 
+
 # Se crea un botón y se expande a toda la pantalla y se coloca a de izquierda a derecha
 b1 = Button(pane, text = "Opción 1",
             background = "red", fg = "white")
 b1.pack(side = LEFT, expand = True, fill = BOTH)
- 
+
 # Se crea un botón y se expande a toda la pantalla y se coloca a de izquierda a derecha
 b2 = Button(pane, text = "Opción 2",
             background = "blue", fg = "white")
 b2.pack(side = LEFT, expand = True, fill = BOTH)
- 
+
 # Se crea un botón y se expande a toda la pantalla y se coloca a de izquierda a derecha
 b3 = Button(pane, text = "Opción 3",
             background = "green", fg = "white")
 b3.pack(side = LEFT, expand = True, fill = BOTH)
- 
+
 root.mainloop()
 
-``` 
+```
 ![pack 3](img/pack_3.png)
 
 ```python
@@ -153,7 +153,7 @@ bluebutton.pack( side = LEFT )
 
 blackbutton = Button(bottomframe, text="Negro", fg="black")
 blackbutton.pack( )
- 
+
 root.mainloop()
 
 ```
