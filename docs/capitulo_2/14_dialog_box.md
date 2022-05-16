@@ -4,12 +4,12 @@ author: Alejandro Leyva
 date: 2022-03-22
 ---
 
-# Ventanas de Dialogo - Message box
+# Ventanas de Diálogo - Message box
 
 Las ventanas emergentes, ventanas de diálogo o simplemente Pop Ups, son ventanas que te ayudan a guiar al usuario o para indicarle ciertas situaciones, tenemos varias opciones que vienen integradas en el paquete.
 
 - `ShowInfo`: Ventana genérica para mostrar un aviso
-- `ShowWarning`: Ventana para mostrar warnings 
+- `ShowWarning`: Ventana para mostrar warnings
 - `ShowError`: Ventana para mostrar errores.
 - `AskQuestion`: Ventana para preguntar y tener una respuesta `si` o `no`
 - `AskOkCancel`: Ventana para obtener la respuesta `ok` o `cancelar`
@@ -17,7 +17,7 @@ Las ventanas emergentes, ventanas de diálogo o simplemente Pop Ups, son ventana
 
 No se puede crear una ventana sin que antes exista una ventana `Tk`.
 
-## Show Info 
+## Show Info
 
 ```python
 from tkinter import messagebox
@@ -52,7 +52,7 @@ messagebox.showerror("Error",
 ```python
 from tkinter import messagebox
 
-messagebox.askquestion("Descarga", 
+messagebox.askquestion("Descarga",
                         "Cancelar descarga?")
 ```
 ![dialog warning](img/dialog_question.png)
