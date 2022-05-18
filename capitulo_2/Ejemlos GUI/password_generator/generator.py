@@ -60,7 +60,14 @@ def generate_password_letters(length=4)-> str:
     return password
 
 def generate_password(length=4)-> str:
+    """Generate a password with symbols, number and letters
 
+    Args:
+        length (int, optional): Length for password. Defaults to 4.
+
+    Returns:
+        str: Password
+    """
     password = ""
     while len(password) < length:
         password += choice( generate_password_letters(1) + generate_password_numbers(1) + generate_symbols(1))
