@@ -40,3 +40,4 @@ Como medidas vamos a tomar una ==separación base de **4px**==, todo sera en fun
 
 ![código de colores](imgs/app_rest.png)
 
+

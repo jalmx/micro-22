@@ -25,7 +25,7 @@ Esta interfaz que se muestra es una propuesta, es totalmente libre la creación 
 
 ![App capacitor](https://raw.githubusercontent.com/jalmx89/Capacitor_Calculator/master/imgs/ds1.png)
 
-Como informacion de apoyo te comparto el siguiente sitio [https://www.inventable.eu](https://www.inventable.eu/calculadora-codigos-capacitores/), donde es una calculadora web en la que te puedes apoyar.
+Como información de apoyo te comparto el siguiente sitio [https://www.inventable.eu](https://www.inventable.eu/calculadora-codigos-capacitores/), donde es una calculadora web en la que te puedes apoyar.
 
 ![codigo](https://www.inventable.eu/wp-content/uploads/2018/02/capacitores_tipos_codigos.png)
 
@@ -40,3 +40,19 @@ Realizar la aplicación de la segunda ley newton, en la cual se pueda elegir la 
 ![app newton](img/app_Ley_opt.svg)
 
 
+## Divisor de Tensión
+
+Realizar una aplicación para el calculo de salida generado en un divisor de tensión por sus respectivas resistencias.
+
+Recordar que la el calculo es:
+
+![div](img/div_b.png)
+
+![divisor](img/divisor_app.png)
+<figcaption>propuesta de app</figcaption>
+
+*La imagen siguiente es un diseño propuesto, eres libre de hacerle cambios a la aplicación.*
+
+Referencia de una app en linea [https://www.herramientasingenieria.com/onlinecalc/spa/divisor-tension/divisor-tension.html](https://www.herramientasingenieria.com/onlinecalc/spa/divisor-tension/divisor-tension.html)
+
+[Descargar el archivo fuente de la imagen](../img/divisor_app.svg), la imagen fue hecha con [inkscape](https://inkscape.org/)
