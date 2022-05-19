@@ -117,7 +117,7 @@ def build_gui():
     """
     root = Tk()
     root.title("Code color Resistance")
-    root.resizable(0, 0)
+    # root.resizable(0, 0)
 
     Label(root, text="Code color Resistance", font=("Hack", 20, "bold")).pack(
         expand=True, fill=BOTH, padx=8, pady=8
@@ -223,9 +223,9 @@ def build_gui():
     container_result.pack(expand=True, fill=BOTH, padx=8, pady=8)
 
     img = PhotoImage(
-        file="/home/xizuth/Documents/Projects/micro-22/docs/capitulo_2/GUI/code_color/assets/resistencia.png"
+        file="./assets/resist.png"
     )
-    Label(root, image=img).pack()
+    Label(root, image=img).pack(expand=True, fill=BOTH, ipadx=4, ipady=4, padx=4,pady=4, side=BOTTOM, anchor=N)
 
     calculate_to_ui()
 
