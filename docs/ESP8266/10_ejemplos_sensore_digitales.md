@@ -134,16 +134,16 @@ d.humidity()    # eg. 41.3 (% RH)
             sensor.measure()# mide el ambiente, siempre se debe mandar a llamar para generar los datos
             value_temperature = sensor.temperature() # se obtiene el valor de la temperatura
             value_humidity = sensor.humidity()    # se obtiene el valor de la humedad relativa
-            
+
             print("Temp:",value_temperature,"C")
             print("Humedad:",value_humidity,"%")
-            
+
             sleep(1) #esperamos 1 seg para la siguiente lectura de las variables ambientales
         ```
 
-        
+
 !!! example "Termómetro Celsius/Fahrenheit DTH11"
-    - **Descripción:** 
+    - **Descripción:**
     - **Materiales:**
         - 1 Sensor DTH11
     - **Circuito:** <br> ![dth11](imgs/dth11_1.png)
@@ -159,10 +159,10 @@ d.humidity()    # eg. 41.3 (% RH)
             sensor.measure()
             celsius = sensor.temperature() # se obtiene el valor de la temperatura
             fahrenheit = (celsius * 1.8) + 32
-            
+
             print("Temp Celsius:", celsius, " C") # mando a la terminal la temp en Celsius
             print("Temp Fahrenheit:", fahrenheit, " F") # mando a la terminal la temp en Fahrenheit
-            
+
             sleep(1) #esperamos 1 seg para la siguiente lectura de las variables ambientales
         ```
 
@@ -180,10 +180,10 @@ El modulo del sensor ultrasónico tiene 2 pines de control, con un activa sun fu
 
 
 !!! warning
-    Este modulo debe ser alimentado con 5V para su correcto funcionamiento
+    Este módulo debe ser alimentado con 5V para su correcto funcionamiento, usa la salida de 5V del ESP o una fuente externa
 
 !!! example "Midiendo distancia con ultrasónico"
-    - **Descripción:** 
+    - **Descripción:**
     - **Materiales:**
         - 1 Sensor Ultrasonico HC-SR04
     - **Circuito:** <br> ![sr04](imgs/ultrasonic_base.png)
@@ -194,13 +194,14 @@ El modulo del sensor ultrasónico tiene 2 pines de control, con un activa sun fu
 
         trigger_pin = 5
         echo_pin = 4
-            
+
         sensor = Ultrasonic(trigger_pin, echo_pin)
         sleep(1)
 
         while True:
-            
+
             print("Distancia:", sensor.distance_in_cm(),"cm")
-            sleep(1) 
+            sleep(1)
         ```
     - **Descargar** modulo [Ultrasonic.py](imgs/Ultrasonic.py) y colocarlo dentro de la placa. [Fuente del modulo en github](https://github.com/skgsergio/MicropythonLibs/blob/master/Ultrasonic/ultrasonic.py)
+    - **Nota:** Si tu placa no tiene el pin **VV**, entonces tiene el pin **Vin**, es una salida de 5V o en su defecto usa una fuente externa
