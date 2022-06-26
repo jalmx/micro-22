@@ -222,8 +222,9 @@ def build_gui():
 
     container_result.pack(expand=True, fill=BOTH, padx=8, pady=8)
 
+    global img
     img = PhotoImage(
-        file="./assets/resist.png"
+        file="./assets/resistencia.png"
     )
     Label(root, image=img).pack(expand=True, fill=BOTH, ipadx=4, ipady=4, padx=4,pady=4, side=BOTTOM, anchor=N)
 

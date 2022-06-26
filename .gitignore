@@ -1,5 +1,5 @@
 site
-bin 
+bin
 include
 lib**
 pyvenv.cfg
@@ -7,3 +7,4 @@ share
 etc
 .directory
 **/__pycache__/**
+**/.ipynb_checkpoints/**
